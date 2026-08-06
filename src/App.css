@@ -2087,3 +2087,52 @@ button {
     height: 580px;
   }
 }
+
+/* =========================================================
+   RESPONSIF MOBILE UNTUK STORM4 MODAL (HP & SCREEN KECIL)
+   ========================================================= */
+@media (max-width: 768px) {
+  /* Ubah container split dari horizontal (row) jadi vertikal (column) */
+  .storm4-split-container {
+    flex-direction: column !important;
+    width: 92vw !important;
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+    padding: 16px !important;
+    gap: 16px !important;
+  }
+
+  /* Sisi Kiri (Gambar Karakter HD) */
+  .storm4-left-col {
+    width: 100% !important;
+    max-height: 260px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .storm4-hd-img {
+    max-height: 240px !important;
+    object-fit: contain !important;
+  }
+
+  /* Sisi Kanan (Informasi & Action Buttons) */
+  .storm4-right-col {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Mencegah tombol CLOSE terdorong/gepeng */
+  .storm4-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 12px !important;
+  }
+
+  .storm4-btn-close {
+    width: 100% !important;
+    padding: 12px !important;
+    position: relative !important;
+  }
+}

@@ -311,6 +311,7 @@ export default function App() {
       <Hero
         cards={cards}
         onOpenShowcase={() => setIsShowcaseOpen(true)}
+        onOpenInventory={() => setIsInventoryOpen(true)}
         onOpenShop={() => setIsShopOpen(true)}
         onSelectCard={card => setSelectedCard(card)}
       />
