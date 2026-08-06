@@ -1,0 +1,22 @@
+0. Main showcase (scale fix)
+
+----------------------------- base card
+
+1. Design Card (Size, scale)
+2. Ovr stats card
+3. Case pack selection (gold, silver, bronze)
+4. Background Card database
+5. Background Card by stats (rare, common)
+6. Jutsu name, Summoning, Jutsu Stats
+
+----------------------------account system
+
+1. animation
+2. inventory card
+3. shop (buy and sell)
+4. upgradeable or trading card with stats and rating with star max 5
+5. coins system
+
+-------The most importent------
+
+-DATABASE	-Header Crous	-Gacha system

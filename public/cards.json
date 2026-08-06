@@ -1,0 +1,1332 @@
+[
+  {
+    "id": 1,
+    "name": "Shukaku (One-Tail)",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/1 shukaku.webp"
+  },
+  {
+    "id": 2,
+    "name": "Ten-Tails (Jubi)",
+    "ovr": 99,
+    "rarity": "GOLD RARE",
+    "image_url": "images/10 jubi.webp"
+  },
+  {
+    "id": 3,
+    "name": "Matatabi (Two-Tails)",
+    "ovr": 87,
+    "rarity": "SILVER RARE",
+    "image_url": "images/2 matatabi.webp"
+  },
+  {
+    "id": 4,
+    "name": "Isobu (Three-Tails)",
+    "ovr": 83,
+    "rarity": "SILVER RARE",
+    "image_url": "images/3 isobu.webp"
+  },
+  {
+    "id": 5,
+    "name": "Son Goku (Four-Tails)",
+    "ovr": 84,
+    "rarity": "SILVER RARE",
+    "image_url": "images/4 son goku.webp"
+  },
+  {
+    "id": 6,
+    "name": "Kokuo (Five-Tails)",
+    "ovr": 84,
+    "rarity": "SILVER RARE",
+    "image_url": "images/5 kokuo.webp"
+  },
+  {
+    "id": 7,
+    "name": "Saiken (Six-Tails)",
+    "ovr": 84,
+    "rarity": "SILVER RARE",
+    "image_url": "images/6 saiken.webp"
+  },
+  {
+    "id": 8,
+    "name": "Chomei (Seven-Tails)",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/7 chomei.webp"
+  },
+  {
+    "id": 9,
+    "name": "Gyuki (Eight-Tails)",
+    "ovr": 90,
+    "rarity": "GOLD RARE",
+    "image_url": "images/8 gyuki.webp"
+  },
+  {
+    "id": 10,
+    "name": "Kurama (Nine-Tails)",
+    "ovr": 94,
+    "rarity": "GOLD RARE",
+    "image_url": "images/9 kurama.webp"
+  },
+  {
+    "id": 11,
+    "name": "Akatsuchi",
+    "ovr": 78,
+    "rarity": "BRONZE",
+    "image_url": "images/akatsuchi_by_masonengine_dck74fz.webp"
+  },
+  {
+    "id": 12,
+    "name": "Anko Mitarashi",
+    "ovr": 77,
+    "rarity": "BRONZE",
+    "image_url": "images/anko.webp"
+  },
+  {
+    "id": 13,
+    "name": "Ao",
+    "ovr": 82,
+    "rarity": "BRONZE",
+    "image_url": "images/ao_by_masonengine_dctlrn7.webp"
+  },
+  {
+    "id": 14,
+    "name": "Asuma Sarutobi",
+    "ovr": 84,
+    "rarity": "SILVER RARE",
+    "image_url": "images/asuma (2).webp"
+  },
+  {
+    "id": 15,
+    "name": "Boro",
+    "ovr": 89,
+    "rarity": "SILVER RARE",
+    "image_url": "images/boro_by_masonengine_dgaktra.webp"
+  },
+  {
+    "id": 16,
+    "name": "Boruto",
+    "ovr": 87,
+    "rarity": "SILVER RARE",
+    "image_url": "images/boruto_by_masonengine_dgiieib.webp"
+  },
+  {
+    "id": 17,
+    "name": "Boruto Karma",
+    "ovr": 92,
+    "rarity": "GOLD RARE",
+    "image_url": "images/boruto__karma__by_masonengine_dg82x33.webp"
+  },
+  {
+    "id": 18,
+    "name": "Kagura Karatachi",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/boruto__naruto_next_generation_kagura_karatachi_by_iennidesign_dboybcc.webp"
+  },
+  {
+    "id": 19,
+    "name": "Sumire Genin",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/boruto__naruto_next_generation_sumire__genin__by_iennidesign_dby4bfk.webp"
+  },
+  {
+    "id": 20,
+    "name": "Araya",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/boruto__the_next_generation_araya_by_iennidesign_d9yvvtd.webp"
+  },
+  {
+    "id": 21,
+    "name": "Chouchou Akimichi",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/boruto__the_next_generation_chouchou_akimichi_by_iennidesign_d9u9vif.webp"
+  },
+  {
+    "id": 22,
+    "name": "Inojin Yamanaka",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/boruto__the_next_generation_inojin_yamanaka_by_iennidesign_d9r99iy.webp"
+  },
+  {
+    "id": 23,
+    "name": "Shikadai Nara",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/boruto__the_next_generation_shikadai_nara_by_iennidesign_d9sg03s.webp"
+  },
+  {
+    "id": 24,
+    "name": "Shinki",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/boruto__the_next_generation_shinki_by_iennidesign_d9t5gmx.webp"
+  },
+  {
+    "id": 25,
+    "name": "Yodo",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/boruto__the_next_generation_yodo_by_iennidesign_d9ska39.webp"
+  },
+  {
+    "id": 26,
+    "name": "Cee",
+    "ovr": 76,
+    "rarity": "BRONZE",
+    "image_url": "images/cee_by_masonengine_dck1sap.webp"
+  },
+  {
+    "id": 27,
+    "name": "Lady Chiyo",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/chiyo_by_masonengine_dcf47mc.webp"
+  },
+  {
+    "id": 28,
+    "name": "Choji Akimichi (Shippuden)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/choji (2).webp"
+  },
+  {
+    "id": 29,
+    "name": "Choji Akimichi (Butterfly Mode)",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/choji (3).webp"
+  },
+  {
+    "id": 30,
+    "name": "Choji Akimichi (Part 1)",
+    "ovr": 66,
+    "rarity": "BRONZE",
+    "image_url": "images/choji (1).webp"
+  },
+  {
+    "id": 31,
+    "name": "Chojuro (6th Mizukage)",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/chojuro_by_masonengine_dctotwa.webp"
+  },
+  {
+    "id": 32,
+    "name": "Danzo Shimura",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/danzo.webp"
+  },
+  {
+    "id": 33,
+    "name": "Darui (Black Lightning)",
+    "ovr": 87,
+    "rarity": "SILVER RARE",
+    "image_url": "images/darui__awakening_mode__by_masonengine_d9py9au.webp"
+  },
+  {
+    "id": 34,
+    "name": "Deidara",
+    "ovr": 87,
+    "rarity": "SILVER RARE",
+    "image_url": "images/deidara_by_masonengine_d9cpgx1.webp"
+  },
+  {
+    "id": 35,
+    "name": "Deidara Reanimation",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/deidara__reanimation__by_masonengine_dc49b42.webp"
+  },
+  {
+    "id": 36,
+    "name": "Delta",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/delta_by_masonengine_dgnr4y5.webp"
+  },
+  {
+    "id": 37,
+    "name": "Foo Yamanaka",
+    "ovr": 77,
+    "rarity": "BRONZE",
+    "image_url": "images/foo.webp"
+  },
+  {
+    "id": 38,
+    "name": "Fuu (Seven-Tails Jinchuriki)",
+    "ovr": 86,
+    "rarity": "SILVER RARE",
+    "image_url": "images/fuu_by_masonengine_dc8rtcz.webp"
+  },
+  {
+    "id": 39,
+    "name": "Fuu Reanimation",
+    "ovr": 86,
+    "rarity": "SILVER RARE",
+    "image_url": "images/fuu__reanimation__by_masonengine_dc8rtff.webp"
+  },
+  {
+    "id": 40,
+    "name": "Gaara (Great War Kazekage)",
+    "ovr": 90,
+    "rarity": "GOLD RARE",
+    "image_url": "images/gaara__great_war_ninja__by_masonengine_d83yaci.webp"
+  },
+  {
+    "id": 41,
+    "name": "Gaara (5th Kazekage)",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/gaara__kage_summit__by_masonengine_d8lx0mb.webp"
+  },
+  {
+    "id": 42,
+    "name": "Gaara (Part 1)",
+    "ovr": 76,
+    "rarity": "BRONZE",
+    "image_url": "images/gaara__part_1___second_suit__by_masonengine_d977sxm.webp"
+  },
+  {
+    "id": 43,
+    "name": "Might Guy (Base)",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/guy (1).webp"
+  },
+  {
+    "id": 44,
+    "name": "Might Guy (8 Gates)",
+    "ovr": 98,
+    "rarity": "GOLD RARE",
+    "image_url": "images/guy (2).webp"
+  },
+  {
+    "id": 45,
+    "name": "Haku",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/haku_by_masonengine_d8htn3u.webp"
+  },
+  {
+    "id": 46,
+    "name": "Haku (Reanimation)",
+    "ovr": 78,
+    "rarity": "BRONZE",
+    "image_url": "images/haku__reanimation__by_masonengine_daock82.webp"
+  },
+  {
+    "id": 47,
+    "name": "Hanzo of the Salamander",
+    "ovr": 89,
+    "rarity": "GOLD RARE",
+    "image_url": "images/hanzo__alive__by_masonengine_dbfnkol.webp"
+  },
+  {
+    "id": 48,
+    "name": "Hanzo (Reanimation)",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/hanzo__reanimation__by_masonengine_dbfnkdb.webp"
+  },
+  {
+    "id": 49,
+    "name": "Han (Five-Tails Jinchuriki)",
+    "ovr": 86,
+    "rarity": "SILVER RARE",
+    "image_url": "images/han_by_masonengine_dc8933q.webp"
+  },
+  {
+    "id": 50,
+    "name": "Han Reanimation",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/han__reanimation__by_masonengine_dc893ek.webp"
+  },
+  {
+    "id": 51,
+    "name": "Hashirama Senju (Sage Mode)",
+    "ovr": 97,
+    "rarity": "GOLD RARE",
+    "image_url": "images/hashirama (3).webp"
+  },
+  {
+    "id": 52,
+    "name": "Hashirama (4)",
+    "ovr": 93,
+    "rarity": "GOLD RARE",
+    "image_url": "images/hashirama (4).webp"
+  },
+  {
+    "id": 53,
+    "name": "Hidan",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/hidan_by_masonengine_d99szqx.webp"
+  },
+  {
+    "id": 54,
+    "name": "Hinata Hyuga",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/hinata (2).webp"
+  },
+  {
+    "id": 55,
+    "name": "Hinata Hyuga (Twin Lion)",
+    "ovr": 82,
+    "rarity": "SILVER RARE",
+    "image_url": "images/hinata (3).webp"
+  },
+  {
+    "id": 56,
+    "name": "Hinata Hyuga (Part 1)",
+    "ovr": 64,
+    "rarity": "BRONZE",
+    "image_url": "images/hinata (1).webp"
+  },
+  {
+    "id": 57,
+    "name": "Hiruzen Sarutobi (3rd Hokage)",
+    "ovr": 91,
+    "rarity": "GOLD RARE",
+    "image_url": "images/hiruzen (1).webp"
+  },
+  {
+    "id": 58,
+    "name": "Hiruzen Reanimation",
+    "ovr": 84,
+    "rarity": "SILVER RARE",
+    "image_url": "images/hiruzen (2).webp"
+  },
+  {
+    "id": 59,
+    "name": "Ino Yamanaka",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/ino (2).webp"
+  },
+  {
+    "id": 60,
+    "name": "Ino Yamanaka (Part 1)",
+    "ovr": 63,
+    "rarity": "BRONZE",
+    "image_url": "images/ino (1).webp"
+  },
+  {
+    "id": 61,
+    "name": "Ino Yamanaka (Great Ninja War)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/ino (3).webp"
+  },
+  {
+    "id": 62,
+    "name": "Itachi Uchiha (Akatsuki)",
+    "ovr": 91,
+    "rarity": "GOLD RARE",
+    "image_url": "images/itachi_by_masonengine_d88z9zy.webp"
+  },
+  {
+    "id": 63,
+    "name": "Itachi Reanimation",
+    "ovr": 97,
+    "rarity": "GOLD RARE",
+    "image_url": "images/itachi__reanimation__by_masonengine_d96b7jt.webp"
+  },
+  {
+    "id": 64,
+    "name": "Jigen",
+    "ovr": 96,
+    "rarity": "GOLD RARE",
+    "image_url": "images/jigen_by_masonengine_dhcaxd3.webp"
+  },
+  {
+    "id": 65,
+    "name": "Jiraiya (Sage Mode)",
+    "ovr": 93,
+    "rarity": "GOLD RARE",
+    "image_url": "images/jiraiya (1).webp"
+  },
+  {
+    "id": 66,
+    "name": "Jirobo",
+    "ovr": 72,
+    "rarity": "BRONZE",
+    "image_url": "images/jirobo_by_masonengine_dcimbkz.webp"
+  },
+  {
+    "id": 67,
+    "name": "Jugo (Curse Mark)",
+    "ovr": 80,
+    "rarity": "SILVER RARE",
+    "image_url": "images/jugo_by_masonengine_d882e00.webp"
+  },
+  {
+    "id": 68,
+    "name": "Kabuto Yakushi (Part 1)",
+    "ovr": 79,
+    "rarity": "BRONZE",
+    "image_url": "images/kabuto_by_masonengine_d7t1mey.webp"
+  },
+  {
+    "id": 69,
+    "name": "Kabuto Yakushi (Sage Mode)",
+    "ovr": 95,
+    "rarity": "GOLD RARE",
+    "image_url": "images/kabuto__sage_mode__by_masonengine_d80t45t.webp"
+  },
+  {
+    "id": 70,
+    "name": "Kabuto Yakushi (Snake Cloak)",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/kabuto__snake_cloak__by_masonengine_d92sf2g.webp"
+  },
+  {
+    "id": 71,
+    "name": "Kaguya Otsutsuki",
+    "ovr": 99,
+    "rarity": "GOLD RARE",
+    "image_url": "images/kaguya_by_masonengine_d93aifc.webp"
+  },
+  {
+    "id": 72,
+    "name": "Kakashi (1)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/kakashi (1).webp"
+  },
+  {
+    "id": 73,
+    "name": "Kakashi (2)",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/kakashi (2).webp"
+  },
+  {
+    "id": 74,
+    "name": "Kakashi (3) Double Sharinggan",
+    "ovr": 91,
+    "rarity": "GOLD RARE",
+    "image_url": "images/kakashi (3) double sharinggan.webp"
+  },
+  {
+    "id": 75,
+    "name": "Kakashi (7) Hokage",
+    "ovr": 90,
+    "rarity": "GOLD RARE",
+    "image_url": "images/kakashi (7) hokage.webp"
+  },
+  {
+    "id": 76,
+    "name": "Kakuzu",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/kakuzu_by_masonengine_d8357u5.webp"
+  },
+  {
+    "id": 77,
+    "name": "Kakuzu Reanimation",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/kakuzu__reanimation__by_masonengine_dc3nrky.webp"
+  },
+  {
+    "id": 78,
+    "name": "Kankuro (Shippuden)",
+    "ovr": 77,
+    "rarity": "BRONZE",
+    "image_url": "images/kankuro_by_masonengine_d9d6sot.webp"
+  },
+  {
+    "id": 79,
+    "name": "Kankuro (War Arc)",
+    "ovr": 81,
+    "rarity": "SILVER RARE",
+    "image_url": "images/kankuro__great_war_ninja__by_masonengine_d9qdt2d.webp"
+  },
+  {
+    "id": 80,
+    "name": "Kankuro (Part 1)",
+    "ovr": 68,
+    "rarity": "BRONZE",
+    "image_url": "images/kankuro__part_1___first_suit__by_masonengine_dcbco6b.webp"
+  },
+  {
+    "id": 81,
+    "name": "Karin Uzumaki",
+    "ovr": 74,
+    "rarity": "BRONZE",
+    "image_url": "images/karin_by_masonengine_d8db18z.webp"
+  },
+  {
+    "id": 82,
+    "name": "Kawaki",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/kawaki_by_masonengine_dgiif7c.webp"
+  },
+  {
+    "id": 83,
+    "name": "Kawaki Karma",
+    "ovr": 92,
+    "rarity": "GOLD RARE",
+    "image_url": "images/kawaki__karma__by_masonengine_dg75ry8.webp"
+  },
+  {
+    "id": 84,
+    "name": "Kiba Inuzuka (War Arc)",
+    "ovr": 78,
+    "rarity": "BRONZE",
+    "image_url": "images/kiba (3).webp"
+  },
+  {
+    "id": 85,
+    "name": "Kiba Inuzuka (Part 1)",
+    "ovr": 65,
+    "rarity": "BRONZE",
+    "image_url": "images/kiba (1).webp"
+  },
+  {
+    "id": 86,
+    "name": "Kiba Inuzuka (Shippuden)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/kiba (2).webp"
+  },
+  {
+    "id": 87,
+    "name": "Kidomaru",
+    "ovr": 73,
+    "rarity": "BRONZE",
+    "image_url": "images/kidomaru_by_masonengine_dchxyjf.webp"
+  },
+  {
+    "id": 88,
+    "name": "Killer Bee (Samehada)",
+    "ovr": 92,
+    "rarity": "GOLD RARE",
+    "image_url": "images/killer_bee__samehada__by_masonengine_d8i8sw0.webp"
+  },
+  {
+    "id": 89,
+    "name": "Kimimaro Kaguya",
+    "ovr": 84,
+    "rarity": "SILVER RARE",
+    "image_url": "images/kimimaro_by_masonengine_dcc0xyo.webp"
+  },
+  {
+    "id": 90,
+    "name": "Kinshiki Otsutsuki",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/kinshiki_otsutsuki.webp"
+  },
+  {
+    "id": 91,
+    "name": "Kisame Hoshigaki",
+    "ovr": 90,
+    "rarity": "GOLD RARE",
+    "image_url": "images/kisame_by_masonengine_d8i40vq.webp"
+  },
+  {
+    "id": 92,
+    "name": "Koji Kashin",
+    "ovr": 87,
+    "rarity": "SILVER RARE",
+    "image_url": "images/koji_kashin_by_masonengine_dgwfo6q.webp"
+  },
+  {
+    "id": 93,
+    "name": "Konan",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/konan_by_masonengine_d8tok2b.webp"
+  },
+  {
+    "id": 94,
+    "name": "Konohamaru Sarutobi (Part 1)",
+    "ovr": 60,
+    "rarity": "BRONZE",
+    "image_url": "images/konohamaru (1).webp"
+  },
+  {
+    "id": 95,
+    "name": "Kurenai Yuhi",
+    "ovr": 78,
+    "rarity": "BRONZE",
+    "image_url": "images/kurenai (1).webp"
+  },
+  {
+    "id": 96,
+    "name": "Kurotsuchi (Jonin)",
+    "ovr": 79,
+    "rarity": "BRONZE",
+    "image_url": "images/kurotsuchi_by_masonengine_dckkjz5.webp"
+  },
+  {
+    "id": 97,
+    "name": "Kushina Uzumaki",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/kushina.webp"
+  },
+  {
+    "id": 98,
+    "name": "Madara Uchiha (Alive / EMS)",
+    "ovr": 96,
+    "rarity": "GOLD RARE",
+    "image_url": "images/madara__alive__by_masonengine_daocl6g.webp"
+  },
+  {
+    "id": 99,
+    "name": "Madara Reanimation Resolved",
+    "ovr": 98,
+    "rarity": "GOLD RARE",
+    "image_url": "images/madara__reanimation_resolved__by_masonengine_d7vy5n3.webp"
+  },
+  {
+    "id": 100,
+    "name": "Madara Uchiha (Six Paths)",
+    "ovr": 99,
+    "rarity": "GOLD RARE",
+    "image_url": "images/madara__six_paths__by_masonengine_d8x05ro.webp"
+  },
+  {
+    "id": 101,
+    "name": "Mei Terumi (5th Mizukage)",
+    "ovr": 84,
+    "rarity": "SILVER RARE",
+    "image_url": "images/mei_terumi_by_masonengine_d8d6hi2.webp"
+  },
+  {
+    "id": 102,
+    "name": "Mifune (Samurai Leader)",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/mifune_by_masonengine_dbwan2x.webp"
+  },
+  {
+    "id": 103,
+    "name": "Minato Namikaze (4th Hokage)",
+    "ovr": 94,
+    "rarity": "GOLD RARE",
+    "image_url": "images/minato (4).webp"
+  },
+  {
+    "id": 104,
+    "name": "Minato (Reanimation)",
+    "ovr": 96,
+    "rarity": "GOLD RARE",
+    "image_url": "images/minato (5).webp"
+  },
+  {
+    "id": 105,
+    "name": "Minato (KCM)",
+    "ovr": 98,
+    "rarity": "GOLD RARE",
+    "image_url": "images/minato (6).webp"
+  },
+  {
+    "id": 106,
+    "name": "Mitsuki",
+    "ovr": 78,
+    "rarity": "BRONZE",
+    "image_url": "images/mitauki (1).webp"
+  },
+  {
+    "id": 107,
+    "name": "Momoshiki Otsutsuki",
+    "ovr": 93,
+    "rarity": "GOLD RARE",
+    "image_url": "images/momoshiki_otsutsuki.webp"
+  },
+  {
+    "id": 108,
+    "name": "Nagato Reanimation",
+    "ovr": 96,
+    "rarity": "GOLD RARE",
+    "image_url": "images/nagato__reanimation__by_masonengine_d965vgd.webp"
+  },
+  {
+    "id": 109,
+    "name": "Naruto Uzumaki (Base Shippuden)",
+    "ovr": 80,
+    "rarity": "SILVER RARE",
+    "image_url": "images/naruto_by_masonengine_d87xn8m.webp"
+  },
+  {
+    "id": 110,
+    "name": "Ashura Otsutsuki",
+    "ovr": 98,
+    "rarity": "GOLD RARE",
+    "image_url": "images/naruto_shippuden____ashura_otsutsuki_by_stormgames_dcwr431.webp"
+  },
+  {
+    "id": 111,
+    "name": "Indra Otsutsuki",
+    "ovr": 98,
+    "rarity": "GOLD RARE",
+    "image_url": "images/naruto_shippuden____indra_otsutsuki_by_stormgames_dcreuih.webp"
+  },
+  {
+    "id": 112,
+    "name": "Naruto Baryon Mode",
+    "ovr": 99,
+    "rarity": "GOLD RARE",
+    "image_url": "images/naruto__baryon_mode__by_masonengine_dg67ve5.webp"
+  },
+  {
+    "id": 113,
+    "name": "Naruto Uzumaki (Bijuu Mode)",
+    "ovr": 95,
+    "rarity": "GOLD RARE",
+    "image_url": "images/naruto__biju_s_mode__by_masonengine_dbgikfz.webp"
+  },
+  {
+    "id": 114,
+    "name": "Naruto Uzumaki (KCM Link)",
+    "ovr": 94,
+    "rarity": "GOLD RARE",
+    "image_url": "images/naruto__kurama_link_mode__by_masonengine_d8q0d2u.webp"
+  },
+  {
+    "id": 115,
+    "name": "Naruto Uzumaki (Part 1)",
+    "ovr": 68,
+    "rarity": "BRONZE",
+    "image_url": "images/naruto__part_1__by_masonengine_daim8u2.webp"
+  },
+  {
+    "id": 116,
+    "name": "Naruto Uzumaki (Sage Mode)",
+    "ovr": 91,
+    "rarity": "GOLD RARE",
+    "image_url": "images/naruto__sage_mode__by_masonengine_d7scfab.webp"
+  },
+  {
+    "id": 117,
+    "name": "Naruto Uzumaki (Six Paths Mode)",
+    "ovr": 99,
+    "rarity": "GOLD RARE",
+    "image_url": "images/naruto__sage_of_the_six_paths_mode__by_masonengine_d8a5q84.webp"
+  },
+  {
+    "id": 118,
+    "name": "Naruto Uzumaki (7th Hokage)",
+    "ovr": 98,
+    "rarity": "GOLD RARE",
+    "image_url": "images/naruto__seventh_hokage__by_masonengine_d9tsgqe.webp"
+  },
+  {
+    "id": 119,
+    "name": "Neji Hyuga (Shippuden)",
+    "ovr": 82,
+    "rarity": "SILVER RARE",
+    "image_url": "images/neji (2).webp"
+  },
+  {
+    "id": 120,
+    "name": "Neji Hyuga (War Arc)",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/neji (4).webp"
+  },
+  {
+    "id": 121,
+    "name": "Neji Hyuga(part 1)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/neji (1).webp"
+  },
+  {
+    "id": 122,
+    "name": "Obito Uchiha (Tobi)",
+    "ovr": 82,
+    "rarity": "SILVER RARE",
+    "image_url": "images/obito.webp"
+  },
+  {
+    "id": 123,
+    "name": "Obito Uchiha (Rampaging)",
+    "ovr": 89,
+    "rarity": "GOLD RARE",
+    "image_url": "images/obito__rampaging__by_masonengine_d8t4bai.webp"
+  },
+  {
+    "id": 124,
+    "name": "Obito Uchiha (Ten-Tails)",
+    "ovr": 98,
+    "rarity": "GOLD RARE",
+    "image_url": "images/obito__ten_tails_jinchuriki__by_masonengine_d8u309w.webp"
+  },
+  {
+    "id": 125,
+    "name": "Obito Uchiha (Unmasked)",
+    "ovr": 94,
+    "rarity": "GOLD RARE",
+    "image_url": "images/obito__unmasked__by_masonengine_d7u7ejs.webp"
+  },
+  {
+    "id": 126,
+    "name": "Ohnoki (3rd Tsuchikage)",
+    "ovr": 91,
+    "rarity": "GOLD RARE",
+    "image_url": "images/ohnoki_by_masonengine_d8gzv0g.webp"
+  },
+  {
+    "id": 127,
+    "name": "Orochimaru",
+    "ovr": 92,
+    "rarity": "GOLD RARE",
+    "image_url": "images/orochimaru_by_masonengine_d8hxov2.webp"
+  },
+  {
+    "id": 128,
+    "name": "Orochimaru (Akatsuki)",
+    "ovr": 91,
+    "rarity": "GOLD RARE",
+    "image_url": "images/orochimaru__akatsuki_inception__by_masonengine_d7t6bsc.webp"
+  },
+  {
+    "id": 129,
+    "name": "Pain (Deva Path)",
+    "ovr": 95,
+    "rarity": "GOLD RARE",
+    "image_url": "images/pain_by_masonengine_damsdub.webp"
+  },
+  {
+    "id": 130,
+    "name": "Ay (4th Raikage)",
+    "ovr": 91,
+    "rarity": "GOLD RARE",
+    "image_url": "images/raikage__ay__haori_jacket__by_masonengine_d8gjayz.webp"
+  },
+  {
+    "id": 131,
+    "name": "Rin Nohara",
+    "ovr": 62,
+    "rarity": "BRONZE",
+    "image_url": "images/rin.webp"
+  },
+  {
+    "id": 132,
+    "name": "Rock Lee (1)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/rock lee (1).webp"
+  },
+  {
+    "id": 133,
+    "name": "Rock Lee (Shippuden)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/rock lee (2).webp"
+  },
+  {
+    "id": 134,
+    "name": "Rock Lee (6 Gates)",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/rock lee (3).webp"
+  },
+  {
+    "id": 135,
+    "name": "Roshi (Four-Tails Jinchuriki)",
+    "ovr": 86,
+    "rarity": "SILVER RARE",
+    "image_url": "images/roshi_by_masonengine_d8x8yzc.webp"
+  },
+  {
+    "id": 136,
+    "name": "Sai (Base)",
+    "ovr": 78,
+    "rarity": "BRONZE",
+    "image_url": "images/sai (2).webp"
+  },
+  {
+    "id": 137,
+    "name": "Sai (War arc)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/sai (3).webp"
+  },
+  {
+    "id": 138,
+    "name": "Sakon & Ukon",
+    "ovr": 74,
+    "rarity": "BRONZE",
+    "image_url": "images/sakon_by_masonengine_dch0i8o.webp"
+  },
+  {
+    "id": 139,
+    "name": "Sakura (1)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/sakura (1).webp"
+  },
+  {
+    "id": 140,
+    "name": "Sakura (Shippuden)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/sakura (2).webp"
+  },
+  {
+    "id": 141,
+    "name": "Sakura (War arc)",
+    "ovr": 84,
+    "rarity": "SILVER RARE",
+    "image_url": "images/sakura (3).webp"
+  },
+  {
+    "id": 142,
+    "name": "Sakura (4) Byakugo",
+    "ovr": 89,
+    "rarity": "GOLD RARE",
+    "image_url": "images/sakura (4) byakugo.webp"
+  },
+  {
+    "id": 143,
+    "name": "Iron Country Samurai",
+    "ovr": 65,
+    "rarity": "BRONZE",
+    "image_url": "images/samurai_by_masonengine_dc5gkn4.webp"
+  },
+  {
+    "id": 144,
+    "name": "Sarada (1)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/sarada (1).webp"
+  },
+  {
+    "id": 145,
+    "name": "Sarada Awakening Mode",
+    "ovr": 87,
+    "rarity": "SILVER RARE",
+    "image_url": "images/sarada__awakening_mode__by_masonengine_dgiifdz.webp"
+  },
+  {
+    "id": 146,
+    "name": "Sasori",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/sasori_by_masonengine_dcf47us.webp"
+  },
+  {
+    "id": 147,
+    "name": "Sasori Reanimation",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/sasori__reanimation__by_masonengine_d9yvxzb.webp"
+  },
+  {
+    "id": 148,
+    "name": "Sasuke (Part 1)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/sasuke (1).webp"
+  },
+  {
+    "id": 149,
+    "name": "Sasuke Hebi",
+    "ovr": 82,
+    "rarity": "SILVER RARE",
+    "image_url": "images/sasuke (2) hebi.webp"
+  },
+  {
+    "id": 150,
+    "name": "Sasuke Black Custom",
+    "ovr": 82,
+    "rarity": "SILVER RARE",
+    "image_url": "images/sasuke (3) black custom.webp"
+  },
+  {
+    "id": 151,
+    "name": "Sasuke Taka",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/sasuke (4) taka.webp"
+  },
+  {
+    "id": 152,
+    "name": "Sasuke War Arc",
+    "ovr": 87,
+    "rarity": "SILVER RARE",
+    "image_url": "images/sasuke (5) war arc.webp"
+  },
+  {
+    "id": 153,
+    "name": "Sasuke Rinne Sharinggan",
+    "ovr": 98,
+    "rarity": "GOLD RARE",
+    "image_url": "images/sasuke (6) rinne sharinggan.webp"
+  },
+  {
+    "id": 154,
+    "name": "Sasuke Support Kage",
+    "ovr": 99,
+    "rarity": "GOLD RARE",
+    "image_url": "images/sasuke (7) support kage.webp"
+  },
+  {
+    "id": 155,
+    "name": "Shikamaru nara",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/shikamaru (2).webp"
+  },
+  {
+    "id": 156,
+    "name": "Shikamaru Nara (War Arc Chief)",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/shikamaru (3).webp"
+  },
+  {
+    "id": 157,
+    "name": "Shikamaru Nara (Part 1)",
+    "ovr": 70,
+    "rarity": "BRONZE",
+    "image_url": "images/shikamaru (1).webp"
+  },
+  {
+    "id": 158,
+    "name": "Shino Aburame",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/shino (2).webp"
+  },
+  {
+    "id": 159,
+    "name": "Shino Aburame (War Arc)",
+    "ovr": 80,
+    "rarity": "SILVER RARE",
+    "image_url": "images/shino (3).webp"
+  },
+  {
+    "id": 160,
+    "name": "Shino Aburame (Part 1)",
+    "ovr": 68,
+    "rarity": "BRONZE",
+    "image_url": "images/shino (1).webp"
+  },
+  {
+    "id": 161,
+    "name": "Shisui Uchiha",
+    "ovr": 94,
+    "rarity": "GOLD RARE",
+    "image_url": "images/shisui.webp"
+  },
+  {
+    "id": 162,
+    "name": "Shizune",
+    "ovr": 76,
+    "rarity": "BRONZE",
+    "image_url": "images/shizune.webp"
+  },
+  {
+    "id": 163,
+    "name": "Suigetsu Hozuki",
+    "ovr": 80,
+    "rarity": "SILVER RARE",
+    "image_url": "images/suigetsu_by_masonengine_d8dul9t.webp"
+  },
+  {
+    "id": 164,
+    "name": "Tayuya",
+    "ovr": 73,
+    "rarity": "BRONZE",
+    "image_url": "images/tayuya_by_masonengine_dchd6a4.webp"
+  },
+  {
+    "id": 165,
+    "name": "Temari (Shippuden)",
+    "ovr": 79,
+    "rarity": "BRONZE",
+    "image_url": "images/temari_by_masonengine_d85kj3g.webp"
+  },
+  {
+    "id": 166,
+    "name": "Temari (War Arc)",
+    "ovr": 82,
+    "rarity": "SILVER RARE",
+    "image_url": "images/temari__great_war_ninja__by_masonengine_d9q918b.webp"
+  },
+  {
+    "id": 167,
+    "name": "Temari (Part 1)",
+    "ovr": 70,
+    "rarity": "BRONZE",
+    "image_url": "images/temari__part_1___second_suit__by_masonengine_dcat4t6.webp"
+  },
+  {
+    "id": 168,
+    "name": "Tenten (Shippuden)",
+    "ovr": 74,
+    "rarity": "BRONZE",
+    "image_url": "images/tenten (2).webp"
+  },
+  {
+    "id": 169,
+    "name": "Tenten (2)",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/tenten (1).webp"
+  },
+  {
+    "id": 170,
+    "name": "Tenten (Bashosen / War Arc)",
+    "ovr": 78,
+    "rarity": "BRONZE",
+    "image_url": "images/tenten (3).webp"
+  },
+  {
+    "id": 171,
+    "name": "Rasa (4th Kazekage)",
+    "ovr": 88,
+    "rarity": "SILVER RARE",
+    "image_url": "images/the_fourth_kazekage__reanimation__by_masonengine_d847n1g.webp"
+  },
+  {
+    "id": 172,
+    "name": "Gengetsu (2nd Mizukage)",
+    "ovr": 90,
+    "rarity": "GOLD RARE",
+    "image_url": "images/the_second_mizukage__reanimation__by_masonengine_d8l9ntr.webp"
+  },
+  {
+    "id": 173,
+    "name": "Mu (2nd Tsuchikage)",
+    "ovr": 92,
+    "rarity": "GOLD RARE",
+    "image_url": "images/the_second_tsuchikage__reanimation__by_masonengine_d7to5b4.webp"
+  },
+  {
+    "id": 174,
+    "name": "A (3rd Raikage)",
+    "ovr": 93,
+    "rarity": "GOLD RARE",
+    "image_url": "images/the_third_raikage__reanimation__by_masonengine_d8hbt3q.webp"
+  },
+  {
+    "id": 175,
+    "name": "Tobirama Senju (2nd Hokage)",
+    "ovr": 95,
+    "rarity": "GOLD RARE",
+    "image_url": "images/tobirama (1).webp"
+  },
+  {
+    "id": 176,
+    "name": "Tobirama (Reanimation)",
+    "ovr": 93,
+    "rarity": "GOLD RARE",
+    "image_url": "images/tobirama (2).webp"
+  },
+  {
+    "id": 177,
+    "name": "Tobi (Akatsuki)",
+    "ovr": 80,
+    "rarity": "SILVER RARE",
+    "image_url": "images/tobi_by_masonengine_d8lxobr.webp"
+  },
+  {
+    "id": 178,
+    "name": "Tobi Great War Ninja",
+    "ovr": 90,
+    "rarity": "GOLD RARE",
+    "image_url": "images/tobi__great_war_ninja__by_masonengine_d8ctsty.webp"
+  },
+  {
+    "id": 179,
+    "name": "Toneri Otsutsuki",
+    "ovr": 90,
+    "rarity": "GOLD RARE",
+    "image_url": "images/toneri_otsutsuki.webp"
+  },
+  {
+    "id": 180,
+    "name": "Torune Aburame",
+    "ovr": 78,
+    "rarity": "BRONZE",
+    "image_url": "images/torune.webp"
+  },
+  {
+    "id": 181,
+    "name": "Tsunade Senju (5th Hokage)",
+    "ovr": 92,
+    "rarity": "GOLD RARE",
+    "image_url": "images/tsunade.webp"
+  },
+  {
+    "id": 182,
+    "name": "Utakata (Six-Tails Jinchuriki)",
+    "ovr": 86,
+    "rarity": "SILVER RARE",
+    "image_url": "images/utakata_by_masonengine_d98p98e.webp"
+  },
+  {
+    "id": 183,
+    "name": "Utakata Reanimation",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/utakata__reanimation__by_masonengine_daockmw.webp"
+  },
+  {
+    "id": 184,
+    "name": "Yagura (4th Mizukage)",
+    "ovr": 87,
+    "rarity": "SILVER RARE",
+    "image_url": "images/yagura_by_masonengine_dc6456b.webp"
+  },
+  {
+    "id": 185,
+    "name": "Yagura Reanimation",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/yagura__reanimation__by_masonengine_dc6458n.webp"
+  },
+  {
+    "id": 186,
+    "name": "Yamato (Wood Release)",
+    "ovr": 85,
+    "rarity": "SILVER RARE",
+    "image_url": "images/yamato (2).webp"
+  },
+  {
+    "id": 187,
+    "name": "Yugito Nii (Two-Tails Jinchuriki)",
+    "ovr": 86,
+    "rarity": "SILVER RARE",
+    "image_url": "images/yugito_nii_by_masonengine_dc6hyy1.webp"
+  },
+  {
+    "id": 188,
+    "name": "Yugito Nii Reanimation",
+    "ovr": 75,
+    "rarity": "BRONZE",
+    "image_url": "images/yugito_nii__reanimation__by_masonengine_dc6hz09.webp"
+  },
+  {
+    "id": 189,
+    "name": "Zabuza Momochi",
+    "ovr": 81,
+    "rarity": "SILVER RARE",
+    "image_url": "images/zabuza_by_masonengine_d81wxee.webp"
+  },
+  {
+    "id": 190,
+    "name": "Zabuza Momochi (Reanimation)",
+    "ovr": 83,
+    "rarity": "SILVER RARE",
+    "image_url": "images/zabuza__reanimation__by_masonengine_daocjrd.webp"
+  }
+]
