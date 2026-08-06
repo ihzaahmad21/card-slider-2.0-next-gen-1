@@ -3,7 +3,7 @@ name: Build Android Offline APK
 on:
   push:
     branches:
-      - main # Ganti 'master' kalau nama branch utama GitHub kamu adalah master
+      - main
 
 jobs:
   build-android:
@@ -16,13 +16,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: 'npm'
+          node-version: 22
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Build Web App (Vite/React)
+      - name: Build Web App
         run: npm run build
 
       - name: Setup Java JDK 17
@@ -36,8 +35,8 @@ jobs:
 
       - name: Add Android Platform & Sync
         run: |
-          npx cap add android
-          npx cap copy
+          npx cap add android || true
+          npx cap sync
 
       - name: Build Debug APK via Gradle
         run: |
