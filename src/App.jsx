@@ -303,6 +303,7 @@ export default function App() {
         coins={coins}
         onOpenShowcase={() => setIsShowcaseOpen(true)}
         onOpenInventory={() => setIsInventoryOpen(true)}
+        onOpenInventory={() => setIsInventoryOpen(true)}
         onOpenShop={() => setIsShopOpen(true)}
       />
 
