@@ -27,6 +27,68 @@ export const PACK_CONFIG = {
   }
 };
 
+const VALID_RARITY_CLASSES = ['gold', 'silver', 'bronze'];
+const FALLBACK_CARD_IMAGE = '/images/naruto__part_1__by_masonengine_daim8u2.png';
+
+function readStoredNumber(key, fallback) {
+  try {
+    const saved = localStorage.getItem(key);
+    if (saved === null) return fallback;
+    const parsed = Number(saved);
+    return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function sanitizeImagePath(value) {
+  const src = String(value == null ? '' : value).trim();
+  if (!src) return FALLBACK_CARD_IMAGE;
+  const scheme = src.match(/^([a-z][a-z0-9+.-]*):/i);
+  if (scheme && !/^https?$/i.test(scheme[1])) return FALLBACK_CARD_IMAGE;
+  return src;
+}
+
+function sanitizeNumber(value, fallback) {
+  const num = Number(value);
+  return Number.isFinite(num) ? num : fallback;
+}
+
+// Persisted inventory is user-writable (localStorage), so every field is
+// re-validated rather than trusted as stored.
+function sanitizeInventoryItem(item) {
+  if (!item || typeof item !== 'object' || item.id === undefined || item.id === null) return null;
+  return {
+    id: item.id,
+    instanceId: typeof item.instanceId === 'string' ? item.instanceId : `${item.id}-${Math.random().toString(36).slice(2, 8)}`,
+    name: String(item.name == null ? 'Unknown Shinobi' : item.name),
+    rarity: String(item.rarity == null ? 'BRONZE' : item.rarity),
+    rarityClass: VALID_RARITY_CLASSES.includes(item.rarityClass) ? item.rarityClass : 'bronze',
+    img: sanitizeImagePath(item.img),
+    jutsu: String(item.jutsu == null ? 'Secret Ninja Art' : item.jutsu),
+    summon: String(item.summon == null ? 'Unknown Spirit' : item.summon),
+    ovr: sanitizeNumber(item.ovr, 70),
+    stars: sanitizeNumber(item.stars, 1),
+    atk: sanitizeNumber(item.atk, 50),
+    def: sanitizeNumber(item.def, 50),
+    chk: sanitizeNumber(item.chk, 50),
+    quantity: sanitizeNumber(item.quantity, 1),
+    plusLevel: sanitizeNumber(item.plusLevel, 0)
+  };
+}
+
+function readStoredInventory() {
+  try {
+    const saved = localStorage.getItem('shinobiTCG.userInventory');
+    if (!saved) return [];
+    const parsed = JSON.parse(saved);
+    if (!Array.isArray(parsed)) return [];
+    return parsed.map(sanitizeInventoryItem).filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
 export function buildInventoryInstance(card, plusLevel = 0) {
   return {
     ...card,
@@ -37,35 +99,14 @@ export function buildInventoryInstance(card, plusLevel = 0) {
 }
 
 export default function App() {
-  const [coins, setCoins] = useState(() => {
-    try {
-      const saved = localStorage.getItem('shinobiTCG.userCoins');
-      return saved !== null ? Number(saved) : 1500;
-    } catch {
-      return 1500;
-    }
-  });
+  const [coins, setCoins] = useState(() => readStoredNumber('shinobiTCG.userCoins', 1500));
 
-  const [rateBoosters, setRateBoosters] = useState(() => {
-    try {
-      const saved = localStorage.getItem('shinobiTCG.rateBoosters');
-      return saved !== null ? Number(saved) : 0;
-    } catch {
-      return 0;
-    }
-  });
+  const [rateBoosters, setRateBoosters] = useState(() => readStoredNumber('shinobiTCG.rateBoosters', 0));
 
   // Direct load from imported cards.json
   const [cards] = useState(() => processRawCards(masterCardsData));
 
-  const [inventory, setInventory] = useState(() => {
-    try {
-      const saved = localStorage.getItem('shinobiTCG.userInventory');
-      return saved ? JSON.parse(saved) : [];
-    } catch {
-      return [];
-    }
-  });
+  const [inventory, setInventory] = useState(readStoredInventory);
 
   const [selectedCard, setSelectedCard] = useState(null);
   const [isShowcaseOpen, setIsShowcaseOpen] = useState(false);

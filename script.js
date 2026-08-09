@@ -344,7 +344,7 @@ function renderHeroCard(card) {
   if (nameEl) nameEl.textContent = card.name;
   if (ovrEl) ovrEl.textContent = card.ovr + ' OVR';
   if (imageEl) {
-    imageEl.src = card.img;
+    imageEl.src = safeImageUrl(card.img);
     imageEl.alt = card.name;
     imageEl.onerror = function () {
       this.onerror = null;
@@ -353,9 +353,9 @@ function renderHeroCard(card) {
   }
   if (jutsuEl) jutsuEl.textContent = card.jutsu || 'Secret Ninja Art';
   if (summonEl) summonEl.textContent = 'Summon: ' + (card.summon || 'Unknown Spirit');
-  if (atkEl) atkEl.style.width = card.atk + '%';
-  if (defEl) defEl.style.width = card.def + '%';
-  if (chkEl) chkEl.style.width = card.chk + '%';
+  if (atkEl) atkEl.style.width = safeNumber(card.atk) + '%';
+  if (defEl) defEl.style.width = safeNumber(card.def) + '%';
+  if (chkEl) chkEl.style.width = safeNumber(card.chk) + '%';
   if (starsEl) starsEl.textContent = '★ '.repeat(card.stars) + '☆ '.repeat(5 - card.stars);
   if (rarityEl) rarityEl.textContent = card.rarity;
 }
@@ -485,35 +485,35 @@ function createInventoryCardElement(entry) {
   const starStr = '★ '.repeat(starsFull) + '☆ '.repeat(starsEmpty);
 
   wrapper.innerHTML =
-    '<div class="card-container ' + entry.rarityClass + '-tier inventory-card">' +
+    '<div class="card-container ' + safeRarityClass(entry.rarityClass) + '-tier inventory-card">' +
       '<div class="card-inner">' +
         '<div class="card-header">' +
           '<span class="card-title">' + escapeHtml(entry.name) + '</span>' +
-          '<div class="ovr-badge">' + entry.ovr + ' OVR</div>' +
+          '<div class="ovr-badge">' + safeNumber(entry.ovr) + ' OVR</div>' +
         '</div>' +
         '<div class="card-image-window">' +
-          '<img src="' + entry.img + '" alt="' + escapeHtml(entry.name) + '" onerror="this.onerror=null;this.src=\'./public/images/naruto__part_1__by_masonengine_daim8u2.png\'">' +
+          '<img src="' + safeImageSrc(entry.img) + '" alt="' + escapeAttr(entry.name) + '" onerror="this.onerror=null;this.src=\'./public/images/naruto__part_1__by_masonengine_daim8u2.png\'">' +
         '</div>' +
         '<div class="card-details-panel">' +
           '<div class="jutsu-name">' + escapeHtml(entry.jutsu) + '</div>' +
           '<div class="summon-type">Summon: ' + escapeHtml(entry.summon) + '</div>' +
           '<div class="stat-bars">' +
-            '<div class="stat-row"><span class="stat-label">ATK</span><div class="stat-track"><div class="stat-fill" style="width:' + entry.atk + '%"></div></div></div>' +
-            '<div class="stat-row"><span class="stat-label">DEF</span><div class="stat-track"><div class="stat-fill" style="width:' + entry.def + '%"></div></div></div>' +
-            '<div class="stat-row"><span class="stat-label">CHK</span><div class="stat-track"><div class="stat-fill" style="width:' + entry.chk + '%"></div></div></div>' +
+            '<div class="stat-row"><span class="stat-label">ATK</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(entry.atk) + '%"></div></div></div>' +
+            '<div class="stat-row"><span class="stat-label">DEF</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(entry.def) + '%"></div></div></div>' +
+            '<div class="stat-row"><span class="stat-label">CHK</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(entry.chk) + '%"></div></div></div>' +
           '</div>' +
         '</div>' +
         '<div class="card-footer">' +
           '<div class="stars-rating">' + starStr + '</div>' +
-          '<span class="rarity-tag">' + entry.rarity + '</span>' +
+          '<span class="rarity-tag">' + escapeHtml(entry.rarity) + '</span>' +
         '</div>' +
       '</div>' +
     '</div>' +
     '<div class="inventory-card-meta">' +
       '<h4>' + escapeHtml(entry.name) + '</h4>' +
-      '<p>' + entry.ovr + ' OVR · ' + entry.stars + '-Star ' + entry.rarity + '</p>' +
+      '<p>' + safeNumber(entry.ovr) + ' OVR · ' + safeNumber(entry.stars) + '-Star ' + escapeHtml(entry.rarity) + '</p>' +
     '</div>' +
-    (entry.quantity > 1 ? '<span class="inventory-quantity-badge">x' + entry.quantity + '</span>' : '');
+    (entry.quantity > 1 ? '<span class="inventory-quantity-badge">x' + safeNumber(entry.quantity) + '</span>' : '');
 
   wrapper.addEventListener('click', () => openInventoryCardModal(entry.id));
   return wrapper;
@@ -554,34 +554,34 @@ function openInventoryCardModal(cardId) {
     '<div class="inventory-modal-stage">' +
       '<div class="inventory-modal-head">' +
         '<h3>' + escapeHtml(entry.name) + '</h3>' +
-        '<span class="reveal-tier-tag ' + entry.rarityClass + '-tag">' + entry.stars + '★ ' + entry.rarity + '</span>' +
+        '<span class="reveal-tier-tag ' + safeRarityClass(entry.rarityClass) + '-tag">' + safeNumber(entry.stars) + '★ ' + escapeHtml(entry.rarity) + '</span>' +
       '</div>' +
-      '<div class="card-container ' + entry.rarityClass + '-tier">' +
+      '<div class="card-container ' + safeRarityClass(entry.rarityClass) + '-tier">' +
         '<div class="card-inner">' +
           '<div class="card-header">' +
             '<span class="card-title">' + escapeHtml(entry.name) + '</span>' +
-            '<div class="ovr-badge">' + entry.ovr + ' OVR</div>' +
+            '<div class="ovr-badge">' + safeNumber(entry.ovr) + ' OVR</div>' +
           '</div>' +
           '<div class="card-image-window">' +
-            '<img src="' + entry.img + '" alt="' + escapeHtml(entry.name) + '" onerror="this.onerror=null;this.src=\'./public/images/naruto__part_1__by_masonengine_daim8u2.png\'">' +
+            '<img src="' + safeImageSrc(entry.img) + '" alt="' + escapeAttr(entry.name) + '" onerror="this.onerror=null;this.src=\'./public/images/naruto__part_1__by_masonengine_daim8u2.png\'">' +
           '</div>' +
           '<div class="card-details-panel">' +
             '<div class="jutsu-name">' + escapeHtml(entry.jutsu) + '</div>' +
             '<div class="summon-type">Summon: ' + escapeHtml(entry.summon) + '</div>' +
             '<div class="stat-bars">' +
-              '<div class="stat-row"><span class="stat-label">ATK</span><div class="stat-track"><div class="stat-fill" style="width:' + entry.atk + '%"></div></div></div>' +
-              '<div class="stat-row"><span class="stat-label">DEF</span><div class="stat-track"><div class="stat-fill" style="width:' + entry.def + '%"></div></div></div>' +
-              '<div class="stat-row"><span class="stat-label">CHK</span><div class="stat-track"><div class="stat-fill" style="width:' + entry.chk + '%"></div></div></div>' +
+              '<div class="stat-row"><span class="stat-label">ATK</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(entry.atk) + '%"></div></div></div>' +
+              '<div class="stat-row"><span class="stat-label">DEF</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(entry.def) + '%"></div></div></div>' +
+              '<div class="stat-row"><span class="stat-label">CHK</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(entry.chk) + '%"></div></div></div>' +
             '</div>' +
           '</div>' +
           '<div class="card-footer">' +
             '<div class="stars-rating">' + starStr + '</div>' +
-            '<span class="rarity-tag">' + entry.rarity + '</span>' +
+            '<span class="rarity-tag">' + escapeHtml(entry.rarity) + '</span>' +
           '</div>' +
         '</div>' +
       '</div>' +
       '<div class="inventory-modal-details">' +
-        '<p>Owned Copies: x' + entry.quantity + '</p>' +
+        '<p>Owned Copies: x' + safeNumber(entry.quantity) + '</p>' +
         '<p>Upgrade Cost: ' + upgradeCost + ' Coins</p>' +
         '<p>Sell Value: +' + sellValue + ' Coins</p>' +
       '</div>' +
@@ -676,7 +676,7 @@ function upgradeCard(cardId) {
   saveGameStateToStorage();
   renderInventoryGrid();
   openInventoryCardModal(cardId);
-  showToastNotification(card.name + ' upgraded to ' + card.stars + '★ for ' + cost + ' Coins.');
+  showToastNotification(card.name + ' upgraded to ' + safeNumber(card.stars) + '★ for ' + cost + ' Coins.');
 }
 
 function sellCard(cardId) {
@@ -857,36 +857,70 @@ function createCardElement(card) {
   const starStr = '★ '.repeat(starsFull) + '☆ '.repeat(starsEmpty);
 
   wrapper.innerHTML =
-    '<div class="card-container ' + card.rarityClass + '-tier">' +
+    '<div class="card-container ' + safeRarityClass(card.rarityClass) + '-tier">' +
       '<div class="card-inner">' +
         '<div class="card-header">' +
           '<span class="card-title">' + escapeHtml(card.name) + '</span>' +
-          '<div class="ovr-badge">' + card.ovr + ' OVR</div>' +
+          '<div class="ovr-badge">' + safeNumber(card.ovr) + ' OVR</div>' +
         '</div>' +
         '<div class="card-image-window">' +
-          '<img src="' + card.img + '" alt="' + escapeHtml(card.name) + '" onerror="this.onerror=null;this.src=\'./public/images/naruto__part_1__by_masonengine_daim8u2.png\'">' +
+          '<img src="' + safeImageSrc(card.img) + '" alt="' + escapeAttr(card.name) + '" onerror="this.onerror=null;this.src=\'./public/images/naruto__part_1__by_masonengine_daim8u2.png\'">' +
         '</div>' +
         '<div class="card-details-panel">' +
           '<div class="jutsu-name">' + escapeHtml(card.jutsu) + '</div>' +
           '<div class="summon-type">Summon: ' + escapeHtml(card.summon) + '</div>' +
           '<div class="stat-bars">' +
-            '<div class="stat-row"><span class="stat-label">ATK</span><div class="stat-track"><div class="stat-fill" style="width:' + card.atk + '%"></div></div></div>' +
-            '<div class="stat-row"><span class="stat-label">DEF</span><div class="stat-track"><div class="stat-fill" style="width:' + card.def + '%"></div></div></div>' +
-            '<div class="stat-row"><span class="stat-label">CHK</span><div class="stat-track"><div class="stat-fill" style="width:' + card.chk + '%"></div></div></div>' +
+            '<div class="stat-row"><span class="stat-label">ATK</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(card.atk) + '%"></div></div></div>' +
+            '<div class="stat-row"><span class="stat-label">DEF</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(card.def) + '%"></div></div></div>' +
+            '<div class="stat-row"><span class="stat-label">CHK</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(card.chk) + '%"></div></div></div>' +
           '</div>' +
         '</div>' +
         '<div class="card-footer">' +
           '<div class="stars-rating">' + starStr + '</div>' +
-          '<span class="rarity-tag">' + card.rarity + '</span>' +
+          '<span class="rarity-tag">' + escapeHtml(card.rarity) + '</span>' +
         '</div>' +
       '</div>' +
     '</div>' +
     '<div class="card-meta-info">' +
       '<h4>' + escapeHtml(card.name) + '</h4>' +
-      '<p>' + card.ovr + ' OVR · ' + card.stars + '-Star ' + card.rarity + '</p>' +
+      '<p>' + safeNumber(card.ovr) + ' OVR · ' + safeNumber(card.stars) + '-Star ' + escapeHtml(card.rarity) + '</p>' +
     '</div>';
 
   return wrapper;
+}
+
+const FALLBACK_CARD_IMAGE = './public/images/naruto__part_1__by_masonengine_daim8u2.png';
+const VALID_RARITY_CLASSES = ['gold', 'silver', 'bronze'];
+
+function escapeAttr(value) {
+  return String(value == null ? '' : value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function safeImageUrl(value) {
+  const src = String(value == null ? '' : value).trim();
+  if (!src) return FALLBACK_CARD_IMAGE;
+  if (/["'<>\\`]/.test(src)) return FALLBACK_CARD_IMAGE;
+  const scheme = src.match(/^([a-z][a-z0-9+.-]*):/i);
+  if (scheme && !/^https?$/i.test(scheme[1])) return FALLBACK_CARD_IMAGE;
+  return src;
+}
+
+function safeImageSrc(value) {
+  return escapeAttr(safeImageUrl(value));
+}
+
+function safeNumber(value, fallback = 0) {
+  const num = Number(value);
+  return Number.isFinite(num) ? num : fallback;
+}
+
+function safeRarityClass(value) {
+  return VALID_RARITY_CLASSES.includes(value) ? value : 'bronze';
 }
 
 function escapeHtml(str) {
@@ -1006,27 +1040,27 @@ function showGachaResultModal(cards) {
   const cardsMarkup = results.map(card => {
     const starStr = '★ '.repeat(card.stars) + '☆ '.repeat(5 - card.stars);
     return '<div class="gacha-result-card">' +
-      '<div class="card-container ' + card.rarityClass + '-tier modal-card-animate">' +
+      '<div class="card-container ' + safeRarityClass(card.rarityClass) + '-tier modal-card-animate">' +
         '<div class="card-inner">' +
           '<div class="card-header">' +
             '<span class="card-title">' + escapeHtml(card.name) + '</span>' +
-            '<div class="ovr-badge">' + card.ovr + ' OVR</div>' +
+            '<div class="ovr-badge">' + safeNumber(card.ovr) + ' OVR</div>' +
           '</div>' +
           '<div class="card-image-window">' +
-            '<img src="' + card.img + '" alt="' + escapeHtml(card.name) + '" onerror="this.onerror=null;this.src=\'./public/images/naruto__part_1__by_masonengine_daim8u2.png\'">' +
+            '<img src="' + safeImageSrc(card.img) + '" alt="' + escapeAttr(card.name) + '" onerror="this.onerror=null;this.src=\'./public/images/naruto__part_1__by_masonengine_daim8u2.png\'">' +
           '</div>' +
           '<div class="card-details-panel">' +
             '<div class="jutsu-name">' + escapeHtml(card.jutsu) + '</div>' +
             '<div class="summon-type">Summon: ' + escapeHtml(card.summon) + '</div>' +
             '<div class="stat-bars">' +
-              '<div class="stat-row"><span class="stat-label">ATK</span><div class="stat-track"><div class="stat-fill" style="width:' + card.atk + '%"></div></div></div>' +
-              '<div class="stat-row"><span class="stat-label">DEF</span><div class="stat-track"><div class="stat-fill" style="width:' + card.def + '%"></div></div></div>' +
-              '<div class="stat-row"><span class="stat-label">CHK</span><div class="stat-track"><div class="stat-fill" style="width:' + card.chk + '%"></div></div></div>' +
+              '<div class="stat-row"><span class="stat-label">ATK</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(card.atk) + '%"></div></div></div>' +
+              '<div class="stat-row"><span class="stat-label">DEF</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(card.def) + '%"></div></div></div>' +
+              '<div class="stat-row"><span class="stat-label">CHK</span><div class="stat-track"><div class="stat-fill" style="width:' + safeNumber(card.chk) + '%"></div></div></div>' +
             '</div>' +
           '</div>' +
           '<div class="card-footer">' +
             '<div class="stars-rating">' + starStr + '</div>' +
-            '<span class="rarity-tag">' + card.rarity + '</span>' +
+            '<span class="rarity-tag">' + escapeHtml(card.rarity) + '</span>' +
           '</div>' +
         '</div>' +
       '</div>' +
@@ -1037,7 +1071,7 @@ function showGachaResultModal(cards) {
     '<div class="gacha-reveal-stage">' +
       '<div class="gacha-reveal-title">' +
         '<h3>Pack Opened!</h3>' +
-        '<span class="reveal-tier-tag ' + results[0].rarityClass + '-tag">' + results.length + ' Card' + (results.length > 1 ? 's' : '') + ' Revealed</span>' +
+        '<span class="reveal-tier-tag ' + safeRarityClass(results[0].rarityClass) + '-tag">' + results.length + ' Card' + (results.length > 1 ? 's' : '') + ' Revealed</span>' +
       '</div>' +
       '<div class="gacha-results-grid">' + cardsMarkup + '</div>' +
       '<div class="gacha-modal-actions">' +
