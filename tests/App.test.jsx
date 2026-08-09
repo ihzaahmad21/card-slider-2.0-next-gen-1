@@ -80,6 +80,98 @@ describe('App', () => {
       expect(storedInventory()).toEqual([]);
     });
 
+    it('ignores a stored inventory that is not an array', () => {
+      localStorage.setItem(INVENTORY_KEY, '{"id":1}');
+
+      render(<App />);
+
+      expect(storedInventory()).toEqual([]);
+    });
+
+    it.each([
+      ['a negative balance', '-500'],
+      ['a non-numeric balance', 'nine hundred'],
+      ['an infinite balance', 'Infinity']
+    ])('falls back to the default coin balance for %s', (_label, stored) => {
+      localStorage.setItem(COINS_KEY, stored);
+
+      render(<App />);
+
+      expect(coinBalance()).toContain('1,500 COINS');
+    });
+
+    it('keeps a zero coin balance', () => {
+      localStorage.setItem(COINS_KEY, '0');
+
+      render(<App />);
+
+      expect(coinBalance()).toContain('0 COINS');
+    });
+
+    it('re-validates every field of a stored inventory item', async () => {
+      localStorage.setItem(
+        INVENTORY_KEY,
+        JSON.stringify([
+          {
+            id: 5,
+            instanceId: 42,
+            name: null,
+            rarity: null,
+            rarityClass: 'mythic',
+            img: 'javascript:alert(1)',
+            jutsu: null,
+            summon: null,
+            ovr: 'nope',
+            stars: 'nope',
+            atk: null,
+            def: undefined,
+            chk: 'nope',
+            quantity: 'nope',
+            plusLevel: 'nope'
+          }
+        ])
+      );
+
+      render(<App />);
+
+      await waitFor(() => expect(storedInventory()).toHaveLength(1));
+      const [item] = storedInventory();
+      expect(item).toMatchObject({
+        id: 5,
+        name: 'Unknown Shinobi',
+        rarity: 'BRONZE',
+        rarityClass: 'bronze',
+        img: '/images/naruto__part_1__by_masonengine_daim8u2.png',
+        jutsu: 'Secret Ninja Art',
+        summon: 'Unknown Spirit',
+        ovr: 70,
+        stars: 1,
+        atk: 0, // null coerces to a finite 0, so the fallback does not apply
+        def: 50,
+        chk: 50,
+        quantity: 1,
+        plusLevel: 0
+      });
+      expect(typeof item.instanceId).toBe('string');
+    });
+
+    it('keeps http image urls and drops entries without an id', async () => {
+      localStorage.setItem(
+        INVENTORY_KEY,
+        JSON.stringify([
+          { ...makeInventoryItem({ id: 6, instanceId: 'remote' }), img: 'https://cdn.test/a.webp' },
+          { name: 'No id' },
+          null,
+          'not an object'
+        ])
+      );
+
+      render(<App />);
+
+      await waitFor(() => expect(storedInventory()).toHaveLength(1));
+      expect(storedInventory()[0].img).toBe('https://cdn.test/a.webp');
+    });
+
     it('warns instead of throwing when persistence fails', () => {
       const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
       const setItem = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
