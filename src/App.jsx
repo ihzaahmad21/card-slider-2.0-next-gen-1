@@ -35,17 +35,20 @@ const STORAGE_KEYS = {
 
 const DEFAULTS = { coins: 1500, rateBoosters: 0, inventory: [] };
 
+const VALID_RARITY_CLASSES = ['gold', 'silver', 'bronze'];
+const FALLBACK_CARD_IMAGE = '/images/naruto__part_1__by_masonengine_daim8u2.png';
+
 function logError(scope, err) {
   console.error(`[ShinobiTCG] ${scope}:`, err);
 }
 
 function readStoredNumber(key, fallback, errors) {
   try {
-    const raw = localStorage.getItem(key);
-    if (raw === null) return fallback;
-    const parsed = Number(raw);
-    if (!Number.isFinite(parsed)) {
-      throw new Error(`stored value is not a finite number: ${JSON.stringify(raw)}`);
+    const saved = localStorage.getItem(key);
+    if (saved === null) return fallback;
+    const parsed = Number(saved);
+    if (!Number.isFinite(parsed) || parsed < 0) {
+      throw new Error(`stored value is not a non-negative number: ${JSON.stringify(saved)}`);
     }
     return parsed;
   } catch (err) {
@@ -55,15 +58,56 @@ function readStoredNumber(key, fallback, errors) {
   }
 }
 
+function sanitizeImagePath(value) {
+  const src = String(value == null ? '' : value).trim();
+  if (!src) return FALLBACK_CARD_IMAGE;
+  const scheme = src.match(/^([a-z][a-z0-9+.-]*):/i);
+  if (scheme && !/^https?$/i.test(scheme[1])) return FALLBACK_CARD_IMAGE;
+  return src;
+}
+
+function sanitizeNumber(value, fallback) {
+  const num = Number(value);
+  return Number.isFinite(num) ? num : fallback;
+}
+
+// Persisted inventory is user-writable (localStorage), so every field is
+// re-validated rather than trusted as stored.
+function sanitizeInventoryItem(item) {
+  if (!item || typeof item !== 'object' || item.id === undefined || item.id === null) return null;
+  return {
+    id: item.id,
+    instanceId: typeof item.instanceId === 'string' ? item.instanceId : `${item.id}-${Math.random().toString(36).slice(2, 8)}`,
+    name: String(item.name == null ? 'Unknown Shinobi' : item.name),
+    rarity: String(item.rarity == null ? 'BRONZE' : item.rarity),
+    rarityClass: VALID_RARITY_CLASSES.includes(item.rarityClass) ? item.rarityClass : 'bronze',
+    img: sanitizeImagePath(item.img),
+    jutsu: String(item.jutsu == null ? 'Secret Ninja Art' : item.jutsu),
+    summon: String(item.summon == null ? 'Unknown Spirit' : item.summon),
+    ovr: sanitizeNumber(item.ovr, 70),
+    stars: sanitizeNumber(item.stars, 1),
+    atk: sanitizeNumber(item.atk, 50),
+    def: sanitizeNumber(item.def, 50),
+    chk: sanitizeNumber(item.chk, 50),
+    quantity: sanitizeNumber(item.quantity, 1),
+    plusLevel: sanitizeNumber(item.plusLevel, 0)
+  };
+}
+
 function readStoredInventory(key, fallback, errors) {
   try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return fallback;
-    const parsed = JSON.parse(raw);
+    const saved = localStorage.getItem(key);
+    if (!saved) return fallback;
+    const parsed = JSON.parse(saved);
     if (!Array.isArray(parsed)) {
       throw new Error(`stored inventory is not an array (got ${typeof parsed})`);
     }
-    return parsed.filter(item => item && typeof item === 'object');
+    const sanitized = parsed.map(sanitizeInventoryItem).filter(Boolean);
+    if (sanitized.length !== parsed.length) {
+      logError(`Dropped ${parsed.length - sanitized.length} unusable inventory entr(ies) from "${key}"`, new Error('invalid inventory entries'));
+      errors.push(key);
+    }
+    return sanitized;
   } catch (err) {
     logError(`Failed to read "${key}" from localStorage`, err);
     errors.push(key);
