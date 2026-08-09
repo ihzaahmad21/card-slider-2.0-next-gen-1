@@ -17,11 +17,11 @@ export default function Storm4Modal({
   // --- Dual-Image Strategy ---
   // Grid uses lightweight .webp thumbnail; Modal loads full HD .png from /images/HD/
   const buildHdPath = (img) =>
-    img
-      .replace('/images/', '/images/HD/')
-      .replace('.webp', '.png');
+    typeof img === 'string'
+      ? img.replace('/images/', '/images/HD/').replace('.webp', '.png')
+      : '';
 
-  const [imgSrc, setImgSrc] = useState(() => card ? buildHdPath(card.img) : '');
+  const [imgSrc, setImgSrc] = useState(() => (card ? buildHdPath(card.img) : ''));
   const [imgLoaded, setImgLoaded] = useState(false);
   const [selectedMaterialId, setSelectedMaterialId] = useState('');
 
@@ -95,10 +95,17 @@ export default function Storm4Modal({
     onClose();
   };
 
-  // HD fallback: if HD png fails to load, fall back to original grid .webp
-  const handleImageError = (e) => {
-    e.target.onerror = null;
-    setImgSrc(card.img);
+  // HD fallback: if HD png fails to load, fall back to original grid .webp.
+  // If the fallback also fails, stop the shimmer so the panel is not stuck loading.
+  const handleImageError = () => {
+    const fallback = card && card.img ? card.img : '';
+    if (fallback && imgSrc !== fallback) {
+      console.warn(`[ShinobiTCG] HD artwork failed to load for "${card.name}", falling back to ${fallback}`);
+      setImgSrc(fallback);
+      return;
+    }
+    console.error(`[ShinobiTCG] No artwork could be loaded for "${card && card.name}" (tried: ${imgSrc || 'none'})`);
+    setImgLoaded(true);
   };
 
   return (
@@ -236,7 +243,12 @@ export default function Storm4Modal({
                 </div>
                 <button
                   className="storm4-action-btn storm4-btn-sell"
-                  onClick={() => onSell && onSell(inventoryEntry ? inventoryEntry.instanceId || inventoryEntry.id : card.id)}
+                  onClick={() => {
+                    const sellKey = inventoryEntry
+                      ? inventoryEntry.instanceId || inventoryEntry.id
+                      : card.instanceId || card.id;
+                    if (onSell) onSell(sellKey);
+                  }}
                 >
                   SELL  +{sellValue}C
                 </button>

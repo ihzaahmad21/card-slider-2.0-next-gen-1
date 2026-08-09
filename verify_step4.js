@@ -10,11 +10,37 @@
  * Run: node verify_step4.js
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 
 // ── Load dataset (root cards.json is the source of truth) ──
-const rawCards = JSON.parse(fs.readFileSync(path.join(__dirname, 'cards.json'), 'utf8'));
+const datasetPath = path.join(scriptDir, 'cards.json');
+
+function loadDataset(filePath) {
+  let contents;
+  try {
+    contents = fs.readFileSync(filePath, 'utf8');
+  } catch (err) {
+    console.error(`FATAL: cannot read dataset at ${filePath}: ${err.message}`);
+    process.exit(1);
+  }
+
+  try {
+    const parsed = JSON.parse(contents);
+    if (!Array.isArray(parsed)) {
+      throw new Error(`expected an array, got ${typeof parsed}`);
+    }
+    return parsed;
+  } catch (err) {
+    console.error(`FATAL: invalid dataset at ${filePath}: ${err.message}`);
+    process.exit(1);
+  }
+}
+
+const rawCards = loadDataset(datasetPath);
 
 // ── 1. Dataset integrity ──
 console.log('═══════════════════════════════════════════════════════════');
@@ -52,7 +78,7 @@ check('BRONZE count = 103', rarityCounts['BRONZE'] === 103, `${rarityCounts['BRO
 // ── 2. Image path existence ──
 const missingImages = rawCards.filter(c => {
   const imgFile = c.image_url.replace(/^\/?public\//, '').replace(/^\/?images\//, '');
-  const fullPath = path.join(__dirname, 'public', 'images', imgFile);
+  const fullPath = path.join(scriptDir, 'public', 'images', imgFile);
   return !fs.existsSync(fullPath);
 });
 check('All 190 image files exist on disk', missingImages.length === 0,
