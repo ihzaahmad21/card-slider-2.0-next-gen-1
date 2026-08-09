@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import masterCardsData from './data/cards.json';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
@@ -27,16 +27,33 @@ export const PACK_CONFIG = {
   }
 };
 
+const STORAGE_KEYS = {
+  coins: 'shinobiTCG.userCoins',
+  rateBoosters: 'shinobiTCG.rateBoosters',
+  inventory: 'shinobiTCG.userInventory'
+};
+
+const DEFAULTS = { coins: 1500, rateBoosters: 0, inventory: [] };
+
 const VALID_RARITY_CLASSES = ['gold', 'silver', 'bronze'];
 const FALLBACK_CARD_IMAGE = '/images/naruto__part_1__by_masonengine_daim8u2.png';
 
-function readStoredNumber(key, fallback) {
+function logError(scope, err) {
+  console.error(`[ShinobiTCG] ${scope}:`, err);
+}
+
+function readStoredNumber(key, fallback, errors) {
   try {
     const saved = localStorage.getItem(key);
     if (saved === null) return fallback;
     const parsed = Number(saved);
-    return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
-  } catch {
+    if (!Number.isFinite(parsed) || parsed < 0) {
+      throw new Error(`stored value is not a non-negative number: ${JSON.stringify(saved)}`);
+    }
+    return parsed;
+  } catch (err) {
+    logError(`Failed to read "${key}" from localStorage`, err);
+    errors.push(key);
     return fallback;
   }
 }
@@ -77,16 +94,39 @@ function sanitizeInventoryItem(item) {
   };
 }
 
-function readStoredInventory() {
+function readStoredInventory(key, fallback, errors) {
   try {
-    const saved = localStorage.getItem('shinobiTCG.userInventory');
-    if (!saved) return [];
+    const saved = localStorage.getItem(key);
+    if (!saved) return fallback;
     const parsed = JSON.parse(saved);
-    if (!Array.isArray(parsed)) return [];
-    return parsed.map(sanitizeInventoryItem).filter(Boolean);
-  } catch {
-    return [];
+    if (!Array.isArray(parsed)) {
+      throw new Error(`stored inventory is not an array (got ${typeof parsed})`);
+    }
+    const sanitized = parsed.map(sanitizeInventoryItem).filter(Boolean);
+    if (sanitized.length !== parsed.length) {
+      logError(`Dropped ${parsed.length - sanitized.length} unusable inventory entr(ies) from "${key}"`, new Error('invalid inventory entries'));
+      errors.push(key);
+    }
+    return sanitized;
+  } catch (err) {
+    logError(`Failed to read "${key}" from localStorage`, err);
+    errors.push(key);
+    return fallback;
   }
+}
+
+export function loadPersistedState() {
+  const errors = [];
+  return {
+    coins: readStoredNumber(STORAGE_KEYS.coins, DEFAULTS.coins, errors),
+    rateBoosters: readStoredNumber(STORAGE_KEYS.rateBoosters, DEFAULTS.rateBoosters, errors),
+    inventory: readStoredInventory(STORAGE_KEYS.inventory, DEFAULTS.inventory, errors),
+    errors
+  };
+}
+
+function getCardKey(card) {
+  return card.instanceId || card.id;
 }
 
 export function buildInventoryInstance(card, plusLevel = 0) {
@@ -99,14 +139,14 @@ export function buildInventoryInstance(card, plusLevel = 0) {
 }
 
 export default function App() {
-  const [coins, setCoins] = useState(() => readStoredNumber('shinobiTCG.userCoins', 1500));
+  const [persisted] = useState(loadPersistedState);
 
-  const [rateBoosters, setRateBoosters] = useState(() => readStoredNumber('shinobiTCG.rateBoosters', 0));
+  const [coins, setCoins] = useState(persisted.coins);
+  const [rateBoosters, setRateBoosters] = useState(persisted.rateBoosters);
+  const [inventory, setInventory] = useState(persisted.inventory);
 
   // Direct load from imported cards.json
   const [cards] = useState(() => processRawCards(masterCardsData));
-
-  const [inventory, setInventory] = useState(readStoredInventory);
 
   const [selectedCard, setSelectedCard] = useState(null);
   const [isShowcaseOpen, setIsShowcaseOpen] = useState(false);
@@ -114,17 +154,6 @@ export default function App() {
   const [isShopOpen, setIsShopOpen] = useState(false);
   const [gachaResults, setGachaResults] = useState(null);
   const [toasts, setToasts] = useState([]);
-
-  // Save game state to localStorage whenever coins, rateBoosters, or inventory changes
-  useEffect(() => {
-    try {
-      localStorage.setItem('shinobiTCG.userCoins', String(coins));
-      localStorage.setItem('shinobiTCG.rateBoosters', String(rateBoosters));
-      localStorage.setItem('shinobiTCG.userInventory', JSON.stringify(inventory));
-    } catch (err) {
-      console.warn('[ShinobiTCG] LocalStorage sync warning:', err);
-    }
-  }, [coins, rateBoosters, inventory]);
 
   // Toast Notification Helper
   const showToast = useCallback((message) => {
@@ -134,6 +163,31 @@ export default function App() {
       setToasts(prev => prev.filter(t => t.id !== id));
     }, 2800);
   }, []);
+
+  // Surface unreadable saved data instead of silently resetting to defaults
+  const loadErrorReported = useRef(false);
+  useEffect(() => {
+    if (loadErrorReported.current || persisted.errors.length === 0) return;
+    loadErrorReported.current = true;
+    showToast('Saved progress could not be read and was reset to defaults. See the console for details.');
+  }, [persisted, showToast]);
+
+  // Save game state to localStorage whenever coins, rateBoosters, or inventory changes
+  const saveErrorReported = useRef(false);
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEYS.coins, String(coins));
+      localStorage.setItem(STORAGE_KEYS.rateBoosters, String(rateBoosters));
+      localStorage.setItem(STORAGE_KEYS.inventory, JSON.stringify(inventory));
+      saveErrorReported.current = false;
+    } catch (err) {
+      logError('Failed to save progress to localStorage', err);
+      if (!saveErrorReported.current) {
+        saveErrorReported.current = true;
+        showToast('Progress could not be saved — your collection will be lost when you reload.');
+      }
+    }
+  }, [coins, rateBoosters, inventory, showToast]);
 
   // Card Draw Roll logic
   const rollSingleCard = useCallback((packType) => {
@@ -166,7 +220,11 @@ export default function App() {
   // Open Pack Handler
   const handleOpenPack = useCallback((packType, count = 1) => {
     const config = PACK_CONFIG[packType];
-    if (!config) return;
+    if (!config) {
+      logError('Open pack failed', new Error(`unknown pack type "${packType}"`));
+      showToast('That pack is unavailable right now.');
+      return;
+    }
 
     const totalCost = config.cost * count;
     if (coins < totalCost) {
@@ -174,16 +232,27 @@ export default function App() {
       return;
     }
 
-    setCoins(prev => prev - totalCost);
-
+    // Roll before charging so a failed roll never costs the player coins
     const pulled = [];
     for (let i = 0; i < count; i++) {
       const card = rollSingleCard(packType);
       if (card) pulled.push(card);
     }
 
+    if (pulled.length === 0) {
+      logError('Open pack failed', new Error(`no card could be rolled for pack "${packType}" (card pool size: ${cards.length})`));
+      showToast('Pack could not be opened — no cards available. You were not charged.');
+      return;
+    }
+
+    if (pulled.length < count) {
+      logError('Open pack partially failed', new Error(`rolled ${pulled.length} of ${count} cards for pack "${packType}"`));
+      showToast(`Only ${pulled.length} of ${count} pulls could be rolled — you were charged for ${pulled.length}.`);
+    }
+
+    setCoins(prev => prev - config.cost * pulled.length);
     setGachaResults(pulled);
-  }, [coins, rollSingleCard, showToast]);
+  }, [cards.length, coins, rollSingleCard, showToast]);
 
   // Keep Pulled Cards
   const handleKeepCards = useCallback(() => {
@@ -225,8 +294,8 @@ export default function App() {
     }
 
     // Ambil ID Unik (fallback ke id biasa jika instanceId kosong)
-    const mainKey = mainCard.instanceId || mainCard.id;
-    const matKey = materialCard.instanceId || materialCard.id;
+    const mainKey = getCardKey(mainCard);
+    const matKey = getCardKey(materialCard);
 
     if (mainKey === matKey && mainCard.instanceId && materialCard.instanceId) {
       showToast('Cannot use the same card as its own material!');
@@ -246,84 +315,94 @@ export default function App() {
       return;
     }
 
-    setInventory(prevInv => {
-      // 1. Cek ketersediaan material/tumbal
-      const hasMaterial = prevInv.some(item =>
-        item.instanceId ? item.instanceId === matKey : item.id === materialCard.id
-      );
+    // Validate against the current inventory *before* charging, so a failed
+    // refinement can never deduct coins or report a false success.
+    const hasMain = inventory.some(item => getCardKey(item) === mainKey);
+    if (!hasMain) {
+      logError('Refinement failed', new Error(`main card ${mainKey} not found in inventory`));
+      showToast('That card is no longer in your inventory.');
+      return;
+    }
 
-      if (!hasMaterial) {
-        showToast('Duplicate material not found in inventory.');
-        return prevInv;
-      }
-
-      // 2. Hapus HANYA 1 kartu material/tumbal secara presisi
-      let materialRemoved = false;
-      const filteredInv = prevInv.filter(item => {
-        const itemKey = item.instanceId || item.id;
-        if (!materialRemoved && itemKey === matKey && itemKey !== mainKey) {
-          materialRemoved = true;
-          return false; // Hapus kartu tumbal ini
-        }
-        return true;
-      });
-
-      // 3. Tambahkan +1 MURNI ke kartu utama
-      let updatedMainCard = null;
-      const nextInv = filteredInv.map(item => {
-        const itemKey = item.instanceId || item.id;
-        if (itemKey === mainKey) {
-          const newPlusLevel = (item.plusLevel || 0) + 1;
-          updatedMainCard = {
-            ...item,
-            plusLevel: newPlusLevel,
-            ovr: (item.ovr || 0) + 1,
-            atk: Math.min(99, (item.atk || 50) + 1),
-            def: Math.min(99, (item.def || 50) + 1),
-            chk: Math.min(99, (item.chk || 50) + 1)
-          };
-          return updatedMainCard;
-        }
-        return item;
-      });
-
-      // 4. Update selectedCard secara aman jika sedang dibuka di Modal
-      if (updatedMainCard && selectedCard) {
-        const selectedKey = selectedCard.instanceId || selectedCard.id;
-        if (selectedKey === mainKey) {
-          setSelectedCard(updatedMainCard);
-        }
-      }
-
-      return nextInv;
+    const hasMaterial = inventory.some(item => {
+      const itemKey = getCardKey(item);
+      return itemKey === matKey && itemKey !== mainKey;
     });
+    if (!hasMaterial) {
+      showToast('Duplicate material not found in inventory.');
+      return;
+    }
+
+    // 1. Hapus HANYA 1 kartu material/tumbal secara presisi
+    let materialRemoved = false;
+    const filteredInv = inventory.filter(item => {
+      const itemKey = getCardKey(item);
+      if (!materialRemoved && itemKey === matKey && itemKey !== mainKey) {
+        materialRemoved = true;
+        return false; // Hapus kartu tumbal ini
+      }
+      return true;
+    });
+
+    // 2. Tambahkan +1 MURNI ke kartu utama
+    let updatedMainCard = null;
+    const nextInv = filteredInv.map(item => {
+      if (getCardKey(item) !== mainKey) return item;
+      updatedMainCard = {
+        ...item,
+        plusLevel: (item.plusLevel || 0) + 1,
+        ovr: (item.ovr || 0) + 1,
+        atk: Math.min(99, (item.atk || 50) + 1),
+        def: Math.min(99, (item.def || 50) + 1),
+        chk: Math.min(99, (item.chk || 50) + 1)
+      };
+      return updatedMainCard;
+    });
+
+    if (!updatedMainCard) {
+      logError('Refinement failed', new Error(`main card ${mainKey} could not be upgraded`));
+      showToast('Refinement failed — nothing was changed.');
+      return;
+    }
+
+    setInventory(nextInv);
+
+    // Keep the open modal in sync with the refined card
+    if (selectedCard && getCardKey(selectedCard) === mainKey) {
+      setSelectedCard(updatedMainCard);
+    }
 
     setCoins(prev => prev - cost);
     showToast(`${mainCard.name} successfully upgraded to +${mainLevel + 1}!`);
-  }, [coins, selectedCard, showToast]);
+  }, [coins, inventory, selectedCard, showToast]);
 
   // Sell Card Handler
   const handleSellCard = useCallback((instanceId) => {
+    const cardIndex = inventory.findIndex(c => getCardKey(c) === instanceId);
+    if (cardIndex === -1) {
+      logError('Sell failed', new Error(`no inventory card matches key ${instanceId}`));
+      showToast('That card could not be sold — it is no longer in your inventory.');
+      return;
+    }
+
+    const card = inventory[cardIndex];
+    const sellValue = card.rarityClass === 'gold' ? 400 : (card.rarityClass === 'silver' ? 150 : 30);
+
     setInventory(prevInv => {
-      const cardIndex = prevInv.findIndex(c => c.instanceId === instanceId);
-      if (cardIndex === -1) return prevInv;
-
-      const card = prevInv[cardIndex];
-      const sellValue = card.rarityClass === 'gold' ? 400 : (card.rarityClass === 'silver' ? 150 : 30);
-
-      setCoins(c => c + sellValue);
-      showToast(`Sold ${card.name} for +${sellValue} Coins.`);
-
+      const index = prevInv.findIndex(c => getCardKey(c) === instanceId);
+      if (index === -1) return prevInv;
       const nextInv = [...prevInv];
-      nextInv.splice(cardIndex, 1);
-
-      if (selectedCard && selectedCard.instanceId === instanceId) {
-        setSelectedCard(null);
-      }
-
+      nextInv.splice(index, 1);
       return nextInv;
     });
-  }, [selectedCard, showToast]);
+
+    setCoins(c => c + sellValue);
+    showToast(`Sold ${card.name} for +${sellValue} Coins.`);
+
+    if (selectedCard && getCardKey(selectedCard) === instanceId) {
+      setSelectedCard(null);
+    }
+  }, [inventory, selectedCard, showToast]);
 
   // Buy Coins Handler
   const handleBuyCoins = useCallback((amount) => {
@@ -442,6 +521,10 @@ export default function App() {
 
 // Data Processor Function: Preserves all JSON values (OVR, Name, Rarity, Jutsu, Summon, Stats, Image)
 export function processRawCards(rawCards) {
+  if (!Array.isArray(rawCards)) {
+    throw new TypeError(`[ShinobiTCG] cards.json must contain an array of cards, got ${typeof rawCards}`);
+  }
+
   return rawCards.map(card => {
     const rawImg = card.image_url || card.img || '';
     let img = rawImg.replace(/^\/?public\//, '');

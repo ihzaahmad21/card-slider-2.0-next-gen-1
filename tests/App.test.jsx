@@ -172,16 +172,30 @@ describe('App', () => {
       expect(storedInventory()[0].img).toBe('https://cdn.test/a.webp');
     });
 
-    it('warns instead of throwing when persistence fails', () => {
-      const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    it('reports instead of throwing when persistence fails', async () => {
+      const error = vi.spyOn(console, 'error').mockImplementation(() => {});
       const setItem = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
         throw new Error('quota exceeded');
       });
 
       render(<App />);
 
-      expect(warn).toHaveBeenCalledWith('[ShinobiTCG] LocalStorage sync warning:', expect.any(Error));
+      expect(error).toHaveBeenCalledWith(
+        '[ShinobiTCG] Failed to save progress to localStorage:',
+        expect.any(Error)
+      );
+      expect(await screen.findByText(/Progress could not be saved/i)).toBeInTheDocument();
       setItem.mockRestore();
+    });
+
+    it('reports unreadable saved progress to the player', async () => {
+      const error = vi.spyOn(console, 'error').mockImplementation(() => {});
+      localStorage.setItem(COINS_KEY, 'not-a-number');
+
+      render(<App />);
+
+      expect(error).toHaveBeenCalled();
+      expect(await screen.findByText(/Saved progress could not be read/i)).toBeInTheDocument();
     });
   });
 

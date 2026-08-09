@@ -1,4 +1,4 @@
-const d = require('./cards.json');
+import d from './cards.json' with { type: 'json' };
 
 // Check GOLD RARE cards with low OVR
 var goldLow = d.filter(c => c.rarity === 'GOLD RARE' && c.ovr < 90);
