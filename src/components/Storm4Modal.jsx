@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
-
-function getSuccessRate(mainLevel, materialLevel) {
-  const baseRate = Math.max(100 - (mainLevel * 10), 5);
-  const materialBonus = (materialLevel - 1) * 8;
-  return Math.max(Math.min(baseRate + materialBonus, 90), 5);
-}
+import useEscapeKey from '../hooks/useEscapeKey.js';
+import { createBackdropClickHandler } from '../utils/modal.js';
+import {
+  MAX_PLUS_LEVEL,
+  RARITY_LABELS,
+  buildHdImagePath,
+  getCardKey,
+  getRarityClass,
+  getSellValue,
+  getStarString,
+  getUpgradeCost,
+  isSameCardInstance
+} from '../utils/cards.js';
 
 export default function Storm4Modal({
   card,
@@ -14,24 +21,13 @@ export default function Storm4Modal({
   onUpgrade,
   onSell
 }) {
-  // --- Dual-Image Strategy ---
-  // Grid uses lightweight .webp thumbnail; Modal loads full HD .png from /images/HD/
-  const buildHdPath = (img) =>
-    img
-      .replace('/images/', '/images/HD/')
-      .replace('.webp', '.png');
-
-  const [imgSrc, setImgSrc] = useState(() => card ? buildHdPath(card.img) : '');
+  const [imgSrc, setImgSrc] = useState(() => card ? buildHdImagePath(card.img) : '');
   const [imgLoaded, setImgLoaded] = useState(false);
   const [selectedMaterialId, setSelectedMaterialId] = useState('');
 
-  // ✅ REVISI: Cari murni berdasarkan instanceId dulu, kalau tidak ada baru berdasarkan ID unik kartu
-  const inventoryEntry = inventory ? inventory.find(item => {
-    if (card.instanceId && item.instanceId) {
-      return item.instanceId === card.instanceId;
-    }
-    return item.id === card.id;
-  }) : null;
+  const inventoryEntry = inventory
+    ? inventory.find(item => isSameCardInstance(item, card))
+    : null;
   const currentStars = inventoryEntry ? inventoryEntry.stars : card.stars;
   const currentOvr = inventoryEntry ? inventoryEntry.ovr : card.ovr;
   const currentAtk = inventoryEntry ? inventoryEntry.atk : card.atk;
@@ -40,9 +36,10 @@ export default function Storm4Modal({
   const currentPlusLevel = inventoryEntry ? (inventoryEntry.plusLevel || 0) : 0;
 
   const amountOwned = inventoryEntry ? (inventoryEntry.quantity || 1) : 0;
-  const upgradeCost = 200 * (currentPlusLevel + 1);
-  const sellValue = card.rarityClass === 'gold' ? 400 : (card.rarityClass === 'silver' ? 150 : 30);
-  const canUpgrade = Boolean(inventoryEntry) && currentPlusLevel < 10 && amountOwned > 1;
+  const upgradeCost = getUpgradeCost(currentPlusLevel);
+  const sellValue = getSellValue(card);
+  const rarityClass = getRarityClass(card);
+  const canUpgrade = Boolean(inventoryEntry) && currentPlusLevel < MAX_PLUS_LEVEL && amountOwned > 1;
   const isOwned = Boolean(inventoryEntry);
   const availableMaterials = inventory ? inventory.filter(item => {
     if (item.id !== card.id) return false;
@@ -55,18 +52,12 @@ export default function Storm4Modal({
   // Reset image state whenever the selected card changes
   useEffect(() => {
     if (card) {
-      setImgSrc(buildHdPath(card.img));
+      setImgSrc(buildHdImagePath(card.img));
       setImgLoaded(false);
     }
   }, [card]);
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose]);
+  useEscapeKey(onClose);
 
   useEffect(() => {
     if (availableMaterials.length > 0) {
@@ -78,17 +69,9 @@ export default function Storm4Modal({
     }
   }, [availableMaterials, selectedMaterialId]);
 
-  // Star display
-  const starsFull = currentStars || 1;
-  const starsEmpty = Math.max(0, 5 - starsFull);
-  const starStr = '★'.repeat(starsFull) + '☆'.repeat(starsEmpty);
+  const starStr = getStarString(currentStars);
 
-  const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
-      e.stopPropagation();
-      onClose();
-    }
-  };
+  const handleBackdropClick = createBackdropClickHandler(onClose, { stopPropagation: true });
 
   const handleCloseClick = (e) => {
     e.stopPropagation();
@@ -103,12 +86,12 @@ export default function Storm4Modal({
 
   return (
     <div className="storm4-modal-overlay" onClick={handleBackdropClick}>
-      <div className={`storm4-split-container storm4-rarity-${card.rarityClass || 'bronze'}`}>
+      <div className={`storm4-split-container storm4-rarity-${rarityClass}`}>
 
         {/* ── LEFT COLUMN: Full-body HD Character Showcase ── */}
         <div className="storm4-left-col">
           {/* Atmospheric rarity glow background */}
-          <div className={`storm4-artwork-bg storm4-bg-${card.rarityClass || 'bronze'}`} />
+          <div className={`storm4-artwork-bg storm4-bg-${rarityClass}`} />
 
           {/* Loading shimmer until HD image is ready */}
           {!imgLoaded && <div className="storm4-img-shimmer" />}
@@ -123,8 +106,8 @@ export default function Storm4Modal({
           />
 
           {/* Rarity watermark badge */}
-          <div className={`storm4-rarity-watermark storm4-rw-${card.rarityClass || 'bronze'}`}>
-            {card.rarityClass === 'gold' ? 'GOLD RARE' : card.rarityClass === 'silver' ? 'SILVER RARE' : 'BRONZE'}
+          <div className={`storm4-rarity-watermark storm4-rw-${rarityClass}`}>
+            {RARITY_LABELS[rarityClass]}
           </div>
         </div>
 
@@ -142,10 +125,10 @@ export default function Storm4Modal({
             <h2 className="storm4-card-name">
               {card.name}
               {currentPlusLevel > 0 && (
-                <span className={`storm4-plus-badge ${currentPlusLevel >= 10 ? 'storm4-plus-max' : ''}`}>+{currentPlusLevel}</span>
+                <span className={`storm4-plus-badge ${currentPlusLevel >= MAX_PLUS_LEVEL ? 'storm4-plus-max' : ''}`}>+{currentPlusLevel}</span>
               )}
             </h2>
-            <div className={`storm4-ovr-badge storm4-ovr-${card.rarityClass || 'bronze'}`}>
+            <div className={`storm4-ovr-badge storm4-ovr-${rarityClass}`}>
               <span className="storm4-ovr-num">{currentOvr}</span>
               <span className="storm4-ovr-label">OVR</span>
             </div>
@@ -153,7 +136,7 @@ export default function Storm4Modal({
 
           {/* Star Rating */}
           <div className="storm4-stars-row">
-            <span className={`storm4-stars storm4-stars-${card.rarityClass || 'bronze'}`}>
+            <span className={`storm4-stars storm4-stars-${rarityClass}`}>
               {starStr}
             </span>
           </div>
@@ -178,7 +161,7 @@ export default function Storm4Modal({
                 <label className="storm4-stat-label">{label}</label>
                 <div className="storm4-bar-track">
                   <div
-                    className={`storm4-bar-fill storm4-fill-${card.rarityClass || 'bronze'}`}
+                    className={`storm4-bar-fill storm4-fill-${rarityClass}`}
                     style={{ width: `${value || 50}%` }}
                   />
                 </div>
@@ -223,7 +206,7 @@ export default function Storm4Modal({
                   </div>
                   <button
                     className="storm4-action-btn storm4-btn-upgrade"
-                    disabled={currentPlusLevel >= 10 || !selectedMaterial || coins < upgradeCost}
+                    disabled={currentPlusLevel >= MAX_PLUS_LEVEL || !selectedMaterial || coins < upgradeCost}
                     // ✅ KODE REVISI (Pastiin selalu passing data kartu yang fresh):
                     onClick={() => {
                       if (onUpgrade && selectedMaterial) {
@@ -231,12 +214,12 @@ export default function Storm4Modal({
                       }
                     }}
                   >
-                    {currentPlusLevel >= 10 ? 'MAX +10' : `UPGRADE TO +${currentPlusLevel + 1}`}
+                    {currentPlusLevel >= MAX_PLUS_LEVEL ? `MAX +${MAX_PLUS_LEVEL}` : `UPGRADE TO +${currentPlusLevel + 1}`}
                   </button>
                 </div>
                 <button
                   className="storm4-action-btn storm4-btn-sell"
-                  onClick={() => onSell && onSell(inventoryEntry ? inventoryEntry.instanceId || inventoryEntry.id : card.id)}
+                  onClick={() => onSell && onSell(getCardKey(inventoryEntry) || card.id)}
                 >
                   SELL  +{sellValue}C
                 </button>

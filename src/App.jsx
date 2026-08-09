@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import masterCardsData from './data/cards.json';
+import BrandMark from './components/BrandMark.jsx';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import ShowcaseModal from './components/ShowcaseModal.jsx';
@@ -8,105 +9,32 @@ import ShopModal from './components/ShopModal.jsx';
 import Storm4Modal from './components/Storm4Modal.jsx';
 import GachaResultModal from './components/GachaResultModal.jsx';
 import ToastContainer from './components/ToastContainer.jsx';
-
-export const PACK_CONFIG = {
-  bronze: {
-    cost: 100,
-    rarityFilter: 'BRONZE',
-    starRates: [{ star: 1, threshold: 50 }, { star: 2, threshold: 90 }, { star: 3, threshold: 100 }]
-  },
-  silver: {
-    cost: 500,
-    rarityFilter: 'SILVER RARE',
-    starRates: [{ star: 3, threshold: 85 }, { star: 4, threshold: 100 }]
-  },
-  gold: {
-    cost: 1000,
-    rarityFilter: 'GOLD RARE',
-    starRates: [{ star: 4, threshold: 80 }, { star: 5, threshold: 100 }]
-  }
-};
-
-const VALID_RARITY_CLASSES = ['gold', 'silver', 'bronze'];
-const FALLBACK_CARD_IMAGE = '/images/naruto__part_1__by_masonengine_daim8u2.png';
-
-function readStoredNumber(key, fallback) {
-  try {
-    const saved = localStorage.getItem(key);
-    if (saved === null) return fallback;
-    const parsed = Number(saved);
-    return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
-  } catch {
-    return fallback;
-  }
-}
-
-function sanitizeImagePath(value) {
-  const src = String(value == null ? '' : value).trim();
-  if (!src) return FALLBACK_CARD_IMAGE;
-  const scheme = src.match(/^([a-z][a-z0-9+.-]*):/i);
-  if (scheme && !/^https?$/i.test(scheme[1])) return FALLBACK_CARD_IMAGE;
-  return src;
-}
-
-function sanitizeNumber(value, fallback) {
-  const num = Number(value);
-  return Number.isFinite(num) ? num : fallback;
-}
-
-// Persisted inventory is user-writable (localStorage), so every field is
-// re-validated rather than trusted as stored.
-function sanitizeInventoryItem(item) {
-  if (!item || typeof item !== 'object' || item.id === undefined || item.id === null) return null;
-  return {
-    id: item.id,
-    instanceId: typeof item.instanceId === 'string' ? item.instanceId : `${item.id}-${Math.random().toString(36).slice(2, 8)}`,
-    name: String(item.name == null ? 'Unknown Shinobi' : item.name),
-    rarity: String(item.rarity == null ? 'BRONZE' : item.rarity),
-    rarityClass: VALID_RARITY_CLASSES.includes(item.rarityClass) ? item.rarityClass : 'bronze',
-    img: sanitizeImagePath(item.img),
-    jutsu: String(item.jutsu == null ? 'Secret Ninja Art' : item.jutsu),
-    summon: String(item.summon == null ? 'Unknown Spirit' : item.summon),
-    ovr: sanitizeNumber(item.ovr, 70),
-    stars: sanitizeNumber(item.stars, 1),
-    atk: sanitizeNumber(item.atk, 50),
-    def: sanitizeNumber(item.def, 50),
-    chk: sanitizeNumber(item.chk, 50),
-    quantity: sanitizeNumber(item.quantity, 1),
-    plusLevel: sanitizeNumber(item.plusLevel, 0)
-  };
-}
-
-function readStoredInventory() {
-  try {
-    const saved = localStorage.getItem('shinobiTCG.userInventory');
-    if (!saved) return [];
-    const parsed = JSON.parse(saved);
-    if (!Array.isArray(parsed)) return [];
-    return parsed.map(sanitizeInventoryItem).filter(Boolean);
-  } catch {
-    return [];
-  }
-}
-
-export function buildInventoryInstance(card, plusLevel = 0) {
-  return {
-    ...card,
-    quantity: 1,
-    plusLevel: plusLevel,
-    instanceId: `${card.id}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
-  };
-}
+import { PACK_CONFIG } from './config/packs.js';
+import { processRawCards } from './utils/cardData.js';
+import {
+  MAX_PLUS_LEVEL,
+  buildInventoryInstance,
+  getCardKey,
+  getSellValue,
+  getUpgradeCost,
+  sanitizeInventory
+} from './utils/cards.js';
+import {
+  STORAGE_KEYS,
+  readStoredJson,
+  readStoredNumber,
+  writeStoredValues
+} from './utils/storage.js';
 
 export default function App() {
-  const [coins, setCoins] = useState(() => readStoredNumber('shinobiTCG.userCoins', 1500));
+  const [coins, setCoins] = useState(() => readStoredNumber(STORAGE_KEYS.coins, 1500));
 
-  const [rateBoosters, setRateBoosters] = useState(() => readStoredNumber('shinobiTCG.rateBoosters', 0));
+  const [rateBoosters, setRateBoosters] = useState(() => readStoredNumber(STORAGE_KEYS.rateBoosters, 0));
 
   // Direct load from imported cards.json
   const [cards] = useState(() => processRawCards(masterCardsData));
 
-  const [inventory, setInventory] = useState(readStoredInventory);
+  const [inventory, setInventory] = useState(() => sanitizeInventory(readStoredJson(STORAGE_KEYS.inventory, [])));
 
   const [selectedCard, setSelectedCard] = useState(null);
   const [isShowcaseOpen, setIsShowcaseOpen] = useState(false);
@@ -117,13 +45,11 @@ export default function App() {
 
   // Save game state to localStorage whenever coins, rateBoosters, or inventory changes
   useEffect(() => {
-    try {
-      localStorage.setItem('shinobiTCG.userCoins', String(coins));
-      localStorage.setItem('shinobiTCG.rateBoosters', String(rateBoosters));
-      localStorage.setItem('shinobiTCG.userInventory', JSON.stringify(inventory));
-    } catch (err) {
-      console.warn('[ShinobiTCG] LocalStorage sync warning:', err);
-    }
+    writeStoredValues({
+      [STORAGE_KEYS.coins]: String(coins),
+      [STORAGE_KEYS.rateBoosters]: String(rateBoosters),
+      [STORAGE_KEYS.inventory]: inventory
+    });
   }, [coins, rateBoosters, inventory]);
 
   // Toast Notification Helper
@@ -205,12 +131,7 @@ export default function App() {
   const handleQuickSell = useCallback(() => {
     if (!gachaResults || gachaResults.length === 0) return;
 
-    let totalCoins = 0;
-    gachaResults.forEach(card => {
-      if (card.rarityClass === 'gold') totalCoins += 400;
-      else if (card.rarityClass === 'silver') totalCoins += 150;
-      else totalCoins += 30;
-    });
+    const totalCoins = gachaResults.reduce((sum, card) => sum + getSellValue(card), 0);
 
     setCoins(prev => prev + totalCoins);
     showToast(`Quick sold for +${totalCoins.toLocaleString()} Coins!`);
@@ -225,8 +146,8 @@ export default function App() {
     }
 
     // Ambil ID Unik (fallback ke id biasa jika instanceId kosong)
-    const mainKey = mainCard.instanceId || mainCard.id;
-    const matKey = materialCard.instanceId || materialCard.id;
+    const mainKey = getCardKey(mainCard);
+    const matKey = getCardKey(materialCard);
 
     if (mainKey === matKey && mainCard.instanceId && materialCard.instanceId) {
       showToast('Cannot use the same card as its own material!');
@@ -234,10 +155,10 @@ export default function App() {
     }
 
     const mainLevel = mainCard.plusLevel || 0;
-    const cost = 200 * (mainLevel + 1);
+    const cost = getUpgradeCost(mainLevel);
 
-    if (mainLevel >= 10) {
-      showToast(`${mainCard.name} is already at MAX +10.`);
+    if (mainLevel >= MAX_PLUS_LEVEL) {
+      showToast(`${mainCard.name} is already at MAX +${MAX_PLUS_LEVEL}.`);
       return;
     }
 
@@ -260,7 +181,7 @@ export default function App() {
       // 2. Hapus HANYA 1 kartu material/tumbal secara presisi
       let materialRemoved = false;
       const filteredInv = prevInv.filter(item => {
-        const itemKey = item.instanceId || item.id;
+        const itemKey = getCardKey(item);
         if (!materialRemoved && itemKey === matKey && itemKey !== mainKey) {
           materialRemoved = true;
           return false; // Hapus kartu tumbal ini
@@ -271,7 +192,7 @@ export default function App() {
       // 3. Tambahkan +1 MURNI ke kartu utama
       let updatedMainCard = null;
       const nextInv = filteredInv.map(item => {
-        const itemKey = item.instanceId || item.id;
+        const itemKey = getCardKey(item);
         if (itemKey === mainKey) {
           const newPlusLevel = (item.plusLevel || 0) + 1;
           updatedMainCard = {
@@ -289,7 +210,7 @@ export default function App() {
 
       // 4. Update selectedCard secara aman jika sedang dibuka di Modal
       if (updatedMainCard && selectedCard) {
-        const selectedKey = selectedCard.instanceId || selectedCard.id;
+        const selectedKey = getCardKey(selectedCard);
         if (selectedKey === mainKey) {
           setSelectedCard(updatedMainCard);
         }
@@ -309,7 +230,7 @@ export default function App() {
       if (cardIndex === -1) return prevInv;
 
       const card = prevInv[cardIndex];
-      const sellValue = card.rarityClass === 'gold' ? 400 : (card.rarityClass === 'silver' ? 150 : 30);
+      const sellValue = getSellValue(card);
 
       setCoins(c => c + sellValue);
       showToast(`Sold ${card.name} for +${sellValue} Coins.`);
@@ -344,7 +265,6 @@ export default function App() {
         coins={coins}
         onOpenShowcase={() => setIsShowcaseOpen(true)}
         onOpenInventory={() => setIsInventoryOpen(true)}
-        onOpenInventory={() => setIsInventoryOpen(true)}
         onOpenShop={() => setIsShopOpen(true)}
       />
 
@@ -361,10 +281,7 @@ export default function App() {
       <footer className="footer">
         <div className="container">
           <div className="footer-content">
-            <div className="nav-brand">
-              <div className="brand-icon">忍</div>
-              <div className="brand-text">SHINOBI<span>TCG</span></div>
-            </div>
+            <BrandMark />
             <p className="footer-text">© 2026 Shinobi Card Slider 2.0 TCG React Application. All rights reserved.</p>
             <div className="footer-links">
               <a href="#home">Home</a>
@@ -405,7 +322,6 @@ export default function App() {
         }}
       />
 
-      // ✅ REVISI PERBAIKAN:
       <ShopModal
         isOpen={isShopOpen}
         onClose={() => setIsShopOpen(false)}
@@ -438,95 +354,4 @@ export default function App() {
       <ToastContainer toasts={toasts} />
     </div>
   );
-}
-
-// Data Processor Function: Preserves all JSON values (OVR, Name, Rarity, Jutsu, Summon, Stats, Image)
-export function processRawCards(rawCards) {
-  return rawCards.map(card => {
-    const rawImg = card.image_url || card.img || '';
-    let img = rawImg.replace(/^\/?public\//, '');
-    if (!img.startsWith('/') && !img.startsWith('http')) {
-      img = '/' + img;
-    }
-
-    let rarityClass = 'bronze';
-    let stars = card.stars;
-
-    if (card.rarity === 'GOLD RARE') {
-      rarityClass = 'gold';
-      if (!stars) {
-        if (card.ovr >= 95) stars = 5;
-        else if (card.ovr >= 88) stars = 4;
-        else stars = 3;
-      }
-    } else if (card.rarity === 'SILVER RARE') {
-      rarityClass = 'silver';
-      if (!stars) {
-        if (card.ovr >= 88) stars = 4;
-        else if (card.ovr >= 80) stars = 3;
-        else stars = 2;
-      }
-    } else {
-      rarityClass = 'bronze';
-      if (!stars) {
-        if (card.ovr <= 68) stars = 1;
-        else if (card.ovr <= 74) stars = 2;
-        else stars = 3;
-      }
-    }
-
-    const atk = card.atk !== undefined ? card.atk : clamp(card.ovr + ((card.id * 7) % 5) - 2, 50, 99);
-    const def = card.def !== undefined ? card.def : clamp(card.ovr - 3 + ((card.id * 3) % 4), 50, 99);
-    const chk = card.chk !== undefined ? card.chk : clamp(card.ovr + 2 - ((card.id * 11) % 5), 50, 99);
-
-    return {
-      id: card.id,
-      name: card.name,
-      ovr: card.ovr, // Preserves exact JSON OVR
-      rarity: card.rarity, // Preserves exact JSON rarity string
-      rarityClass: rarityClass,
-      stars: stars,
-      img: img,
-      jutsu: card.jutsu || getJutsuForCharacter(card.name),
-      summon: card.summon || getSummonForCharacter(card.name),
-      atk,
-      def,
-      chk
-    };
-  });
-}
-
-export function clamp(val, min, max) {
-  return Math.max(min, Math.min(max, val));
-}
-
-export function getJutsuForCharacter(name) {
-  const n = (name || '').toLowerCase();
-  if (n.includes('naruto') && n.includes('baryon')) return 'Rasengan / Baryon Tail';
-  if (n.includes('naruto') && n.includes('sage')) return 'Sage Art: Rasenshuriken';
-  if (n.includes('naruto') && n.includes('six paths')) return 'Truth-Seeking Orbs';
-  if (n.includes('naruto') && n.includes('bijuu')) return 'Tailed Beast Bomb';
-  if (n.includes('sasuke') && n.includes('rinne')) return "Indra's Arrow / Chidori";
-  if (n.includes('sasuke')) return 'Fire Release / Sharingan Genjutsu';
-  if (n.includes('kakashi')) return 'Raikiri / Kamui';
-  if (n.includes('itachi')) return 'Tsukuyomi / Amaterasu';
-  if (n.includes('madara')) return 'Tengai Shinsei / Susanoo';
-  if (n.includes('gaara')) return 'Sand Tsunami / Shield';
-  if (n.includes('guy')) return 'Night Guy / Morning Peacock';
-  if (n.includes('hashirama')) return 'Wood Style: Sage Art';
-  if (n.includes('minato')) return 'Flying Raijin / Rasengan';
-  return 'Secret Ninja Art';
-}
-
-export function getSummonForCharacter(name) {
-  const n = (name || '').toLowerCase();
-  if (n.includes('naruto')) return 'Nine-Tails Kurama';
-  if (n.includes('sasuke')) return 'Susanoo Armor';
-  if (n.includes('kakashi')) return 'Ninken Hounds';
-  if (n.includes('itachi')) return 'Crow Clone';
-  if (n.includes('gaara')) return 'Shukaku Sand';
-  if (n.includes('jiraiya') || n.includes('minato')) return 'Toad Gamabunta';
-  if (n.includes('tsunade') || n.includes('sakura')) return 'Katsuyu Slug';
-  if (n.includes('orochimaru')) return 'Giant Snake Manda';
-  return 'None';
 }

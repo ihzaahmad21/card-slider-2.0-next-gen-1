@@ -1,23 +1,22 @@
 import React from 'react';
+import {
+  FALLBACK_CARD_IMAGE,
+  createImageFallbackHandler,
+  getRarityClass,
+  getStarString
+} from '../utils/cards.js';
+
+const handleImageError = createImageFallbackHandler(FALLBACK_CARD_IMAGE);
 
 export default function CardContainer({ card, onClick, className = '' }) {
   if (!card) return null;
 
-  const starsFull = card.stars || 1;
-  const starsEmpty = Math.max(0, 5 - starsFull);
-  const starStr = '★ '.repeat(starsFull) + '☆ '.repeat(starsEmpty);
+  const starStr = getStarString(card.stars, ' ');
   const plusLevel = Math.max(0, Number(card.plusLevel || 0));
-
-  const fallbackImage = '/images/naruto__part_1__by_masonengine_daim8u2.png';
-
-  const handleImageError = (e) => {
-    e.target.onerror = null;
-    e.target.src = fallbackImage;
-  };
 
   return (
     <div
-      className={`card-container ${card.rarityClass || 'bronze'}-tier ${className}`}
+      className={`card-container ${getRarityClass(card)}-tier ${className}`}
       onClick={onClick}
     >
       <div className="card-inner">
@@ -33,7 +32,7 @@ export default function CardContainer({ card, onClick, className = '' }) {
         {/* Card Image Window */}
         <div className="card-image-window">
           <img
-            src={card.img || fallbackImage}
+            src={card.img || FALLBACK_CARD_IMAGE}
             alt={card.name}
             loading="lazy"
             onError={handleImageError}
@@ -46,24 +45,18 @@ export default function CardContainer({ card, onClick, className = '' }) {
           <div className="summon-type">Summon: {card.summon || 'None'}</div>
 
           <div className="stat-bars">
-            <div className="stat-row">
-              <span className="stat-label">ATK</span>
-              <div className="stat-track">
-                <div className="stat-fill" style={{ width: `${card.atk || 50}%` }}></div>
+            {[
+              { label: 'ATK', value: card.atk },
+              { label: 'DEF', value: card.def },
+              { label: 'CHK', value: card.chk }
+            ].map(({ label, value }) => (
+              <div className="stat-row" key={label}>
+                <span className="stat-label">{label}</span>
+                <div className="stat-track">
+                  <div className="stat-fill" style={{ width: `${value || 50}%` }}></div>
+                </div>
               </div>
-            </div>
-            <div className="stat-row">
-              <span className="stat-label">DEF</span>
-              <div className="stat-track">
-                <div className="stat-fill" style={{ width: `${card.def || 50}%` }}></div>
-              </div>
-            </div>
-            <div className="stat-row">
-              <span className="stat-label">CHK</span>
-              <div className="stat-track">
-                <div className="stat-fill" style={{ width: `${card.chk || 50}%` }}></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

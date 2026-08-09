@@ -1,12 +1,11 @@
 import { describe, it, expect } from 'vitest';
+import { PACK_CONFIG } from '../src/config/packs.js';
+import { buildInventoryInstance, clamp } from '../src/utils/cards.js';
 import {
-  PACK_CONFIG,
-  buildInventoryInstance,
-  clamp,
   getJutsuForCharacter,
   getSummonForCharacter,
   processRawCards
-} from '../src/App.jsx';
+} from '../src/utils/cardData.js';
 
 describe('clamp', () => {
   it('returns the value when inside the range', () => {
