@@ -9,7 +9,9 @@ export const STORAGE_KEYS = {
 export function readStoredNumber(key, fallback) {
   try {
     const saved = localStorage.getItem(key);
-    return saved !== null ? Number(saved) : fallback;
+    if (saved === null) return fallback;
+    const parsed = Number(saved);
+    return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
   } catch {
     return fallback;
   }

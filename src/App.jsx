@@ -16,7 +16,8 @@ import {
   buildInventoryInstance,
   getCardKey,
   getSellValue,
-  getUpgradeCost
+  getUpgradeCost,
+  sanitizeInventory
 } from './utils/cards.js';
 import {
   STORAGE_KEYS,
@@ -33,7 +34,7 @@ export default function App() {
   // Direct load from imported cards.json
   const [cards] = useState(() => processRawCards(masterCardsData));
 
-  const [inventory, setInventory] = useState(() => readStoredJson(STORAGE_KEYS.inventory, []));
+  const [inventory, setInventory] = useState(() => sanitizeInventory(readStoredJson(STORAGE_KEYS.inventory, [])));
 
   const [selectedCard, setSelectedCard] = useState(null);
   const [isShowcaseOpen, setIsShowcaseOpen] = useState(false);

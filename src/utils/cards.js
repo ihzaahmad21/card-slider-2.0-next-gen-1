@@ -8,6 +8,8 @@ export const RARITY_LABELS = {
   bronze: 'BRONZE'
 };
 
+export const RARITY_CLASSES = ['gold', 'silver', 'bronze'];
+
 const SELL_VALUES = { gold: 400, silver: 150, bronze: 30 };
 const UPGRADE_COST_PER_LEVEL = 200;
 
@@ -52,6 +54,47 @@ export function buildInventoryInstance(card, plusLevel = 0) {
     plusLevel,
     instanceId: `${card.id}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
   };
+}
+
+export function sanitizeImagePath(value) {
+  const src = String(value == null ? '' : value).trim();
+  if (!src) return FALLBACK_CARD_IMAGE;
+  const scheme = src.match(/^([a-z][a-z0-9+.-]*):/i);
+  if (scheme && !/^https?$/i.test(scheme[1])) return FALLBACK_CARD_IMAGE;
+  return src;
+}
+
+function sanitizeNumber(value, fallback) {
+  const num = Number(value);
+  return Number.isFinite(num) ? num : fallback;
+}
+
+// Persisted inventory is user-writable (localStorage), so every field is
+// re-validated rather than trusted as stored.
+function sanitizeInventoryItem(item) {
+  if (!item || typeof item !== 'object' || item.id === undefined || item.id === null) return null;
+  return {
+    id: item.id,
+    instanceId: typeof item.instanceId === 'string' ? item.instanceId : `${item.id}-${Math.random().toString(36).slice(2, 8)}`,
+    name: String(item.name == null ? 'Unknown Shinobi' : item.name),
+    rarity: String(item.rarity == null ? RARITY_LABELS.bronze : item.rarity),
+    rarityClass: RARITY_CLASSES.includes(item.rarityClass) ? item.rarityClass : 'bronze',
+    img: sanitizeImagePath(item.img),
+    jutsu: String(item.jutsu == null ? 'Secret Ninja Art' : item.jutsu),
+    summon: String(item.summon == null ? 'Unknown Spirit' : item.summon),
+    ovr: sanitizeNumber(item.ovr, 70),
+    stars: sanitizeNumber(item.stars, 1),
+    atk: sanitizeNumber(item.atk, 50),
+    def: sanitizeNumber(item.def, 50),
+    chk: sanitizeNumber(item.chk, 50),
+    quantity: sanitizeNumber(item.quantity, 1),
+    plusLevel: sanitizeNumber(item.plusLevel, 0)
+  };
+}
+
+export function sanitizeInventory(items) {
+  if (!Array.isArray(items)) return [];
+  return items.map(sanitizeInventoryItem).filter(Boolean);
 }
 
 // Modal artwork uses the full HD .png variant of the grid .webp thumbnail
