@@ -34,8 +34,8 @@ export function getRarityClass(card) {
 }
 
 export function getStarString(stars, separator = '') {
-  const full = clamp(Number(stars) || 1, 0, MAX_STARS);
-  const empty = MAX_STARS - full;
+  const full = Number(stars) || 1;
+  const empty = Math.max(0, MAX_STARS - full);
   return ('★' + separator).repeat(full) + ('☆' + separator).repeat(empty);
 }
 
