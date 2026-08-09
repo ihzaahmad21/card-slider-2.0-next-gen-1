@@ -9,7 +9,7 @@ import Storm4Modal from './components/Storm4Modal.jsx';
 import GachaResultModal from './components/GachaResultModal.jsx';
 import ToastContainer from './components/ToastContainer.jsx';
 
-const PACK_CONFIG = {
+export const PACK_CONFIG = {
   bronze: {
     cost: 100,
     rarityFilter: 'BRONZE',
@@ -89,7 +89,7 @@ function readStoredInventory() {
   }
 }
 
-function buildInventoryInstance(card, plusLevel = 0) {
+export function buildInventoryInstance(card, plusLevel = 0) {
   return {
     ...card,
     quantity: 1,
@@ -441,7 +441,7 @@ export default function App() {
 }
 
 // Data Processor Function: Preserves all JSON values (OVR, Name, Rarity, Jutsu, Summon, Stats, Image)
-function processRawCards(rawCards) {
+export function processRawCards(rawCards) {
   return rawCards.map(card => {
     const rawImg = card.image_url || card.img || '';
     let img = rawImg.replace(/^\/?public\//, '');
@@ -496,11 +496,11 @@ function processRawCards(rawCards) {
   });
 }
 
-function clamp(val, min, max) {
+export function clamp(val, min, max) {
   return Math.max(min, Math.min(max, val));
 }
 
-function getJutsuForCharacter(name) {
+export function getJutsuForCharacter(name) {
   const n = (name || '').toLowerCase();
   if (n.includes('naruto') && n.includes('baryon')) return 'Rasengan / Baryon Tail';
   if (n.includes('naruto') && n.includes('sage')) return 'Sage Art: Rasenshuriken';
@@ -518,7 +518,7 @@ function getJutsuForCharacter(name) {
   return 'Secret Ninja Art';
 }
 
-function getSummonForCharacter(name) {
+export function getSummonForCharacter(name) {
   const n = (name || '').toLowerCase();
   if (n.includes('naruto')) return 'Nine-Tails Kurama';
   if (n.includes('sasuke')) return 'Susanoo Armor';
