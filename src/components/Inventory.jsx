@@ -1,5 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import CardContainer from './CardContainer.jsx';
+import { getCardKey } from '../utils/cards.js';
+
+const SORT_OPTIONS = [
+  { value: 'plusLevel', label: 'Level' },
+  { value: 'ovr', label: 'OVR' },
+  { value: 'name', label: 'Name' }
+];
 
 export default function Inventory({ inventory, totalMasterCount, onSelectCard }) {
   const [sortBy, setSortBy] = useState('plusLevel'); // 'plusLevel', 'ovr', 'name'
@@ -58,24 +65,15 @@ export default function Inventory({ inventory, totalMasterCount, onSelectCard })
           <div className="inventory-controls">
             <span className="controls-label">Sort by:</span>
             <div className="sort-buttons">
-              <button 
-                className={`sort-btn ${sortBy === 'plusLevel' ? 'active' : ''}`}
-                onClick={() => toggleSort('plusLevel')}
-              >
-                Level {sortBy === 'plusLevel' && (sortOrder === 'asc' ? '↑' : '↓')}
-              </button>
-              <button 
-                className={`sort-btn ${sortBy === 'ovr' ? 'active' : ''}`}
-                onClick={() => toggleSort('ovr')}
-              >
-                OVR {sortBy === 'ovr' && (sortOrder === 'asc' ? '↑' : '↓')}
-              </button>
-              <button 
-                className={`sort-btn ${sortBy === 'name' ? 'active' : ''}`}
-                onClick={() => toggleSort('name')}
-              >
-                Name {sortBy === 'name' && (sortOrder === 'asc' ? '↑' : '↓')}
-              </button>
+              {SORT_OPTIONS.map(({ value, label }) => (
+                <button
+                  key={value}
+                  className={`sort-btn ${sortBy === value ? 'active' : ''}`}
+                  onClick={() => toggleSort(value)}
+                >
+                  {label} {sortBy === value && (sortOrder === 'asc' ? '↑' : '↓')}
+                </button>
+              ))}
             </div>
           </div>
         </div>
@@ -89,7 +87,7 @@ export default function Inventory({ inventory, totalMasterCount, onSelectCard })
             sortedInventory.map(item => (
               <div
                 className="inventory-card-wrapper"
-                key={item.instanceId || item.id}
+                key={getCardKey(item)}
                 onClick={() => onSelectCard(item)}
               >
                 <CardContainer card={item} className="inventory-card" />

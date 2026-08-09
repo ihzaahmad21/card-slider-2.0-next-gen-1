@@ -1,5 +1,6 @@
 import React from 'react';
 import CardContainer from './CardContainer.jsx';
+import { createBackdropClickHandler } from '../utils/modal.js';
 
 export default function GachaResultModal({
   results,
@@ -10,16 +11,10 @@ export default function GachaResultModal({
 }) {
   if (!results || results.length === 0) return null;
 
-  const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
-
   const topRarity = results[0]?.rarityClass || 'gold';
 
   return (
-    <div className="modal-overlay active" onClick={handleBackdropClick}>
+    <div className="modal-overlay active" onClick={createBackdropClickHandler(onClose)}>
       <div className="gacha-reveal-stage">
         <div className="gacha-reveal-title">
           <h3>Pack Opened!</h3>

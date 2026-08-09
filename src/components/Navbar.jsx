@@ -1,4 +1,5 @@
 import React from 'react';
+import BrandMark from './BrandMark.jsx';
 
 export default function Navbar({ coins, onOpenShowcase, onOpenInventory, onOpenShop }) {
   const scrollToSection = (id) => {
@@ -11,32 +12,21 @@ export default function Navbar({ coins, onOpenShowcase, onOpenInventory, onOpenS
   return (
     <div className="navbar-wrapper">
       <nav className="navbar-capsule" id="navbar">
-        <div className="nav-brand" onClick={() => scrollToSection('home')}>
-          <div className="brand-icon">忍</div>
-          <div className="brand-text">SHINOBI<span>TCG</span></div>
-        </div>
+        <BrandMark onClick={() => scrollToSection('home')} />
 
         <ul className="nav-menu">
-          <li>
-            <button className="nav-link" onClick={() => scrollToSection('home')}>
-              Home
-            </button>
-          </li>
-          <li>
-            <button className="nav-link active" onClick={onOpenShowcase}>
-              Showcase Modal
-            </button>
-          </li>
-          <li>
-            <button className="nav-link" onClick={onOpenInventory}>
-              Inventory
-            </button>
-          </li>
-          <li>
-            <button className="nav-link" onClick={onOpenShop}>
-              Shop
-            </button>
-          </li>
+          {[
+            { label: 'Home', onClick: () => scrollToSection('home') },
+            { label: 'Showcase Modal', onClick: onOpenShowcase, active: true },
+            { label: 'Inventory', onClick: onOpenInventory },
+            { label: 'Shop', onClick: onOpenShop }
+          ].map(({ label, onClick, active }) => (
+            <li key={label}>
+              <button className={`nav-link${active ? ' active' : ''}`} onClick={onClick}>
+                {label}
+              </button>
+            </li>
+          ))}
         </ul>
 
         <div className="nav-actions">
