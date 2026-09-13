@@ -7,7 +7,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [react()],
-  base: '/card-slider-2.0-next-gen-1/', // 👈 Wajib ada nama repo ini
+  // BUILD_TARGET=apk  → './'  (Capacitor WebView butuh relative path)
+  // BUILD_TARGET tidak di-set → '/card-slider-2.0-next-gen-1/'  (GitHub Pages)
+  base: process.env.BUILD_TARGET === 'apk'
+    ? './'
+    : '/card-slider-2.0-next-gen-1/',
   test: {
     environment: 'jsdom',
     globals: true,

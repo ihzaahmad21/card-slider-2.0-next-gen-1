@@ -25,6 +25,8 @@ jobs:
         run: npm install
 
       - name: Build Web App
+        env:
+          BUILD_TARGET: apk
         run: |
           chmod +x node_modules/.bin/* || true
           npm run build
