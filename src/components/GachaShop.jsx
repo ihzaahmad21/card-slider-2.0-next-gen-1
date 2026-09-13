@@ -3,12 +3,13 @@ import { PACK_CONFIG, PACK_TYPES } from '../config/packs.js';
 
 const COIN_BUNDLES = [
   { amount: 1500, className: 'btn-shop-action' },
-  { amount: 4000, className: 'btn-shop-action secondary' }
+  { amount: 1000000, className: 'btn-shop-action secondary' }
 ];
 
 export default function GachaShop({
   coins,
   rateBoosters,
+  pity,
   onOpenPack,
   onBuyCoins,
   onBuyBooster
@@ -16,13 +17,16 @@ export default function GachaShop({
   const [quantities, setQuantities] = useState(() =>
     PACK_TYPES.reduce((acc, pack) => ({ ...acc, [pack]: 1 }), {})
   );
-
+  const handleSetMax = (pack) => {
+    setQuantities(prev => ({ ...prev, [pack]: 10 }));
+  };
   const handleQtyChange = (pack, delta) => {
     setQuantities(prev => ({
       ...prev,
       [pack]: Math.max(1, Math.min(10, prev[pack] + delta))
     }));
   };
+
 
   return (
     <>
@@ -41,11 +45,21 @@ export default function GachaShop({
                 <div className={`pack-card ${pack}-pack`} key={pack}>
                   <div className="pack-tier-badge">{config.tierBadge}</div>
                   <div className="pack-image-container">
-                    <img src={config.image} alt={`${config.label} Shinobi Pack`} />
+                    <img
+                      src={config.image || ''}
+                      alt={`${config.label} Shinobi Pack`}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = `https://placehold.co/180x240/0f172a/${pack === 'premium' ? 'a855f7' : pack === 'gold' ? 'd4af37' : pack === 'silver' ? 'c0c0c0' : 'cd7f32'}?text=${config.label}+Pack`;
+                      }}
+                    />
                   </div>
                   <h3 className="pack-title">{config.label} Pack</h3>
                   <p className="pack-description">{config.description}</p>
                   <div className="pack-drop-rates">{config.dropRates}</div>
+                  <div className="pack-pity-status" style={{ fontSize: '0.85rem', color: pack === 'premium' ? '#ec4899' : '#10b981', margin: '4px 0 12px', fontWeight: 'bold' }}>
+                    {pity[pack] || 0}/{config.pityGuarantee} pulls to guaranteed {pack === 'premium' ? 'Mythic' : pack === 'gold' ? 'Diamond' : 'top-tier'}
+                  </div>
                   <div className="pack-cost">
                     <span className="coin-icon">⚙</span>
                     <span>{config.cost.toLocaleString()} Coins</span>
@@ -85,12 +99,16 @@ export default function GachaShop({
                     <div className="pack-shop-info">
                       <strong>{config.label} Pack</strong>
                       <span>{config.cost.toLocaleString()} Coins / pull</span>
+                      <span style={{ fontSize: '0.8rem', color: pack === 'premium' ? '#ec4899' : '#10b981', display: 'block', marginTop: '4px', fontWeight: 'bold' }}>
+                        Pity: {pity[pack] || 0}/{config.pityGuarantee}
+                      </span>
                     </div>
                     <div className="pack-counter">
                       <button className="qty-btn" onClick={() => handleQtyChange(pack, -1)}>−</button>
                       <span className="qty-value">x{quantity}</span>
                       <button className="qty-btn" onClick={() => handleQtyChange(pack, 1)}>+</button>
                     </div>
+                    <button className="btn-qty-max" onClick={() => handleSetMax(pack)}>Max x10</button>
                     <div className="pack-total">Total: {(config.cost * quantity).toLocaleString()} Coins</div>
                     <button
                       className="btn-shop-action"

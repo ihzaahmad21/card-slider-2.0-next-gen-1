@@ -1,0 +1,121 @@
+/* ==========================================================================
+   RIGHT PANEL (Dashboard Info / Utilities)
+   Panel tetap di kolom kanan: Collection Stats, Daily Bonus, BGM Settings
+   ========================================================================== */
+.right-panel {
+  grid-row: 1 / 3;
+  grid-column: 3;
+  position: relative;
+  min-width: 0;
+  background: linear-gradient(180deg, var(--ink-2, #17120f), var(--ink, #0f0c0b) 70%);
+  border-left: 1px solid var(--line, rgba(212,168,74,0.16));
+  overflow: hidden;
+}
+
+.right-panel-content {
+  width: 320px;
+  max-width: 320px;
+  height: 100%;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #2a2015 #0d0f0c;
+  transition: opacity 0.2s ease;
+}
+
+/* Custom scrollbar gelap khusus panel Utilities */
+.right-panel-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right-panel-content::-webkit-scrollbar-track {
+  background: #0d0f0c;
+}
+
+.right-panel-content::-webkit-scrollbar-thumb {
+  background: #2a2015;
+  border-radius: 8px;
+  border: 1px solid #0d0f0c;
+}
+
+.right-panel-content::-webkit-scrollbar-thumb:hover {
+  background: #3a2d1f;
+}
+
+.right-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line, rgba(212,168,74,0.16));
+}
+
+.right-panel-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--parchment, #f3e6c8);
+}
+
+/* ---------- Toggle Collapse (Handle di tepi kiri panel) ---------- */
+.right-panel-toggle {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: 24px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212,168,74,0.12);
+  border: 1px solid rgba(212,168,74,0.3);
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  color: var(--parchment-dim, #cabb98);
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+
+.right-panel-toggle:hover {
+  background: rgba(212,168,74,0.22);
+  color: var(--parchment, #f3e6c8);
+}
+
+.right-panel-toggle svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Saat collapsed, handle melayang di tepi kanan layar untuk membuka lagi */
+.right-panel.collapsed .right-panel-toggle {
+  position: fixed;
+  top: 50%;
+  left: auto;
+  right: 6px;
+  transform: translateY(-50%);
+  border-left: 1px solid rgba(212,168,74,0.3);
+  border-radius: 8px;
+}
+
+.right-panel.collapsed .right-panel-toggle svg {
+  transform: rotate(180deg);
+}
+
+.right-panel.collapsed .right-panel-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 980px) {
+  .right-panel-toggle {
+    display: none;
+  }
+}

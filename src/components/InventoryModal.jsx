@@ -1,6 +1,7 @@
 import React from 'react';
 import Inventory from './Inventory.jsx';
 import ModalShell from './ModalShell.jsx';
+import { getAttributeColorClass } from '../utils/cards.js';
 
 export default function InventoryModal({ isOpen, onClose, inventory, totalMasterCount, onSelectCard }) {
   return (

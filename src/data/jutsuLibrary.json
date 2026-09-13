@@ -1,0 +1,3462 @@
+{
+  "jutsu-rasengan-01": {
+    "name": "Rasengan",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 350,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Serangan bola chakra berputar intensitas tinggi."
+  },
+  "jutsu-chidori-01": {
+    "name": "Chidori: One Thousand Birds",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 380,
+    "critRate": 0.25,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Tusukan petir berkecepatan tinggi dengan peluang Critical tinggi."
+  },
+  "jutsu-indras-arrow-01": {
+    "name": "Indra's Arrow",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 600,
+    "critRate": 0.2,
+    "baseChakraCost": 80,
+    "target": "AOE",
+    "description": "Panah petir terkuat Susanoo Sasuke."
+  },
+  "jutsu-fireball-01": {
+    "name": "Fire Release: Great Fireball Technique",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 320,
+    "critRate": 0.12,
+    "baseChakraCost": 35,
+    "target": "AOE",
+    "description": "Semburan bola api besar khas klan Uchiha."
+  },
+  "jutsu-kirin-01": {
+    "name": "Kirin",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 560,
+    "critRate": 0.28,
+    "baseChakraCost": 75,
+    "target": "AOE",
+    "description": "Naga petir alami berkekuatan penghancur dahsyat dari langit."
+  },
+  "jutsu-amaterasu-01": {
+    "name": "Amaterasu",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 520,
+    "critRate": 0.18,
+    "baseChakraCost": 70,
+    "target": "SINGLE",
+    "description": "Api hitam abadi Mangekyo Sharingan yang membakar segalanya."
+  },
+  "jutsu-rasenshuriken-01": {
+    "name": "Wind Release: Rasenshuriken",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 540,
+    "critRate": 0.22,
+    "baseChakraCost": 70,
+    "target": "AOE",
+    "description": "Bilah angin berkecepatan mikroskopis yang merusak jaringan sel."
+  },
+  "jutsu-tailed-beast-bomb-01": {
+    "name": "Tailed Beast Bomb",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 650,
+    "critRate": 0.2,
+    "baseChakraCost": 85,
+    "target": "AOE",
+    "description": "Kompresi chakra positif dan negatif bervolume raksasa penghancur gunung."
+  },
+  "jutsu-shadow-clone-01": {
+    "name": "Shadow Clone Technique",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 260,
+    "critRate": 0.1,
+    "baseChakraCost": 30,
+    "target": "SINGLE",
+    "description": "Membelah chakra pengguna menjadi bayangan fisik yang nyata."
+  },
+  "jutsu-kamui-01": {
+    "name": "Kamui",
+    "type": "DOJUTSU",
+    "element": "SPACE-TIME",
+    "baseDamage": 580,
+    "critRate": 0.3,
+    "baseChakraCost": 80,
+    "target": "SINGLE",
+    "description": "Dojutsu ruang dan waktu yang menghisap target ke dimensi lain."
+  },
+  "jutsu-wood-emergence-01": {
+    "name": "Wood Release: Deep Forest Emergence",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 510,
+    "critRate": 0.15,
+    "baseChakraCost": 65,
+    "target": "AOE",
+    "description": "Menumbuhkan hutan lebat seketika untuk meremukkan musuh."
+  },
+  "jutsu-water-dragon-01": {
+    "name": "Water Release: Water Dragon Bullet",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 360,
+    "critRate": 0.14,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Membentuk air menjadi naga raksasa yang menerjang lawan."
+  },
+  "jutsu-sand-tsunami-01": {
+    "name": "Sand Tsunami / Desert Imperial Funeral",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 490,
+    "critRate": 0.16,
+    "baseChakraCost": 60,
+    "target": "AOE",
+    "description": "Gelombang pasir raksasa yang menenggelamkan dan meremukkan target."
+  },
+  "jutsu-night-guy-01": {
+    "name": "Night Guy",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 700,
+    "critRate": 0.35,
+    "baseChakraCost": 90,
+    "target": "SINGLE",
+    "description": "Tendangan pamungkas Gerbang Delapan yang mendistorsi ruang di sekitarnya."
+  },
+  "jutsu-gentle-fist-01": {
+    "name": "Eight Trigrams Sixty-Four Palms",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 420,
+    "critRate": 0.25,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Pukulan beruntun ke titik tenketsu untuk menghentikan aliran chakra."
+  },
+  "jutsu-tsukuyomi-01": {
+    "name": "Tsukuyomi",
+    "type": "GENJUTSU",
+    "element": "YIN",
+    "baseDamage": 480,
+    "critRate": 0.2,
+    "baseChakraCost": 65,
+    "target": "SINGLE",
+    "description": "Genjutsu absolut yang mengendalikan persepsi waktu dan ruang korban."
+  },
+  "jutsu-flying-raijin-01": {
+    "name": "Flying Raijin: Level 2",
+    "type": "NINJUTSU",
+    "element": "SPACE-TIME",
+    "baseDamage": 520,
+    "critRate": 0.25,
+    "baseChakraCost": 60,
+    "target": "SINGLE",
+    "description": "Teleportasi sekejap mata diikuti serangan Rasengan dari atas musuh."
+  },
+  "jutsu-shadow-paralysis-01": {
+    "name": "Shadow Paralysis Jutsu",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 300,
+    "critRate": 0.1,
+    "baseChakraCost": 35,
+    "target": "SINGLE",
+    "description": "Menghubungkan bayangan pengguna ke bayangan target untuk mengontrol pergerakannya."
+  },
+  "jutsu-truth-seeking-balls-01": {
+    "name": "Truth-Seeking Orbs",
+    "type": "SENJUTSU",
+    "element": "YIN-YANG",
+    "baseDamage": 620,
+    "critRate": 0.22,
+    "baseChakraCost": 80,
+    "target": "AOE",
+    "description": "Bola hitam yang menyerap semua bentuk ninjutsu konvensional."
+  },
+  "jutsu-secret-art-01": {
+    "name": "Secret Ninja Art",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 300,
+    "critRate": 0.1,
+    "baseChakraCost": 35,
+    "target": "SINGLE",
+    "description": "Seni bela diri rahasia ninja dengan teknik serangan serba guna."
+  },
+  "jutsu-rock-golem-technique-01": {
+    "name": "Rock Golem Technique",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 364,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-striking-shadow-snakes-01": {
+    "name": "Striking Shadow Snakes",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 400,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-byakugan-01": {
+    "name": "Byakugan",
+    "type": "DOJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 395,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Kekuatan mata legendaris yang memanipulasi realitas dan ruang pertempuran."
+  },
+  "jutsu-water-release-01": {
+    "name": "Water Release",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 390,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-flying-swallow-01": {
+    "name": "Flying Swallow",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 287,
+    "critRate": 0.1,
+    "baseChakraCost": 30,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-burning-ash-01": {
+    "name": "Burning Ash",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 421,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-virus-mist-01": {
+    "name": "Virus Mist",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 361,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-regenerative-core-01": {
+    "name": "Regenerative Core",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 368,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-vanishing-rasengan-01": {
+    "name": "Vanishing Rasengan",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 374,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-boruto-stream-01": {
+    "name": "Boruto Stream",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 373,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-karma-compression-rasengan-01": {
+    "name": "Karma Compression Rasengan",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 423,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-hiramekarei-twin-blade-01": {
+    "name": "Hiramekarei Twin Blade",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 427,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-nue-water-bullet-01": {
+    "name": "Nue Water Bullet",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 382,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-puppet-technique-great-scythe-01": {
+    "name": "Puppet Technique: Great Scythe",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 427,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-partial-multisize-technique-01": {
+    "name": "Partial Multi-Size Technique",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 391,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-super-beast-scroll-01": {
+    "name": "Super Beast Scroll",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 595,
+    "critRate": 0.2,
+    "baseChakraCost": 76,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-mind-transfer-01": {
+    "name": "Mind Transfer",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 422,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-iron-sand-black-iron-wings-01": {
+    "name": "Iron Sand Black Iron Wings",
+    "type": "BUKIJUTSU",
+    "element": "EARTH",
+    "baseDamage": 387,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-sonic-hair-blast-01": {
+    "name": "Sonic Hair Blast",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 287,
+    "critRate": 0.1,
+    "baseChakraCost": 26,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-lightning-flash-01": {
+    "name": "Lightning Flash",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 412,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-medical-ninjutsu-01": {
+    "name": "Medical Ninjutsu",
+    "type": "MEDICAL",
+    "element": "YANG",
+    "baseDamage": 392,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Manipulasi chakra medis untuk regenerasi sel tubuh dan pertahanan vital."
+  },
+  "jutsu-three-jewels-suction-crush-01": {
+    "name": "Three Jewels Suction Crush",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 361,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-mother-father-01": {
+    "name": "Mother & Father",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 371,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-expansion-technique-01": {
+    "name": "Expansion Technique",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 384,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-human-boulder-01": {
+    "name": "Human Boulder",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 422,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-butterfly-bullet-bombing-01": {
+    "name": "Butterfly Bullet Bombing",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 530,
+    "critRate": 0.2,
+    "baseChakraCost": 66,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-human-bullet-tank-01": {
+    "name": "Human Bullet Tank",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 365,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-twin-bone-swords-01": {
+    "name": "Twin Bone Swords",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 422,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-bone-flute-01": {
+    "name": "Bone Flute",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 362,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-izanagi-01": {
+    "name": "Izanagi",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 383,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-wind-release-vacuum-wave-01": {
+    "name": "Wind Release: Vacuum Wave",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 360,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-laser-circus-01": {
+    "name": "Laser Circus",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 399,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-black-panther-01": {
+    "name": "Black Panther",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 398,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-c4-karura-01": {
+    "name": "C4 Karura",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-c3-mega-bomb-01": {
+    "name": "C3 Mega Bomb",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 599,
+    "critRate": 0.2,
+    "baseChakraCost": 65,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-c1-clay-birds-01": {
+    "name": "C1 Clay Birds",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 403,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-c2-dragon-01": {
+    "name": "C2 Dragon",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 376,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-destructive-beam-01": {
+    "name": "Destructive Beam",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 395,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-modded-legs-01": {
+    "name": "Modded Legs",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 360,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-mind-transfer-puppet-curse-01": {
+    "name": "Mind Transfer Puppet Curse",
+    "type": "BUKIJUTSU",
+    "element": "YIN",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-scale-powder-blast-01": {
+    "name": "Scale Powder Blast",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 368,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-net-slash-01": {
+    "name": "Net Slash",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 392,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-scale-powder-shield-01": {
+    "name": "Scale Powder Shield",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 393,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-wind-slash-01": {
+    "name": "Wind Slash",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 420,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sand-binding-coffin-01": {
+    "name": "Sand Binding Coffin",
+    "type": "FUINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 394,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-shield-of-sand-01": {
+    "name": "Shield of Sand",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-desert-suspension-01": {
+    "name": "Desert Suspension",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 362,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sand-shuriken-01": {
+    "name": "Sand Shuriken",
+    "type": "BUKIJUTSU",
+    "element": "EARTH",
+    "baseDamage": 275,
+    "critRate": 0.1,
+    "baseChakraCost": 32,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-asa-kujaku-01": {
+    "name": "Asa Kujaku",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 383,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-hirudora-01": {
+    "name": "Hirudora",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 411,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sekizo-evening-elephant-01": {
+    "name": "Sekizo (Evening Elephant)",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 414,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-demonic-mirror-ice-crystals-01": {
+    "name": "Demonic Mirror Ice Crystals",
+    "type": "GENJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 370,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Ilusi pikiran kuat yang mengaburkan persepsi panca indera dan melumpuhkan target."
+  },
+  "jutsu-ice-release-thousand-flying-stabbing-needles-01": {
+    "name": "Ice Release: Thousand Flying Stabbing Needles",
+    "type": "BUKIJUTSU",
+    "element": "EARTH",
+    "baseDamage": 425,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "AOE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-ninja-art-salamander-poison-01": {
+    "name": "Ninja Art: Salamander Poison",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 405,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-salamander-poison-01": {
+    "name": "Salamander Poison",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 400,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sickle-dance-01": {
+    "name": "Sickle Dance",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 383,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-steam-propulsion-01": {
+    "name": "Steam Propulsion",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 423,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-boiling-horn-01": {
+    "name": "Boiling Horn",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 422,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-steam-dash-01": {
+    "name": "Steam Dash",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 412,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-erupting-propulsion-01": {
+    "name": "Erupting Propulsion",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 371,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sage-art-wood-release-true-several-thousand-hands-01": {
+    "name": "Sage Art: Wood Release True Several Thousand Hands",
+    "type": "SENJUTSU",
+    "element": "EARTH",
+    "baseDamage": 572,
+    "critRate": 0.2,
+    "baseChakraCost": 78,
+    "target": "AOE",
+    "description": "Seni petapa pemanfaatan energi alam dengan daya hancur berlipat ganda."
+  },
+  "jutsu-curse-technique-death-possession-blood-01": {
+    "name": "Curse Technique: Death Possession Blood",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-eight-trigrams-thirtytwo-palms-01": {
+    "name": "Eight Trigrams Thirty-Two Palms",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 369,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-gentle-step-twin-lion-palms-01": {
+    "name": "Gentle Step Twin Lion Palms",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 381,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-gentle-fist-02": {
+    "name": "Gentle Fist",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 393,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-byakugan-strike-01": {
+    "name": "Byakugan Strike",
+    "type": "DOJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 364,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Kekuatan mata legendaris yang memanipulasi realitas dan ruang pertempuran."
+  },
+  "jutsu-reaping-death-seal-01": {
+    "name": "Reaping Death Seal",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 560,
+    "critRate": 0.2,
+    "baseChakraCost": 72,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-five-elements-combo-01": {
+    "name": "Five Elements Combo",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 363,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-enma-power-01": {
+    "name": "Enma Power",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 367,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-roof-tile-shuriken-01": {
+    "name": "Roof Tile Shuriken",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 262,
+    "critRate": 0.1,
+    "baseChakraCost": 34,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-mind-destruction-01": {
+    "name": "Mind Destruction",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 366,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-mind-body-switch-technique-01": {
+    "name": "Mind Body Switch Technique",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 423,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-mind-body-transmission-01": {
+    "name": "Mind Body Transmission",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 417,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-psycho-mind-transmission-01": {
+    "name": "Psycho Mind Transmission",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 381,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-susanoo-01": {
+    "name": "Susanoo",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 392,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-izanami-01": {
+    "name": "Izanami",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 380,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-yasaka-magatama-01": {
+    "name": "Yasaka Magatama",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 424,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-chakra-rods-01": {
+    "name": "Chakra Rods",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 386,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-disruption-beams-01": {
+    "name": "Disruption Beams",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 395,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sage-art-goemon-01": {
+    "name": "Sage Art: Goemon",
+    "type": "SENJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 544,
+    "critRate": 0.2,
+    "baseChakraCost": 70,
+    "target": "SINGLE",
+    "description": "Seni petapa pemanfaatan energi alam dengan daya hancur berlipat ganda."
+  },
+  "jutsu-needle-jizo-01": {
+    "name": "Needle Jizo",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 424,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-terra-shield-01": {
+    "name": "Terra Shield",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 385,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-earth-style-barrier-01": {
+    "name": "Earth Style Barrier",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 412,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-piston-fist-01": {
+    "name": "Piston Fist",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 386,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-curse-mark-frenzy-01": {
+    "name": "Curse Mark Frenzy",
+    "type": "NINJUTSU",
+    "element": "YANG",
+    "baseDamage": 420,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur YANG berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-chakra-scalpel-01": {
+    "name": "Chakra Scalpel",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 418,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-dead-soul-01": {
+    "name": "Dead Soul",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 367,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sage-art-inorganic-reanimation-01": {
+    "name": "Sage Art: Inorganic Reanimation",
+    "type": "SENJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 559,
+    "critRate": 0.2,
+    "baseChakraCost": 84,
+    "target": "SINGLE",
+    "description": "Seni petapa pemanfaatan energi alam dengan daya hancur berlipat ganda."
+  },
+  "jutsu-snake-summon-01": {
+    "name": "Snake Summon",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-dna-reanimation-01": {
+    "name": "DNA Reanimation",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 381,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-eighty-gods-vacuum-attack-01": {
+    "name": "Eighty Gods Vacuum Attack",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 532,
+    "critRate": 0.2,
+    "baseChakraCost": 76,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-amenominaka-01": {
+    "name": "Amenominaka",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 408,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-lightning-blade-01": {
+    "name": "Lightning Blade",
+    "type": "BUKIJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 366,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-earth-style-wall-01": {
+    "name": "Earth Style Wall",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 275,
+    "critRate": 0.1,
+    "baseChakraCost": 31,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-raikiri-01": {
+    "name": "Raikiri",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 424,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-kamui-shuriken-01": {
+    "name": "Kamui Shuriken",
+    "type": "DOJUTSU",
+    "element": "SPACE-TIME",
+    "baseDamage": 530,
+    "critRate": 0.2,
+    "baseChakraCost": 68,
+    "target": "SINGLE",
+    "description": "Kekuatan mata legendaris yang memanipulasi realitas dan ruang pertempuran."
+  },
+  "jutsu-kamui-lightning-blade-01": {
+    "name": "Kamui Lightning Blade",
+    "type": "DOJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 560,
+    "critRate": 0.2,
+    "baseChakraCost": 81,
+    "target": "SINGLE",
+    "description": "Kekuatan mata legendaris yang memanipulasi realitas dan ruang pertempuran."
+  },
+  "jutsu-purple-lightning-01": {
+    "name": "Purple Lightning",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 360,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-earth-grudge-fear-01": {
+    "name": "Earth Grudge Fear",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 393,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-elemental-blast-01": {
+    "name": "Elemental Blast",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 427,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-false-darkness-01": {
+    "name": "False Darkness",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 407,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-pressure-damage-01": {
+    "name": "Pressure Damage",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 383,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-secret-puppet-technique-salamander-01": {
+    "name": "Secret Puppet Technique: Salamander",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-puppet-performance-kuroari-karasu-01": {
+    "name": "Puppet Performance: Kuroari & Karasu",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 375,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-iron-maiden-01": {
+    "name": "Iron Maiden",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 417,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-crow-puppet-01": {
+    "name": "Crow Puppet",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 384,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-adamantine-attacking-chains-01": {
+    "name": "Adamantine Attacking Chains",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 425,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-heal-01": {
+    "name": "Heal",
+    "type": "MEDICAL",
+    "element": "YANG",
+    "baseDamage": 414,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Manipulasi chakra medis untuk regenerasi sel tubuh dan pertahanan vital."
+  },
+  "jutsu-microscopic-transformation-01": {
+    "name": "Microscopic Transformation",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 415,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-body-weapon-01": {
+    "name": "Body Weapon",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 414,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-karma-blast-01": {
+    "name": "Karma Blast",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 382,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-shrinking-field-01": {
+    "name": "Shrinking Field",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 378,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-threeheaded-wolf-01": {
+    "name": "Three-Headed Wolf",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-fang-rotating-fang-01": {
+    "name": "Fang Rotating Fang",
+    "type": "BUKIJUTSU",
+    "element": "WIND",
+    "baseDamage": 409,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-fang-over-fang-01": {
+    "name": "Fang Over Fang",
+    "type": "BUKIJUTSU",
+    "element": "WIND",
+    "baseDamage": 398,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-absolute-fang-over-fang-01": {
+    "name": "Absolute Fang Over Fang",
+    "type": "BUKIJUTSU",
+    "element": "WIND",
+    "baseDamage": 414,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-spider-sticky-gold-01": {
+    "name": "Spider Sticky Gold",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 373,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-bow-01": {
+    "name": "Bow",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-lariat-01": {
+    "name": "Lariat",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 416,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-eightswords-dance-01": {
+    "name": "Eight-Swords Dance",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 361,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-dance-of-the-seedling-fern-01": {
+    "name": "Dance of the Seedling Fern",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 394,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-red-chakra-weapons-01": {
+    "name": "Red Chakra Weapons",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 373,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-stone-splitter-01": {
+    "name": "Stone Splitter",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 416,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-water-shark-bomb-01": {
+    "name": "Water Shark Bomb",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 528,
+    "critRate": 0.2,
+    "baseChakraCost": 76,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-great-shark-wave-01": {
+    "name": "Great Shark Wave",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 372,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-true-fire-of-samadhi-01": {
+    "name": "True Fire of Samadhi",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 559,
+    "critRate": 0.2,
+    "baseChakraCost": 79,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sacred-paper-emissary-technique-01": {
+    "name": "Sacred Paper Emissary Technique",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 395,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sexy-jutsu-01": {
+    "name": "Sexy Jutsu",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 265,
+    "critRate": 0.1,
+    "baseChakraCost": 27,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-demonic-illusion-tree-bind-death-01": {
+    "name": "Demonic Illusion: Tree Bind Death",
+    "type": "GENJUTSU",
+    "element": "YIN",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Ilusi pikiran kuat yang mengaburkan persepsi panca indera dan melumpuhkan target."
+  },
+  "jutsu-lava-release-quicklime-technique-01": {
+    "name": "Lava Release: Quicklime Technique",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 421,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-adamantine-sealing-chains-01": {
+    "name": "Adamantine Sealing Chains",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 418,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-tengai-shinsei-01": {
+    "name": "Tengai Shinsei",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 560,
+    "critRate": 0.2,
+    "baseChakraCost": 80,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-majestic-attire-susanoo-01": {
+    "name": "Majestic Attire Susanoo",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 364,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-wood-release-deep-forest-bloom-01": {
+    "name": "Wood Release: Deep Forest Bloom",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 374,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-limbo-border-jail-01": {
+    "name": "Limbo: Border Jail",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 425,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-lava-release-01": {
+    "name": "Lava Release",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 397,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-vapor-style-01": {
+    "name": "Vapor Style",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 365,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-iai-beheading-01": {
+    "name": "Iai Beheading",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 362,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-samurai-slash-01": {
+    "name": "Samurai Slash",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 366,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-flying-raijin-02": {
+    "name": "Flying Raijin",
+    "type": "NINJUTSU",
+    "element": "SPACE-TIME",
+    "baseDamage": 384,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur SPACE-TIME berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-spiralling-serial-flying-raijin-01": {
+    "name": "Spiralling Serial Flying Raijin",
+    "type": "NINJUTSU",
+    "element": "SPACE-TIME",
+    "baseDamage": 391,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur SPACE-TIME berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sage-transformation-01": {
+    "name": "Sage Transformation",
+    "type": "SENJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 532,
+    "critRate": 0.2,
+    "baseChakraCost": 70,
+    "target": "SINGLE",
+    "description": "Seni petapa pemanfaatan energi alam dengan daya hancur berlipat ganda."
+  },
+  "jutsu-lightning-snake-01": {
+    "name": "Lightning Snake",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 393,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-inukai-takeru-no-mikoto-01": {
+    "name": "Inukai Takeru no Mikoto",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 391,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-shadow-rusher-01": {
+    "name": "Shadow Rusher",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 400,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-summoning-rinnegan-01": {
+    "name": "Summoning Rinnegan",
+    "type": "DOJUTSU",
+    "element": "YIN-YANG",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Kekuatan mata legendaris yang memanipulasi realitas dan ruang pertempuran."
+  },
+  "jutsu-almighty-push-01": {
+    "name": "Almighty Push",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 396,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-amenomihoboko-01": {
+    "name": "Amenomihoboko",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-wood-release-01": {
+    "name": "Wood Release",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 421,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-hinokagutsuchi-01": {
+    "name": "Hinokagutsuchi",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 375,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-lightning-style-01": {
+    "name": "Lightning Style",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 415,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-baryon-tail-01": {
+    "name": "Baryon Tail",
+    "type": "NINJUTSU",
+    "element": "YIN-YANG",
+    "baseDamage": 411,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur YIN-YANG berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-tailed-beast-planets-rasengan-01": {
+    "name": "Tailed Beast Planets Rasengan",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 427,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-minirasenshuriken-01": {
+    "name": "Mini-Rasenshuriken",
+    "type": "BUKIJUTSU",
+    "element": "WIND",
+    "baseDamage": 299,
+    "critRate": 0.1,
+    "baseChakraCost": 32,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-kurama-arms-01": {
+    "name": "Kurama Arms",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 407,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-uzumaki-barrage-01": {
+    "name": "Uzumaki Barrage",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 382,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sage-art-wind-release-rasenshuriken-01": {
+    "name": "Sage Art: Wind Release Rasenshuriken",
+    "type": "SENJUTSU",
+    "element": "WIND",
+    "baseDamage": 520,
+    "critRate": 0.2,
+    "baseChakraCost": 82,
+    "target": "SINGLE",
+    "description": "Seni petapa pemanfaatan energi alam dengan daya hancur berlipat ganda."
+  },
+  "jutsu-rasenshuriken-02": {
+    "name": "Rasenshuriken",
+    "type": "BUKIJUTSU",
+    "element": "WIND",
+    "baseDamage": 272,
+    "critRate": 0.1,
+    "baseChakraCost": 34,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-super-ultrabig-ball-rasengan-01": {
+    "name": "Super Ultra-Big Ball Rasengan",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 597,
+    "critRate": 0.2,
+    "baseChakraCost": 71,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-rotation-01": {
+    "name": "Rotation",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 365,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-eight-trigrams-one-hundred-twentyeight-palms-01": {
+    "name": "Eight Trigrams One Hundred Twenty-Eight Palms",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 528,
+    "critRate": 0.2,
+    "baseChakraCost": 67,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-eight-trigrams-palm-rotation-01": {
+    "name": "Eight Trigrams Palm Rotation",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 429,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-minefield-technique-01": {
+    "name": "Minefield Technique",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 399,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-kamui-escape-01": {
+    "name": "Kamui Escape",
+    "type": "DOJUTSU",
+    "element": "SPACE-TIME",
+    "baseDamage": 567,
+    "critRate": 0.2,
+    "baseChakraCost": 74,
+    "target": "SINGLE",
+    "description": "Kekuatan mata legendaris yang memanipulasi realitas dan ruang pertempuran."
+  },
+  "jutsu-wood-release-cutting-technique-01": {
+    "name": "Wood Release: Cutting Technique",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 391,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sword-of-nunoboko-01": {
+    "name": "Sword of Nunoboko",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 557,
+    "critRate": 0.2,
+    "baseChakraCost": 80,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-truthseeking-orb-01": {
+    "name": "Truth-Seeking Orb",
+    "type": "NINJUTSU",
+    "element": "YIN-YANG",
+    "baseDamage": 408,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur YIN-YANG berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-fire-release-bomb-blast-01": {
+    "name": "Fire Release: Bomb Blast",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 558,
+    "critRate": 0.2,
+    "baseChakraCost": 77,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-particle-style-atomic-dismantling-01": {
+    "name": "Particle Style: Atomic Dismantling",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 418,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-eight-branches-technique-01": {
+    "name": "Eight Branches Technique",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 395,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-triple-rashomon-01": {
+    "name": "Triple Rashomon",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 408,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-kusanagi-sword-01": {
+    "name": "Kusanagi Sword",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 395,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-planetary-devastation-01": {
+    "name": "Planetary Devastation",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 558,
+    "critRate": 0.2,
+    "baseChakraCost": 75,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-lightning-straight-01": {
+    "name": "Lightning Straight",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 396,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-first-aid-01": {
+    "name": "First Aid",
+    "type": "MEDICAL",
+    "element": "NEUTRAL",
+    "baseDamage": 295,
+    "critRate": 0.1,
+    "baseChakraCost": 25,
+    "target": "SINGLE",
+    "description": "Manipulasi chakra medis untuk regenerasi sel tubuh dan pertahanan vital."
+  },
+  "jutsu-primary-lotus-01": {
+    "name": "Primary Lotus",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 419,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-leaf-hurricane-01": {
+    "name": "Leaf Hurricane",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 388,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-drunken-fist-01": {
+    "name": "Drunken Fist",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 393,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-hidden-lotus-01": {
+    "name": "Hidden Lotus",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 386,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-reverse-lotus-01": {
+    "name": "Reverse Lotus",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 394,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-lava-release-scorching-rocks-01": {
+    "name": "Lava Release: Scorching Rocks",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 397,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-super-beast-imitating-drawing-01": {
+    "name": "Super Beast Imitating Drawing",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 533,
+    "critRate": 0.2,
+    "baseChakraCost": 75,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-super-beast-scroll-dragon-01": {
+    "name": "Super Beast Scroll: Dragon",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 573,
+    "critRate": 0.2,
+    "baseChakraCost": 78,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-tiger-01": {
+    "name": "Tiger",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 427,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-demon-twin-attack-01": {
+    "name": "Demon Twin Attack",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 398,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-chakra-enhanced-strength-01": {
+    "name": "Chakra Enhanced Strength",
+    "type": "NINJUTSU",
+    "element": "YANG",
+    "baseDamage": 398,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur YANG berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-cherry-blossom-impact-01": {
+    "name": "Cherry Blossom Impact",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 425,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-katsuyu-slug-summon-01": {
+    "name": "Katsuyu Slug Summon",
+    "type": "MEDICAL",
+    "element": "NEUTRAL",
+    "baseDamage": 382,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Manipulasi chakra medis untuk regenerasi sel tubuh dan pertahanan vital."
+  },
+  "jutsu-medical-punch-01": {
+    "name": "Medical Punch",
+    "type": "TAIJUTSU",
+    "element": "YANG",
+    "baseDamage": 365,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-100-healings-seal-01": {
+    "name": "100 Healings Seal",
+    "type": "FUINJUTSU",
+    "element": "YANG",
+    "baseDamage": 424,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-ground-split-01": {
+    "name": "Ground Split",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 370,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-chakra-sabre-slash-01": {
+    "name": "Chakra Sabre Slash",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sharingan-genjutsu-01": {
+    "name": "Sharingan Genjutsu",
+    "type": "GENJUTSU",
+    "element": "YIN",
+    "baseDamage": 367,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Ilusi pikiran kuat yang mengaburkan persepsi panca indera dan melumpuhkan target."
+  },
+  "jutsu-iron-sand-unleashed-01": {
+    "name": "Iron Sand Unleashed",
+    "type": "BUKIJUTSU",
+    "element": "FIRE",
+    "baseDamage": 365,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-100-puppets-01": {
+    "name": "100 Puppets",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 424,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-third-kazekage-puppet-01": {
+    "name": "Third Kazekage Puppet",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 381,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-poison-blades-01": {
+    "name": "Poison Blades",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 379,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-chidori-senbon-01": {
+    "name": "Chidori Senbon",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 403,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-curse-mark-01": {
+    "name": "Curse Mark",
+    "type": "NINJUTSU",
+    "element": "YANG",
+    "baseDamage": 390,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur YANG berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-dragon-fire-technique-01": {
+    "name": "Dragon Fire Technique",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 399,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-chidori-spear-01": {
+    "name": "Chidori Spear",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 382,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-enton-kagutsuchi-01": {
+    "name": "Enton: Kagutsuchi",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 423,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-amenotejikara-01": {
+    "name": "Amenotejikara",
+    "type": "NINJUTSU",
+    "element": "SPACE-TIME",
+    "baseDamage": 371,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur SPACE-TIME berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-shadow-strangle-jutsu-01": {
+    "name": "Shadow Strangle Jutsu",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-shadow-sewing-01": {
+    "name": "Shadow Sewing",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 371,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-shadow-stitching-01": {
+    "name": "Shadow Stitching",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-shadow-pinning-01": {
+    "name": "Shadow Pinning",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 390,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-secret-technique-insect-sphere-01": {
+    "name": "Secret Technique: Insect Sphere",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 411,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "AOE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-secret-technique-beetle-tornado-01": {
+    "name": "Secret Technique: Beetle Tornado",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 393,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-insect-jamming-technique-01": {
+    "name": "Insect Jamming Technique",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 383,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-kotoamatsukami-01": {
+    "name": "Kotoamatsukami",
+    "type": "GENJUTSU",
+    "element": "YIN",
+    "baseDamage": 387,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Ilusi pikiran kuat yang mengaburkan persepsi panca indera dan melumpuhkan target."
+  },
+  "jutsu-body-flicker-01": {
+    "name": "Body Flicker",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 373,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-poison-fog-01": {
+    "name": "Poison Fog",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 381,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-needle-shot-01": {
+    "name": "Needle Shot",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-water-style-great-arm-01": {
+    "name": "Water Style: Great Arm",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 376,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-hydrification-01": {
+    "name": "Hydrification",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 414,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-demon-flute-phantom-sound-chains-01": {
+    "name": "Demon Flute: Phantom Sound Chains",
+    "type": "GENJUTSU",
+    "element": "YIN",
+    "baseDamage": 390,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Ilusi pikiran kuat yang mengaburkan persepsi panca indera dan melumpuhkan target."
+  },
+  "jutsu-wind-release-great-task-fan-01": {
+    "name": "Wind Release: Great Task Fan",
+    "type": "BUKIJUTSU",
+    "element": "WIND",
+    "baseDamage": 421,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-wind-release-cast-net-01": {
+    "name": "Wind Release: Cast Net",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 373,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-cyclone-01": {
+    "name": "Cyclone",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 270,
+    "critRate": 0.1,
+    "baseChakraCost": 26,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-wind-release-dust-wind-technique-01": {
+    "name": "Wind Release: Dust Wind Technique",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 424,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-twin-rising-dragons-01": {
+    "name": "Twin Rising Dragons",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 423,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-unsealing-technique-iron-weapons-01": {
+    "name": "Unsealing Technique: Iron Weapons",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 379,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-bashosen-five-element-fan-01": {
+    "name": "Bashosen: Five Element Fan",
+    "type": "BUKIJUTSU",
+    "element": "FIRE",
+    "baseDamage": 363,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-gold-dust-imperial-funeral-01": {
+    "name": "Gold Dust Imperial Funeral",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 426,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-steaming-danger-tyranny-01": {
+    "name": "Steaming Danger Tyranny",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 410,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-water-gun-01": {
+    "name": "Water Gun",
+    "type": "BUKIJUTSU",
+    "element": "WATER",
+    "baseDamage": 364,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-particle-style-01": {
+    "name": "Particle Style",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-dustless-bewildering-01": {
+    "name": "Dustless Bewildering",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 425,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-hell-stab-fourfinger-spear-01": {
+    "name": "Hell Stab: Four-Finger Spear",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 422,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-flying-raijin-slice-01": {
+    "name": "Flying Raijin Slice",
+    "type": "NINJUTSU",
+    "element": "SPACE-TIME",
+    "baseDamage": 367,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur SPACE-TIME berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-water-style-water-colliding-wave-01": {
+    "name": "Water Style: Water Colliding Wave",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 380,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-escape-01": {
+    "name": "Escape",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 370,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-kamui-fire-blast-01": {
+    "name": "Kamui Fire Blast",
+    "type": "DOJUTSU",
+    "element": "FIRE",
+    "baseDamage": 536,
+    "critRate": 0.2,
+    "baseChakraCost": 66,
+    "target": "SINGLE",
+    "description": "Kekuatan mata legendaris yang memanipulasi realitas dan ruang pertempuran."
+  },
+  "jutsu-summoning-01": {
+    "name": "Summoning",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 423,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-golden-wheel-reincarnation-explosion-01": {
+    "name": "Golden Wheel Reincarnation Explosion",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 425,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-rinkaichu-venomous-insects-01": {
+    "name": "Rinkaichu Venomous Insects",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 374,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-100-healings-01": {
+    "name": "100 Healings",
+    "type": "MEDICAL",
+    "element": "YANG",
+    "baseDamage": 388,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Manipulasi chakra medis untuk regenerasi sel tubuh dan pertahanan vital."
+  },
+  "jutsu-bubble-drowning-01": {
+    "name": "Bubble Drowning",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 383,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-acid-slime-01": {
+    "name": "Acid Slime",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-wrathful-bubble-wave-01": {
+    "name": "Wrathful Bubble Wave",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 426,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-water-reflection-mirror-01": {
+    "name": "Water Reflection Mirror",
+    "type": "GENJUTSU",
+    "element": "WATER",
+    "baseDamage": 393,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Ilusi pikiran kuat yang mengaburkan persepsi panca indera dan melumpuhkan target."
+  },
+  "jutsu-coral-palm-01": {
+    "name": "Coral Palm",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 363,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-tailed-beast-water-cannon-01": {
+    "name": "Tailed Beast Water Cannon",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 369,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-cat-fireball-01": {
+    "name": "Cat Fireball",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 394,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-mouse-hair-ball-01": {
+    "name": "Mouse Hair Ball",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 271,
+    "critRate": 0.1,
+    "baseChakraCost": 30,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-twotails-fire-cat-blast-01": {
+    "name": "Two-Tails Fire Cat Blast",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 380,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-silent-killing-01": {
+    "name": "Silent Killing",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 428,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-demonic-silent-killing-01": {
+    "name": "Demonic Silent Killing",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 400,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-water-wall-01": {
+    "name": "Water Wall",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 269,
+    "critRate": 0.1,
+    "baseChakraCost": 31,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-karma-mark-level-3-01": {
+    "name": "Karma mark level 3",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 408,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-hiramekarei-liberation-01": {
+    "name": "Hiramekarei Liberation",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 402,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-twin-sword-slash-01": {
+    "name": "Twin Sword Slash",
+    "type": "BUKIJUTSU",
+    "element": "FIRE",
+    "baseDamage": 374,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-claw-marks-01": {
+    "name": "Claw Marks",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 368,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-white-karma-unleashed-01": {
+    "name": "White Karma Unleashed",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 418,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-reflection-01": {
+    "name": "Reflection",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 370,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-superhuman-taijutsu-01": {
+    "name": "Superhuman Taijutsu",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 539,
+    "critRate": 0.2,
+    "baseChakraCost": 66,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-black-lightning-01": {
+    "name": "Black Lightning",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 420,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-superifying-explosive-art-01": {
+    "name": "Superifying Explosive Art",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 579,
+    "critRate": 0.2,
+    "baseChakraCost": 76,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-senrigan-01": {
+    "name": "Senrigan",
+    "type": "DOJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 402,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Kekuatan mata legendaris yang memanipulasi realitas dan ruang pertempuran."
+  },
+  "jutsu-omnipotence-charm-01": {
+    "name": "Omnipotence Charm",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 360,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-eight-tragrams-sixtyfour-palms-01": {
+    "name": "Eight Tragrams Sixty-Four Palms",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 371,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-triplebladed-scythe-01": {
+    "name": "Triple-Bladed Scythe",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 424,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-curse-technique-death-possession-01": {
+    "name": "Curse Technique: Death Possession",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 412,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-eight-trigrams-twin-lion-fists-01": {
+    "name": "Eight Trigrams Twin Lion Fists",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-gentle-step-01": {
+    "name": "Gentle Step",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 412,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-eight-trigrams-vacuum-palm-01": {
+    "name": "Eight Trigrams Vacuum Palm",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 418,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-twin-lion-attack-01": {
+    "name": "Twin Lion Attack",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 397,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-mind-transfer-jutsu-01": {
+    "name": "Mind Transfer Jutsu",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 414,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-sensory-communication-01": {
+    "name": "Sensory Communication",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 392,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-daikokuten-01": {
+    "name": "Daikokuten",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 379,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-sukunahikona-cubes-01": {
+    "name": "Sukunahikona Cubes",
+    "type": "DOJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 412,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Kekuatan mata legendaris yang memanipulasi realitas dan ruang pertempuran."
+  },
+  "jutsu-fire-release-dragon-fire-technique-01": {
+    "name": "Fire Release: Dragon Fire Technique",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 376,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-summoning-toad-mouth-bind-01": {
+    "name": "Summoning: Toad Mouth Bind",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 426,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-massive-rasengan-01": {
+    "name": "Massive Rasengan",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 426,
+    "critRate": 0.15,
+    "baseChakraCost": 41,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-firewind-compound-jutsu-01": {
+    "name": "Fire-Wind Compound Jutsu",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 395,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-black-secret-technique-machine-one-shot-01": {
+    "name": "Black Secret Technique: Machine One Shot",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 413,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-karma-blaster-01": {
+    "name": "Karma Blaster",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 391,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-microshrinking-rods-01": {
+    "name": "Micro-Shrinking Rods",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 390,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-absolute-taijutsu-drive-01": {
+    "name": "Absolute Taijutsu Drive",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 375,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-lava-release-quicklime-congealing-technique-01": {
+    "name": "Lava Release: Quicklime Congealing Technique",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 367,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-seven-ninja-swords-style-01": {
+    "name": "Seven Ninja Swords Style",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 388,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-wind-release-whirlwind-fist-01": {
+    "name": "Wind Release: Whirlwind Fist",
+    "type": "TAIJUTSU",
+    "element": "WIND",
+    "baseDamage": 404,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-genjutsu-flint-01": {
+    "name": "Genjutsu Flint",
+    "type": "GENJUTSU",
+    "element": "YIN",
+    "baseDamage": 416,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Ilusi pikiran kuat yang mengaburkan persepsi panca indera dan melumpuhkan target."
+  },
+  "jutsu-earth-release-earth-flow-wave-01": {
+    "name": "Earth Release: Earth Flow Wave",
+    "type": "NINJUTSU",
+    "element": "EARTH",
+    "baseDamage": 394,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur EARTH berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-chakra-blade-01": {
+    "name": "Chakra Blade",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 429,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-super-rasengan-plan-01": {
+    "name": "Super Rasengan Plan",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 594,
+    "critRate": 0.2,
+    "baseChakraCost": 83,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-wind-release-breakthrough-01": {
+    "name": "Wind Release: Breakthrough",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 414,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-eight-gates-dynamic-entry-01": {
+    "name": "Eight Gates Dynamic Entry",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 368,
+    "critRate": 0.15,
+    "baseChakraCost": 54,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-super-beast-scroll-lions-dragons-01": {
+    "name": "Super Beast Scroll: Lions & Dragons",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 596,
+    "critRate": 0.2,
+    "baseChakraCost": 67,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-medical-palm-01": {
+    "name": "Medical Palm",
+    "type": "MEDICAL",
+    "element": "YANG",
+    "baseDamage": 401,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Manipulasi chakra medis untuk regenerasi sel tubuh dan pertahanan vital."
+  },
+  "jutsu-chakra-infused-heavy-strike-01": {
+    "name": "Chakra Infused Heavy Strike",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 386,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-puppet-performance-hundred-puppets-01": {
+    "name": "Puppet Performance: Hundred Puppets",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 378,
+    "critRate": 0.15,
+    "baseChakraCost": 46,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-iron-sand-01": {
+    "name": "Iron Sand",
+    "type": "BUKIJUTSU",
+    "element": "EARTH",
+    "baseDamage": 427,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-flame-control-sword-slash-01": {
+    "name": "Flame Control Sword Slash",
+    "type": "BUKIJUTSU",
+    "element": "FIRE",
+    "baseDamage": 403,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-almighty-teleportation-slash-01": {
+    "name": "Almighty Teleportation Slash",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 370,
+    "critRate": 0.15,
+    "baseChakraCost": 40,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-wind-release-sea-dragon-01": {
+    "name": "Wind Release: Sea Dragon",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 375,
+    "critRate": 0.15,
+    "baseChakraCost": 51,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-great-sickle-weasel-01": {
+    "name": "Great Sickle Weasel",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 365,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-rising-dragon-control-01": {
+    "name": "Rising Dragon Control",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 396,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-weapon-avalanche-01": {
+    "name": "Weapon Avalanche",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 374,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-heavenly-spear-punch-01": {
+    "name": "Heavenly Spear Punch",
+    "type": "TAIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 382,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Teknik serangan fisik mematikan berdaya hantam tinggi dari seni bela diri shinobi."
+  },
+  "jutsu-creation-rebirth-01": {
+    "name": "Creation Rebirth",
+    "type": "MEDICAL",
+    "element": "YANG",
+    "baseDamage": 398,
+    "critRate": 0.15,
+    "baseChakraCost": 53,
+    "target": "SINGLE",
+    "description": "Manipulasi chakra medis untuk regenerasi sel tubuh dan pertahanan vital."
+  },
+  "jutsu-butterfly-mode-01": {
+    "name": "Butterfly Mode",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 382,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-partial-expansion-01": {
+    "name": "Partial Expansion",
+    "type": "HIDEN",
+    "element": "NEUTRAL",
+    "baseDamage": 386,
+    "critRate": 0.15,
+    "baseChakraCost": 47,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-truthseeking-balls-01": {
+    "name": "Truth-Seeking Balls",
+    "type": "NINJUTSU",
+    "element": "YIN-YANG",
+    "baseDamage": 377,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur YIN-YANG berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-six-paths-senjutsu-01": {
+    "name": "Six Paths Senjutsu",
+    "type": "SENJUTSU",
+    "element": "YIN-YANG",
+    "baseDamage": 557,
+    "critRate": 0.2,
+    "baseChakraCost": 84,
+    "target": "SINGLE",
+    "description": "Seni petapa pemanfaatan energi alam dengan daya hancur berlipat ganda."
+  },
+  "jutsu-paper-dance-01": {
+    "name": "Paper Dance",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 420,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-paper-shuriken-01": {
+    "name": "Paper Shuriken",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 276,
+    "critRate": 0.1,
+    "baseChakraCost": 27,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-water-release-encirclement-pillar-01": {
+    "name": "Water Release: Encirclement Pillar",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 404,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-wild-water-wave-01": {
+    "name": "Wild Water Wave",
+    "type": "NINJUTSU",
+    "element": "WATER",
+    "baseDamage": 406,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur WATER berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-spore-technique-01": {
+    "name": "Spore Technique",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 419,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-mayfly-01": {
+    "name": "Mayfly",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 386,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-body-flicker-technique-01": {
+    "name": "Body Flicker Technique",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 371,
+    "critRate": 0.15,
+    "baseChakraCost": 42,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-demonic-statue-gedo-mazo-01": {
+    "name": "Demonic Statue: Gedo Mazo",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 372,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-heavenly-hand-power-01": {
+    "name": "Heavenly Hand Power",
+    "type": "NINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 405,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-seven-star-sword-01": {
+    "name": "Seven Star Sword",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 425,
+    "critRate": 0.15,
+    "baseChakraCost": 48,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-crimson-gourd-01": {
+    "name": "Crimson Gourd",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 404,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-secret-red-move-tripuppet-control-01": {
+    "name": "Secret Red Move: Tri-Puppet Control",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 373,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-banana-fan-coil-of-fire-01": {
+    "name": "Banana Fan: Coil of Fire",
+    "type": "BUKIJUTSU",
+    "element": "FIRE",
+    "baseDamage": 378,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-amber-purifying-pot-01": {
+    "name": "Amber Purifying Pot",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 423,
+    "critRate": 0.15,
+    "baseChakraCost": 49,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-multishadow-clone-technique-01": {
+    "name": "Multi-Shadow Clone Technique",
+    "type": "HIDEN",
+    "element": "YIN",
+    "baseDamage": 286,
+    "critRate": 0.1,
+    "baseChakraCost": 29,
+    "target": "SINGLE",
+    "description": "Jurus rahasia turun-temurun klan dengan karakteristik taktis yang unik."
+  },
+  "jutsu-cursed-seal-stage-2-01": {
+    "name": "Cursed Seal: Stage 2",
+    "type": "FUINJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 367,
+    "critRate": 0.15,
+    "baseChakraCost": 52,
+    "target": "SINGLE",
+    "description": "Seni segel sakral untuk mengikat, menyerap, atau menyegel kekuatan lawan."
+  },
+  "jutsu-fireball-02": {
+    "name": "Fireball",
+    "type": "NINJUTSU",
+    "element": "FIRE",
+    "baseDamage": 374,
+    "critRate": 0.15,
+    "baseChakraCost": 45,
+    "target": "AOE",
+    "description": "Jurus ninjutsu berunsur FIRE berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-puppet-spring-punishing-strike-01": {
+    "name": "Puppet: Spring Punishing Strike",
+    "type": "BUKIJUTSU",
+    "element": "NEUTRAL",
+    "baseDamage": 386,
+    "critRate": 0.15,
+    "baseChakraCost": 43,
+    "target": "SINGLE",
+    "description": "Kombinasi senjata ninja presisi tinggi dan manuver bertarung taktis."
+  },
+  "jutsu-tailed-beast-rasengan-01": {
+    "name": "Tailed Beast Rasengan",
+    "type": "NINJUTSU",
+    "element": "WIND",
+    "baseDamage": 391,
+    "critRate": 0.15,
+    "baseChakraCost": 44,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur WIND berkekuatan tinggi untuk menghantam pertahanan lawan."
+  },
+  "jutsu-curse-mark-chidori-01": {
+    "name": "Curse Mark Chidori",
+    "type": "NINJUTSU",
+    "element": "LIGHTNING",
+    "baseDamage": 370,
+    "critRate": 0.15,
+    "baseChakraCost": 50,
+    "target": "SINGLE",
+    "description": "Jurus ninjutsu berunsur LIGHTNING berkekuatan tinggi untuk menghantam pertahanan lawan."
+  }
+}

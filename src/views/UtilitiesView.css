@@ -1,0 +1,77 @@
+/* ==========================================================================
+   UTILITIES VIEW — Full-page layout for stats, daily bonus, audio, settings
+   Replaces old narrow right-panel sidebar with a spacious dashboard grid.
+   ========================================================================== */
+
+.utilities-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 0 40px;
+}
+
+.utilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* Each card in the grid */
+.util-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(10, 14, 23, 0.95));
+  border: 1px solid rgba(212, 168, 74, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.util-card:hover {
+  border-color: rgba(212, 168, 74, 0.3);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Stats card spans full width */
+.util-card-stats {
+  grid-column: 1 / -1;
+}
+
+/* Override QuickStats sizing for full-width context */
+.util-card-stats .quick-stats {
+  max-width: none;
+}
+
+.util-card-stats .stats-row {
+  gap: 24px;
+}
+
+/* Daily Bonus card */
+.util-card-daily {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Audio card */
+.util-card-audio {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Settings card */
+.util-card-settings {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive: stack to single column on small screens */
+@media (max-width: 680px) {
+  .utilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .util-card-stats,
+  .util-card-settings {
+    grid-column: 1;
+  }
+}

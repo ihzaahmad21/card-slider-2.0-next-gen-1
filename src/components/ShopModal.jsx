@@ -7,6 +7,7 @@ export default function ShopModal({
   onClose,
   coins,
   rateBoosters,
+  pity,
   onOpenPack,
   onBuyCoins,
   onBuyBooster
@@ -21,6 +22,7 @@ export default function ShopModal({
       <GachaShop
         coins={coins}
         rateBoosters={rateBoosters}
+        pity={pity}
         onOpenPack={onOpenPack}
         onBuyCoins={onBuyCoins}
         onBuyBooster={onBuyBooster}

@@ -1,1332 +1,2609 @@
 [
   {
-    "id": 1,
-    "name": "Shukaku (One-Tail)",
-    "ovr": 88,
-    "rarity": "SILVER RARE",
-    "image_url": "images/1 shukaku.webp"
-  },
-  {
-    "id": 2,
-    "name": "Ten-Tails (Jubi)",
-    "ovr": 99,
-    "rarity": "GOLD RARE",
-    "image_url": "images/10 jubi.webp"
-  },
-  {
-    "id": 3,
-    "name": "Matatabi (Two-Tails)",
-    "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/2 matatabi.webp"
-  },
-  {
-    "id": 4,
-    "name": "Isobu (Three-Tails)",
-    "ovr": 83,
-    "rarity": "SILVER RARE",
-    "image_url": "images/3 isobu.webp"
-  },
-  {
-    "id": 5,
-    "name": "Son Goku (Four-Tails)",
-    "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/4 son goku.webp"
-  },
-  {
-    "id": 6,
-    "name": "Kokuo (Five-Tails)",
-    "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/5 kokuo.webp"
-  },
-  {
-    "id": 7,
-    "name": "Saiken (Six-Tails)",
-    "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/6 saiken.webp"
-  },
-  {
-    "id": 8,
-    "name": "Chomei (Seven-Tails)",
-    "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/7 chomei.webp"
-  },
-  {
-    "id": 9,
-    "name": "Gyuki (Eight-Tails)",
-    "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/8 gyuki.webp"
-  },
-  {
-    "id": 10,
-    "name": "Kurama (Nine-Tails)",
-    "ovr": 94,
-    "rarity": "GOLD RARE",
-    "image_url": "images/9 kurama.webp"
-  },
-  {
     "id": 11,
     "name": "Akatsuchi",
-    "ovr": 78,
-    "rarity": "BRONZE",
-    "image_url": "images/akatsuchi_by_masonengine_dck74fz.webp"
+    "ovr": 80,
+    "image_url": "images/akatsuchi_by_masonengine_dck74fz.webp",
+    "equippedJutsu": [
+      "jutsu-rock-golem-technique-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 12,
     "name": "Anko Mitarashi",
-    "ovr": 77,
-    "rarity": "BRONZE",
-    "image_url": "images/anko.webp"
+    "ovr": 78,
+    "image_url": "images/anko.webp",
+    "equippedJutsu": [
+      "jutsu-striking-shadow-snakes-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 13,
     "name": "Ao",
     "ovr": 82,
-    "rarity": "BRONZE",
-    "image_url": "images/ao_by_masonengine_dctlrn7.webp"
+    "image_url": "images/ao_by_masonengine_dctlrn7.webp",
+    "equippedJutsu": [
+      "jutsu-byakugan-01",
+      "jutsu-water-release-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 14,
     "name": "Asuma Sarutobi",
     "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/asuma (2).webp"
+    "image_url": "images/asuma (2).webp",
+    "equippedJutsu": [
+      "jutsu-flying-swallow-01",
+      "jutsu-burning-ash-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 15,
     "name": "Boro",
-    "ovr": 89,
-    "rarity": "SILVER RARE",
-    "image_url": "images/boro_by_masonengine_dgaktra.webp"
+    "ovr": 90,
+    "image_url": "images/boro_by_masonengine_dgaktra.webp",
+    "equippedJutsu": [
+      "jutsu-virus-mist-01",
+      "jutsu-regenerative-core-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 16,
     "name": "Boruto",
-    "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/boruto_by_masonengine_dgiieib.webp"
+    "ovr": 86,
+    "image_url": "images/boruto_by_masonengine_dgiieib.webp",
+    "equippedJutsu": [
+      "jutsu-vanishing-rasengan-01",
+      "jutsu-boruto-stream-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 17,
     "name": "Boruto Karma",
-    "ovr": 92,
-    "rarity": "GOLD RARE",
-    "image_url": "images/boruto__karma__by_masonengine_dg82x33.webp"
+    "ovr": 91,
+    "image_url": "images/boruto__karma__by_masonengine_dg82x33.webp",
+    "equippedJutsu": [
+      "jutsu-karma-compression-rasengan-01"
+    ],
+    "awakeningId": "awakening-karma-01"
   },
   {
     "id": 18,
     "name": "Kagura Karatachi",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/boruto__naruto_next_generation_kagura_karatachi_by_iennidesign_dboybcc.webp"
+    "image_url": "images/boruto__naruto_next_generation_kagura_karatachi_by_iennidesign_dboybcc.webp",
+    "equippedJutsu": [
+      "jutsu-hiramekarei-twin-blade-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 19,
     "name": "Sumire Genin",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/boruto__naruto_next_generation_sumire__genin__by_iennidesign_dby4bfk.webp"
+    "image_url": "images/boruto__naruto_next_generation_sumire__genin__by_iennidesign_dby4bfk.webp",
+    "equippedJutsu": [
+      "jutsu-nue-water-bullet-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 20,
     "name": "Araya",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/boruto__the_next_generation_araya_by_iennidesign_d9yvvtd.webp"
+    "image_url": "images/boruto__the_next_generation_araya_by_iennidesign_d9yvvtd.webp",
+    "equippedJutsu": [
+      "jutsu-puppet-technique-great-scythe-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 21,
     "name": "Chouchou Akimichi",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/boruto__the_next_generation_chouchou_akimichi_by_iennidesign_d9u9vif.webp"
+    "image_url": "images/boruto__the_next_generation_chouchou_akimichi_by_iennidesign_d9u9vif.webp",
+    "equippedJutsu": [
+      "jutsu-partial-multisize-technique-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 22,
     "name": "Inojin Yamanaka",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/boruto__the_next_generation_inojin_yamanaka_by_iennidesign_d9r99iy.webp"
+    "image_url": "images/boruto__the_next_generation_inojin_yamanaka_by_iennidesign_d9r99iy.webp",
+    "equippedJutsu": [
+      "jutsu-super-beast-scroll-01",
+      "jutsu-mind-transfer-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 23,
     "name": "Shikadai Nara",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/boruto__the_next_generation_shikadai_nara_by_iennidesign_d9sg03s.webp"
+    "image_url": "images/boruto__the_next_generation_shikadai_nara_by_iennidesign_d9sg03s.webp",
+    "equippedJutsu": [
+      "jutsu-shadow-paralysis-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 24,
     "name": "Shinki",
-    "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/boruto__the_next_generation_shinki_by_iennidesign_d9t5gmx.webp"
+    "ovr": 78,
+    "image_url": "images/boruto__the_next_generation_shinki_by_iennidesign_d9t5gmx.webp",
+    "equippedJutsu": [
+      "jutsu-iron-sand-black-iron-wings-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 25,
     "name": "Yodo",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/boruto__the_next_generation_yodo_by_iennidesign_d9ska39.webp"
+    "image_url": "images/boruto__the_next_generation_yodo_by_iennidesign_d9ska39.webp",
+    "equippedJutsu": [
+      "jutsu-sonic-hair-blast-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 26,
     "name": "Cee",
-    "ovr": 76,
-    "rarity": "BRONZE",
-    "image_url": "images/cee_by_masonengine_dck1sap.webp"
+    "ovr": 80,
+    "image_url": "images/cee_by_masonengine_dck1sap.webp",
+    "equippedJutsu": [
+      "jutsu-lightning-flash-01",
+      "jutsu-medical-ninjutsu-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 27,
     "name": "Lady Chiyo",
-    "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/chiyo_by_masonengine_dcf47mc.webp"
+    "ovr": 83,
+    "image_url": "images/chiyo_by_masonengine_dcf47mc.webp",
+    "equippedJutsu": [
+      "jutsu-three-jewels-suction-crush-01",
+      "jutsu-mother-father-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 28,
     "name": "Choji Akimichi (Shippuden)",
-    "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/choji (2).webp"
+    "ovr": 78,
+    "image_url": "images/choji (2).webp",
+    "equippedJutsu": [
+      "jutsu-expansion-technique-01",
+      "jutsu-human-boulder-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 29,
-    "name": "Choji Akimichi (Butterfly Mode)",
-    "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/choji (3).webp"
+    "name": "Choji Akimichi (War Arc)",
+    "ovr": 84,
+    "image_url": "images/choji (3).webp",
+    "equippedJutsu": [
+      "jutsu-butterfly-bullet-bombing-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 30,
     "name": "Choji Akimichi (Part 1)",
-    "ovr": 66,
-    "rarity": "BRONZE",
-    "image_url": "images/choji (1).webp"
+    "ovr": 70,
+    "image_url": "images/choji (1).webp",
+    "equippedJutsu": [
+      "jutsu-human-bullet-tank-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 31,
-    "name": "Chojuro (6th Mizukage)",
-    "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/chojuro_by_masonengine_dctotwa.webp"
+    "name": "Chojuro",
+    "ovr": 87,
+    "image_url": "images/chojuro_by_masonengine_dctotwa.webp",
+    "equippedJutsu": [
+      "jutsu-twin-bone-swords-01",
+      "jutsu-bone-flute-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 32,
     "name": "Danzo Shimura",
-    "ovr": 88,
-    "rarity": "SILVER RARE",
-    "image_url": "images/danzo.webp"
+    "ovr": 84,
+    "image_url": "images/danzo.webp",
+    "equippedJutsu": [
+      "jutsu-izanagi-01",
+      "jutsu-wind-release-vacuum-wave-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 33,
     "name": "Darui (Black Lightning)",
     "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/darui__awakening_mode__by_masonengine_d9py9au.webp"
+    "image_url": "images/darui__awakening_mode__by_masonengine_d9py9au.webp",
+    "equippedJutsu": [
+      "jutsu-laser-circus-01",
+      "jutsu-black-panther-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 34,
     "name": "Deidara",
     "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/deidara_by_masonengine_d9cpgx1.webp"
+    "image_url": "images/deidara_by_masonengine_d9cpgx1.webp",
+    "equippedJutsu": [
+      "jutsu-c4-karura-01",
+      "jutsu-c3-mega-bomb-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 35,
     "name": "Deidara Reanimation",
-    "ovr": 88,
-    "rarity": "SILVER RARE",
-    "image_url": "images/deidara__reanimation__by_masonengine_dc49b42.webp"
+    "ovr": 87,
+    "image_url": "images/deidara__reanimation__by_masonengine_dc49b42.webp",
+    "equippedJutsu": [
+      "jutsu-c1-clay-birds-01",
+      "jutsu-c2-dragon-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 36,
     "name": "Delta",
-    "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/delta_by_masonengine_dgnr4y5.webp"
+    "ovr": 90,
+    "image_url": "images/delta_by_masonengine_dgnr4y5.webp",
+    "equippedJutsu": [
+      "jutsu-destructive-beam-01",
+      "jutsu-modded-legs-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 37,
     "name": "Foo Yamanaka",
-    "ovr": 77,
-    "rarity": "BRONZE",
-    "image_url": "images/foo.webp"
+    "ovr": 80,
+    "image_url": "images/foo.webp",
+    "equippedJutsu": [
+      "jutsu-mind-transfer-puppet-curse-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 38,
     "name": "Fuu (Seven-Tails Jinchuriki)",
     "ovr": 86,
-    "rarity": "SILVER RARE",
-    "image_url": "images/fuu_by_masonengine_dc8rtcz.webp"
+    "image_url": "images/fuu_by_masonengine_dc8rtcz.webp",
+    "equippedJutsu": [
+      "jutsu-scale-powder-blast-01",
+      "jutsu-net-slash-01"
+    ],
+    "awakeningId": "awakening-chomei-01"
   },
   {
     "id": 39,
     "name": "Fuu Reanimation",
     "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/fuu__reanimation__by_masonengine_dc8rtff.webp"
+    "image_url": "images/fuu__reanimation__by_masonengine_dc8rtff.webp",
+    "equippedJutsu": [
+      "jutsu-scale-powder-shield-01",
+      "jutsu-wind-slash-01"
+    ],
+    "awakeningId": "awakening-chomei-01"
   },
   {
     "id": 40,
-    "name": "Gaara (Great War Kazekage)",
+    "name": "Gaara (Great War Arc Kazekage)",
     "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/gaara__great_war_ninja__by_masonengine_d83yaci.webp"
+    "image_url": "images/gaara__great_war_ninja__by_masonengine_d83yaci.webp",
+    "equippedJutsu": [
+      "jutsu-sand-tsunami-01"
+    ],
+    "awakeningId": "awakening-shukaku-01"
   },
   {
     "id": 41,
     "name": "Gaara (5th Kazekage)",
-    "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/gaara__kage_summit__by_masonengine_d8lx0mb.webp"
+    "ovr": 88,
+    "image_url": "images/gaara__kage_summit__by_masonengine_d8lx0mb.webp",
+    "equippedJutsu": [
+      "jutsu-sand-binding-coffin-01",
+      "jutsu-shield-of-sand-01"
+    ],
+    "awakeningId": "awakening-shukaku-01"
   },
   {
     "id": 42,
     "name": "Gaara (Part 1)",
-    "ovr": 79,
-    "rarity": "BRONZE",
-    "image_url": "images/gaara__part_1___second_suit__by_masonengine_d977sxm.webp"
+    "ovr": 80,
+    "image_url": "images/gaara__part_1___second_suit__by_masonengine_d977sxm.webp",
+    "equippedJutsu": [
+      "jutsu-desert-suspension-01",
+      "jutsu-sand-shuriken-01"
+    ],
+    "awakeningId": "awakening-shukaku-01"
   },
   {
     "id": 43,
     "name": "Might Guy (Base)",
     "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/guy (1).webp"
+    "image_url": "images/guy (1).webp",
+    "equippedJutsu": [
+      "jutsu-asa-kujaku-01",
+      "jutsu-hirudora-01"
+    ],
+    "awakeningId": "awakening-eight-gates-01"
   },
   {
     "id": 44,
     "name": "Might Guy (8 Gates)",
-    "ovr": 98,
-    "rarity": "GOLD RARE",
-    "image_url": "images/guy (2).webp"
+    "ovr": 97,
+    "image_url": "images/guy (2).webp",
+    "equippedJutsu": [
+      "jutsu-night-guy-01",
+      "jutsu-sekizo-evening-elephant-01"
+    ],
+    "awakeningId": "awakening-eight-gates-01"
   },
   {
     "id": 45,
     "name": "Haku",
-    "ovr": 79,
-    "rarity": "BRONZE",
-    "image_url": "images/haku_by_masonengine_d8htn3u.webp"
+    "ovr": 72,
+    "image_url": "images/haku_by_masonengine_d8htn3u.webp",
+    "equippedJutsu": [
+      "jutsu-demonic-mirror-ice-crystals-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 46,
     "name": "Haku (Reanimation)",
     "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/haku__reanimation__by_masonengine_daock82.webp"
+    "image_url": "images/haku__reanimation__by_masonengine_daock82.webp",
+    "equippedJutsu": [
+      "jutsu-ice-release-thousand-flying-stabbing-needles-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 47,
     "name": "Hanzo of the Salamander",
-    "ovr": 89,
-    "rarity": "GOLD RARE",
-    "image_url": "images/hanzo__alive__by_masonengine_dbfnkol.webp"
+    "ovr": 85,
+    "image_url": "images/hanzo__alive__by_masonengine_dbfnkol.webp",
+    "equippedJutsu": [
+      "jutsu-ninja-art-salamander-poison-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 48,
     "name": "Hanzo (Reanimation)",
-    "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/hanzo__reanimation__by_masonengine_dbfnkdb.webp"
+    "ovr": 86,
+    "image_url": "images/hanzo__reanimation__by_masonengine_dbfnkdb.webp",
+    "equippedJutsu": [
+      "jutsu-salamander-poison-01",
+      "jutsu-sickle-dance-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 49,
     "name": "Han (Five-Tails Jinchuriki)",
     "ovr": 86,
-    "rarity": "SILVER RARE",
-    "image_url": "images/han_by_masonengine_dc8933q.webp"
+    "image_url": "images/han_by_masonengine_dc8933q.webp",
+    "equippedJutsu": [
+      "jutsu-steam-propulsion-01",
+      "jutsu-boiling-horn-01"
+    ],
+    "awakeningId": "awakening-kokuo-01"
   },
   {
     "id": 50,
     "name": "Han Reanimation",
     "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/han__reanimation__by_masonengine_dc893ek.webp"
+    "image_url": "images/han__reanimation__by_masonengine_dc893ek.webp",
+    "equippedJutsu": [
+      "jutsu-steam-dash-01",
+      "jutsu-erupting-propulsion-01"
+    ],
+    "awakeningId": "awakening-kokuo-01"
   },
   {
     "id": 51,
     "name": "Hashirama Senju (Sage Mode)",
     "ovr": 97,
-    "rarity": "GOLD RARE",
-    "image_url": "images/hashirama (3).webp"
+    "image_url": "images/hashirama sage.webp",
+    "equippedJutsu": [
+      "jutsu-sage-art-wood-release-true-several-thousand-hands-01"
+    ],
+    "awakeningId": "awakening-sage-01"
   },
   {
     "id": 52,
     "name": "Hashirama Senju (Alive)",
-    "ovr": 93,
-    "rarity": "GOLD RARE",
-    "image_url": "images/hashirama (4).webp"
+    "ovr": 97,
+    "image_url": "images/hashirama (3).webp",
+    "equippedJutsu": [
+      "jutsu-wood-emergence-01"
+    ],
+    "awakeningId": "awakening-sage-01"
   },
   {
     "id": 53,
     "name": "Hidan",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/hidan_by_masonengine_d99szqx.webp"
+    "image_url": "images/hidan_by_masonengine_d99szqx.webp",
+    "equippedJutsu": [
+      "jutsu-curse-technique-death-possession-blood-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 54,
     "name": "Hinata Hyuga (Shippuden)",
-    "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/hinata (2).webp"
+    "ovr": 80,
+    "image_url": "images/hinata (2).webp",
+    "equippedJutsu": [
+      "jutsu-eight-trigrams-thirtytwo-palms-01"
+    ],
+    "awakeningId": "awakening-byakugan-01"
   },
   {
     "id": 55,
-    "name": "Hinata Hyuga (Twin Lion)",
+    "name": "Hinata Hyuga (Twin Lion / War Arc)",
     "ovr": 82,
-    "rarity": "SILVER RARE",
-    "image_url": "images/hinata (3).webp"
+    "image_url": "images/hinata (3).webp",
+    "equippedJutsu": [
+      "jutsu-gentle-step-twin-lion-palms-01"
+    ],
+    "awakeningId": "awakening-byakugan-01"
   },
   {
     "id": 56,
     "name": "Hinata Hyuga (Part 1)",
-    "ovr": 64,
-    "rarity": "BRONZE",
-    "image_url": "images/hinata (1).webp"
+    "ovr": 75,
+    "image_url": "images/hinata (1).webp",
+    "equippedJutsu": [
+      "jutsu-gentle-fist-02",
+      "jutsu-byakugan-strike-01"
+    ],
+    "awakeningId": "awakening-byakugan-01"
   },
   {
     "id": 57,
     "name": "Hiruzen Sarutobi (3rd Hokage)",
-    "ovr": 91,
-    "rarity": "GOLD RARE",
-    "image_url": "images/hiruzen (1).webp"
+    "ovr": 88,
+    "image_url": "images/hiruzen (1).webp",
+    "equippedJutsu": [
+      "jutsu-reaping-death-seal-01",
+      "jutsu-five-elements-combo-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 58,
     "name": "Hiruzen Reanimation",
-    "ovr": 92,
-    "rarity": "GOLD RARE",
-    "image_url": "images/hiruzen (2).webp"
+    "ovr": 88,
+    "image_url": "images/hiruzen (2).webp",
+    "equippedJutsu": [
+      "jutsu-enma-power-01",
+      "jutsu-roof-tile-shuriken-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 59,
     "name": "Ino Yamanaka (Shippuden)",
-    "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/ino (2).webp"
+    "ovr": 78,
+    "image_url": "images/ino (2).webp",
+    "equippedJutsu": [
+      "jutsu-mind-destruction-01",
+      "jutsu-mind-transfer-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 60,
     "name": "Ino Yamanaka (Part 1)",
     "ovr": 63,
-    "rarity": "BRONZE",
-    "image_url": "images/ino (1).webp"
+    "image_url": "images/ino (1).webp",
+    "equippedJutsu": [
+      "jutsu-mind-body-switch-technique-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 61,
-    "name": "Ino Yamanaka (Great Ninja War)",
+    "name": "Ino Yamanaka (War Arc)",
     "ovr": 81,
-    "rarity": "SILVER RARE",
-    "image_url": "images/ino (3).webp"
+    "image_url": "images/ino (3).webp",
+    "equippedJutsu": [
+      "jutsu-mind-body-transmission-01",
+      "jutsu-psycho-mind-transmission-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 62,
     "name": "Itachi Uchiha (Akatsuki)",
     "ovr": 91,
-    "rarity": "GOLD RARE",
-    "image_url": "images/itachi_by_masonengine_d88z9zy.webp"
+    "image_url": "images/itachi_by_masonengine_d88z9zy.webp",
+    "equippedJutsu": [
+      "jutsu-tsukuyomi-01",
+      "jutsu-amaterasu-01",
+      "jutsu-susanoo-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 63,
     "name": "Itachi Reanimation",
-    "ovr": 97,
-    "rarity": "GOLD RARE",
-    "image_url": "images/itachi__reanimation__by_masonengine_d96b7jt.webp"
+    "ovr": 96,
+    "image_url": "images/itachi__reanimation__by_masonengine_d96b7jt.webp",
+    "equippedJutsu": [
+      "jutsu-izanami-01",
+      "jutsu-yasaka-magatama-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 64,
     "name": "Jigen",
     "ovr": 96,
-    "rarity": "GOLD RARE",
-    "image_url": "images/jigen_by_masonengine_dhcaxd3.webp"
+    "image_url": "images/jigen_by_masonengine_dhcaxd3.webp",
+    "equippedJutsu": [
+      "jutsu-chakra-rods-01",
+      "jutsu-disruption-beams-01"
+    ],
+    "awakeningId": "awakening-karma-01"
   },
   {
     "id": 65,
-    "name": "Jiraiya (Sannin)",
-    "ovr": 93,
-    "rarity": "GOLD RARE",
-    "image_url": "images/jiraiya (1).webp"
+    "name": "Jiraiya",
+    "ovr": 90,
+    "image_url": "images/jiraiya (1).webp",
+    "equippedJutsu": [
+      "jutsu-sage-art-goemon-01",
+      "jutsu-needle-jizo-01"
+    ],
+    "awakeningId": "awakening-sage-01"
   },
   {
     "id": 66,
     "name": "Jirobo",
     "ovr": 72,
-    "rarity": "BRONZE",
-    "image_url": "images/jirobo_by_masonengine_dcimbkz.webp"
+    "image_url": "images/jirobo_by_masonengine_dcimbkz.webp",
+    "equippedJutsu": [
+      "jutsu-terra-shield-01",
+      "jutsu-earth-style-barrier-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 67,
     "name": "Jugo (Curse Mark)",
     "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/jugo_by_masonengine_d882e00.webp"
+    "image_url": "images/jugo_by_masonengine_d882e00.webp",
+    "equippedJutsu": [
+      "jutsu-piston-fist-01",
+      "jutsu-curse-mark-frenzy-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 68,
     "name": "Kabuto Yakushi (Part 1)",
     "ovr": 79,
-    "rarity": "BRONZE",
-    "image_url": "images/kabuto_by_masonengine_d7t1mey.webp"
+    "image_url": "images/kabuto_by_masonengine_d7t1mey.webp",
+    "equippedJutsu": [
+      "jutsu-chakra-scalpel-01",
+      "jutsu-dead-soul-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 69,
     "name": "Kabuto Yakushi (Sage Mode)",
-    "ovr": 95,
-    "rarity": "GOLD RARE",
-    "image_url": "images/kabuto__sage_mode__by_masonengine_d80t45t.webp"
+    "ovr": 91,
+    "image_url": "images/kabuto__sage_mode__by_masonengine_d80t45t.webp",
+    "equippedJutsu": [
+      "jutsu-sage-art-inorganic-reanimation-01"
+    ],
+    "awakeningId": "awakening-sage-01"
   },
   {
     "id": 70,
     "name": "Kabuto Yakushi (Snake Cloak)",
-    "ovr": 88,
-    "rarity": "SILVER RARE",
-    "image_url": "images/kabuto__snake_cloak__by_masonengine_d92sf2g.webp"
+    "ovr": 87,
+    "image_url": "images/kabuto__snake_cloak__by_masonengine_d92sf2g.webp",
+    "equippedJutsu": [
+      "jutsu-snake-summon-01",
+      "jutsu-dna-reanimation-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 71,
     "name": "Kaguya Otsutsuki",
     "ovr": 99,
-    "rarity": "GOLD RARE",
-    "image_url": "images/kaguya_by_masonengine_d93aifc.webp"
+    "image_url": "images/kaguya_by_masonengine_d93aifc.webp",
+    "equippedJutsu": [
+      "jutsu-eighty-gods-vacuum-attack-01",
+      "jutsu-amenominaka-01"
+    ],
+    "awakeningId": "awakening-rinne-sharingan-01"
   },
   {
     "id": 72,
     "name": "Kakashi (Part 1)",
-    "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/kakashi (1).webp"
+    "ovr": 80,
+    "image_url": "images/kakashi (1).webp",
+    "equippedJutsu": [
+      "jutsu-lightning-blade-01",
+      "jutsu-earth-style-wall-01"
+    ],
+    "awakeningId": "awakening-sharingan-01"
   },
   {
     "id": 73,
     "name": "Kakashi Sharingan",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/kakashi (2).webp"
+    "image_url": "images/kakashi (2).webp",
+    "equippedJutsu": [
+      "jutsu-raikiri-01",
+      "jutsu-kamui-01"
+    ],
+    "awakeningId": "awakening-sharingan-01"
   },
   {
     "id": 74,
     "name": "Kakashi Double Sharinggan",
-    "ovr": 91,
-    "rarity": "GOLD RARE",
-    "image_url": "images/kakashi (3) double sharinggan.webp"
+    "ovr": 93,
+    "image_url": "images/kakashi (3) double sharinggan.webp",
+    "equippedJutsu": [
+      "jutsu-kamui-shuriken-01",
+      "jutsu-kamui-lightning-blade-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 75,
     "name": "Kakashi 6th Hokage",
-    "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/kakashi (7) hokage.webp"
+    "ovr": 87,
+    "image_url": "images/kakashi (7) hokage.webp",
+    "equippedJutsu": [
+      "jutsu-purple-lightning-01",
+      "jutsu-earth-style-wall-01"
+    ],
+    "awakeningId": "awakening-sharingan-01"
   },
   {
     "id": 76,
     "name": "Kakuzu",
     "ovr": 86,
-    "rarity": "SILVER RARE",
-    "image_url": "images/kakuzu_by_masonengine_d8357u5.webp"
+    "image_url": "images/kakuzu_by_masonengine_d8357u5.webp",
+    "equippedJutsu": [
+      "jutsu-earth-grudge-fear-01",
+      "jutsu-elemental-blast-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 77,
     "name": "Kakuzu Reanimation",
     "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/kakuzu__reanimation__by_masonengine_dc3nrky.webp"
+    "image_url": "images/kakuzu__reanimation__by_masonengine_dc3nrky.webp",
+    "equippedJutsu": [
+      "jutsu-false-darkness-01",
+      "jutsu-pressure-damage-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 78,
     "name": "Kankuro (Shippuden)",
-    "ovr": 77,
-    "rarity": "BRONZE",
-    "image_url": "images/kankuro_by_masonengine_d9d6sot.webp"
+    "ovr": 78,
+    "image_url": "images/kankuro_by_masonengine_d9d6sot.webp",
+    "equippedJutsu": [
+      "jutsu-secret-puppet-technique-salamander-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 79,
     "name": "Kankuro (War Arc)",
     "ovr": 81,
-    "rarity": "SILVER RARE",
-    "image_url": "images/kankuro__great_war_ninja__by_masonengine_d9qdt2d.webp"
+    "image_url": "images/kankuro__great_war_ninja__by_masonengine_d9qdt2d.webp",
+    "equippedJutsu": [
+      "jutsu-puppet-performance-kuroari-karasu-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 80,
     "name": "Kankuro (Part 1)",
-    "ovr": 68,
-    "rarity": "BRONZE",
-    "image_url": "images/kankuro__part_1___first_suit__by_masonengine_dcbco6b.webp"
+    "ovr": 72,
+    "image_url": "images/kankuro__part_1___first_suit__by_masonengine_dcbco6b.webp",
+    "equippedJutsu": [
+      "jutsu-iron-maiden-01",
+      "jutsu-crow-puppet-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 81,
     "name": "Karin Uzumaki",
     "ovr": 74,
-    "rarity": "BRONZE",
-    "image_url": "images/karin_by_masonengine_d8db18z.webp"
+    "image_url": "images/karin_by_masonengine_d8db18z.webp",
+    "equippedJutsu": [
+      "jutsu-adamantine-attacking-chains-01",
+      "jutsu-heal-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 82,
     "name": "Kawaki",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/kawaki_by_masonengine_dgiif7c.webp"
+    "image_url": "images/kawaki_by_masonengine_dgiif7c.webp",
+    "equippedJutsu": [
+      "jutsu-microscopic-transformation-01",
+      "jutsu-body-weapon-01"
+    ],
+    "awakeningId": "awakening-karma-01"
   },
   {
     "id": 83,
     "name": "Kawaki Karma",
-    "ovr": 92,
-    "rarity": "GOLD RARE",
-    "image_url": "images/kawaki__karma__by_masonengine_dg75ry8.webp"
+    "ovr": 91,
+    "image_url": "images/kawaki__karma__by_masonengine_dg75ry8.webp",
+    "equippedJutsu": [
+      "jutsu-karma-blast-01",
+      "jutsu-shrinking-field-01"
+    ],
+    "awakeningId": "awakening-karma-01"
   },
   {
     "id": 84,
     "name": "Kiba Inuzuka (War Arc)",
-    "ovr": 78,
-    "rarity": "BRONZE",
-    "image_url": "images/kiba (3).webp"
+    "ovr": 80,
+    "image_url": "images/kiba (3).webp",
+    "equippedJutsu": [
+      "jutsu-threeheaded-wolf-01",
+      "jutsu-fang-rotating-fang-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 85,
     "name": "Kiba Inuzuka (Part 1)",
-    "ovr": 65,
-    "rarity": "BRONZE",
-    "image_url": "images/kiba (1).webp"
+    "ovr": 70,
+    "image_url": "images/kiba (1).webp",
+    "equippedJutsu": [
+      "jutsu-fang-over-fang-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 86,
     "name": "Kiba Inuzuka (Shippuden)",
-    "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/kiba (2).webp"
+    "ovr": 78,
+    "image_url": "images/kiba (2).webp",
+    "equippedJutsu": [
+      "jutsu-absolute-fang-over-fang-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 87,
     "name": "Kidomaru",
     "ovr": 73,
-    "rarity": "BRONZE",
-    "image_url": "images/kidomaru_by_masonengine_dchxyjf.webp"
+    "image_url": "images/kidomaru_by_masonengine_dchxyjf.webp",
+    "equippedJutsu": [
+      "jutsu-spider-sticky-gold-01",
+      "jutsu-bow-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 88,
     "name": "Killer Bee (Samehada)",
     "ovr": 92,
-    "rarity": "GOLD RARE",
-    "image_url": "images/killer_bee__samehada__by_masonengine_d8i8sw0.webp"
+    "image_url": "images/killer_bee__samehada__by_masonengine_d8i8sw0.webp",
+    "equippedJutsu": [
+      "jutsu-lariat-01",
+      "jutsu-eightswords-dance-01"
+    ],
+    "awakeningId": "awakening-gyuki-01"
   },
   {
     "id": 89,
     "name": "Kimimaro Kaguya",
     "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/kimimaro_by_masonengine_dcc0xyo.webp"
+    "image_url": "images/kimimaro_by_masonengine_dcc0xyo.webp",
+    "equippedJutsu": [
+      "jutsu-dance-of-the-seedling-fern-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 90,
     "name": "Kinshiki Otsutsuki",
-    "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/kinshiki_otsutsuki.webp"
+    "ovr": 93,
+    "image_url": "images/kinshiki_otsutsuki.webp",
+    "equippedJutsu": [
+      "jutsu-red-chakra-weapons-01",
+      "jutsu-stone-splitter-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 91,
     "name": "Kisame Hoshigaki",
     "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/kisame_by_masonengine_d8i40vq.webp"
+    "image_url": "images/kisame_by_masonengine_d8i40vq.webp",
+    "equippedJutsu": [
+      "jutsu-water-shark-bomb-01",
+      "jutsu-great-shark-wave-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 92,
     "name": "Koji Kashin",
     "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/koji_kashin_by_masonengine_dgwfo6q.webp"
+    "image_url": "images/koji_kashin_by_masonengine_dgwfo6q.webp",
+    "equippedJutsu": [
+      "jutsu-true-fire-of-samadhi-01",
+      "jutsu-rasengan-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 93,
     "name": "Konan",
     "ovr": 88,
-    "rarity": "SILVER RARE",
-    "image_url": "images/konan_by_masonengine_d8tok2b.webp"
+    "image_url": "images/konan_by_masonengine_d8tok2b.webp",
+    "equippedJutsu": [
+      "jutsu-sacred-paper-emissary-technique-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 94,
     "name": "Konohamaru Sarutobi (Part 1)",
     "ovr": 60,
-    "rarity": "BRONZE",
-    "image_url": "images/konohamaru (1).webp"
+    "image_url": "images/konohamaru (1).webp",
+    "equippedJutsu": [
+      "jutsu-rasengan-01",
+      "jutsu-sexy-jutsu-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 95,
     "name": "Kurenai Yuhi",
     "ovr": 78,
-    "rarity": "BRONZE",
-    "image_url": "images/kurenai (1).webp"
+    "image_url": "images/kurenai (1).webp",
+    "equippedJutsu": [
+      "jutsu-demonic-illusion-tree-bind-death-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 96,
     "name": "Kurotsuchi (Jonin)",
     "ovr": 79,
-    "rarity": "BRONZE",
-    "image_url": "images/kurotsuchi_by_masonengine_dckkjz5.webp"
+    "image_url": "images/kurotsuchi_by_masonengine_dckkjz5.webp",
+    "equippedJutsu": [
+      "jutsu-lava-release-quicklime-technique-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 97,
     "name": "Kushina Uzumaki",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/kushina.webp"
+    "image_url": "images/kushina.webp",
+    "equippedJutsu": [
+      "jutsu-adamantine-sealing-chains-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 98,
     "name": "Madara Uchiha (Alive / EMS)",
-    "ovr": 96,
-    "rarity": "GOLD RARE",
-    "image_url": "images/madara__alive__by_masonengine_daocl6g.webp"
+    "ovr": 97,
+    "image_url": "images/madara__alive__by_masonengine_daocl6g.webp",
+    "equippedJutsu": [
+      "jutsu-tengai-shinsei-01",
+      "jutsu-majestic-attire-susanoo-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 99,
     "name": "Madara Reanimation Resolved",
     "ovr": 98,
-    "rarity": "GOLD RARE",
-    "image_url": "images/madara__reanimation_resolved__by_masonengine_d7vy5n3.webp"
+    "image_url": "images/madara__reanimation_resolved__by_masonengine_d7vy5n3.webp",
+    "equippedJutsu": [
+      "jutsu-wood-release-deep-forest-bloom-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 100,
     "name": "Madara Uchiha (Six Paths)",
     "ovr": 99,
-    "rarity": "GOLD RARE",
-    "image_url": "images/madara__six_paths__by_masonengine_d8x05ro.webp"
+    "image_url": "images/madara__six_paths__by_masonengine_d8x05ro.webp",
+    "equippedJutsu": [
+      "jutsu-limbo-border-jail-01",
+      "jutsu-tengai-shinsei-01"
+    ],
+    "awakeningId": "awakening-ten-tails-01"
   },
   {
     "id": 101,
     "name": "Mei Terumi (5th Mizukage)",
-    "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/mei_terumi_by_masonengine_d8d6hi2.webp"
+    "ovr": 87,
+    "image_url": "images/mei_terumi_by_masonengine_d8d6hi2.webp",
+    "equippedJutsu": [
+      "jutsu-lava-release-01",
+      "jutsu-vapor-style-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 102,
     "name": "Mifune (Samurai Leader)",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/mifune_by_masonengine_dbwan2x.webp"
+    "image_url": "images/mifune_by_masonengine_dbwan2x.webp",
+    "equippedJutsu": [
+      "jutsu-iai-beheading-01",
+      "jutsu-samurai-slash-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 103,
     "name": "Minato Namikaze (4th Hokage)",
     "ovr": 94,
-    "rarity": "GOLD RARE",
-    "image_url": "images/minato (4).webp"
+    "image_url": "images/minato (4).webp",
+    "equippedJutsu": [
+      "jutsu-flying-raijin-01",
+      "jutsu-rasengan-01"
+    ],
+    "awakeningId": "awakening-flying-raijin-01"
   },
   {
     "id": 104,
     "name": "Minato (Reanimation)",
     "ovr": 96,
-    "rarity": "GOLD RARE",
-    "image_url": "images/minato (5).webp"
+    "image_url": "images/minato (5).webp",
+    "equippedJutsu": [
+      "jutsu-reaping-death-seal-01",
+      "jutsu-flying-raijin-02"
+    ],
+    "awakeningId": "awakening-flying-raijin-01"
   },
   {
     "id": 105,
     "name": "Minato (KCM)",
-    "ovr": 98,
-    "rarity": "GOLD RARE",
-    "image_url": "images/minato (6).webp"
+    "ovr": 96,
+    "image_url": "images/minato (6).webp",
+    "equippedJutsu": [
+      "jutsu-spiralling-serial-flying-raijin-01"
+    ],
+    "awakeningId": "awakening-kcm-01"
   },
   {
     "id": 106,
     "name": "Mitsuki",
     "ovr": 82,
-    "rarity": "SILVER RARE",
-    "image_url": "images/mitauki (1).webp"
+    "image_url": "images/mitauki (1).webp",
+    "equippedJutsu": [
+      "jutsu-sage-transformation-01",
+      "jutsu-lightning-snake-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 107,
     "name": "Momoshiki Otsutsuki",
-    "ovr": 93,
-    "rarity": "GOLD RARE",
-    "image_url": "images/momoshiki_otsutsuki.webp"
+    "ovr": 96,
+    "image_url": "images/momoshiki_otsutsuki.webp",
+    "equippedJutsu": [
+      "jutsu-inukai-takeru-no-mikoto-01",
+      "jutsu-shadow-rusher-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 108,
     "name": "Nagato Reanimation",
     "ovr": 96,
-    "rarity": "GOLD RARE",
-    "image_url": "images/nagato__reanimation__by_masonengine_d965vgd.webp"
+    "image_url": "images/nagato__reanimation__by_masonengine_d965vgd.webp",
+    "equippedJutsu": [
+      "jutsu-summoning-rinnegan-01",
+      "jutsu-almighty-push-01"
+    ],
+    "awakeningId": "awakening-rinnegan-01"
   },
   {
     "id": 109,
     "name": "Naruto Uzumaki (Base Shippuden)",
     "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/naruto_by_masonengine_d87xn8m.webp"
+    "image_url": "images/naruto_by_masonengine_d87xn8m.webp",
+    "equippedJutsu": [
+      "jutsu-shadow-clone-01",
+      "jutsu-rasengan-01"
+    ],
+    "awakeningId": "awakening-kurama-01"
   },
   {
     "id": 110,
     "name": "Ashura Otsutsuki",
-    "ovr": 98,
-    "rarity": "GOLD RARE",
-    "image_url": "images/naruto_shippuden____ashura_otsutsuki_by_stormgames_dcwr431.webp"
+    "ovr": 97,
+    "image_url": "images/naruto_shippuden____ashura_otsutsuki_by_stormgames_dcwr431.webp",
+    "equippedJutsu": [
+      "jutsu-amenomihoboko-01",
+      "jutsu-wood-release-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 111,
     "name": "Indra Otsutsuki",
-    "ovr": 98,
-    "rarity": "GOLD RARE",
-    "image_url": "images/naruto_shippuden____indra_otsutsuki_by_stormgames_dcreuih.webp"
+    "ovr": 97,
+    "image_url": "images/naruto_shippuden____indra_otsutsuki_by_stormgames_dcreuih.webp",
+    "equippedJutsu": [
+      "jutsu-hinokagutsuchi-01",
+      "jutsu-lightning-style-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 112,
     "name": "Naruto Baryon Mode",
     "ovr": 99,
-    "rarity": "GOLD RARE",
-    "image_url": "images/naruto__baryon_mode__by_masonengine_dg67ve5.webp"
+    "image_url": "images/naruto__baryon_mode__by_masonengine_dg67ve5.webp",
+    "equippedJutsu": [
+      "jutsu-baryon-tail-01",
+      "jutsu-rasengan-01"
+    ],
+    "awakeningId": "awakening-baryon-01"
   },
   {
     "id": 113,
     "name": "Naruto Uzumaki (Bijuu Mode)",
     "ovr": 95,
-    "rarity": "GOLD RARE",
-    "image_url": "images/naruto__biju_s_mode__by_masonengine_dbgikfz.webp"
+    "image_url": "images/naruto__biju_s_mode__by_masonengine_dbgikfz.webp",
+    "equippedJutsu": [
+      "jutsu-tailed-beast-planets-rasengan-01"
+    ],
+    "awakeningId": "awakening-kurama-01"
   },
   {
     "id": 114,
     "name": "Naruto Uzumaki (KCM Link)",
     "ovr": 94,
-    "rarity": "GOLD RARE",
-    "image_url": "images/naruto__kurama_link_mode__by_masonengine_d8q0d2u.webp"
+    "image_url": "images/naruto__kurama_link_mode__by_masonengine_d8q0d2u.webp",
+    "equippedJutsu": [
+      "jutsu-minirasenshuriken-01",
+      "jutsu-kurama-arms-01"
+    ],
+    "awakeningId": "awakening-kurama-01"
   },
   {
     "id": 115,
     "name": "Naruto Uzumaki (Part 1)",
-    "ovr": 68,
-    "rarity": "BRONZE",
-    "image_url": "images/naruto__part_1__by_masonengine_daim8u2.webp"
+    "ovr": 71,
+    "image_url": "images/naruto__part_1__by_masonengine_daim8u2.webp",
+    "equippedJutsu": [
+      "jutsu-shadow-clone-01",
+      "jutsu-uzumaki-barrage-01"
+    ],
+    "awakeningId": "awakening-kurama-01"
   },
   {
     "id": 116,
     "name": "Naruto Uzumaki (Sage Mode)",
     "ovr": 91,
-    "rarity": "GOLD RARE",
-    "image_url": "images/naruto__sage_mode__by_masonengine_d7scfab.webp"
+    "image_url": "images/naruto__sage_mode__by_masonengine_d7scfab.webp",
+    "equippedJutsu": [
+      "jutsu-sage-art-wind-release-rasenshuriken-01"
+    ],
+    "awakeningId": "awakening-sage-01"
   },
   {
     "id": 117,
     "name": "Naruto Uzumaki (Six Paths Mode)",
-    "ovr": 99,
-    "rarity": "GOLD RARE",
-    "image_url": "images/naruto__sage_of_the_six_paths_mode__by_masonengine_d8a5q84.webp"
+    "ovr": 98,
+    "image_url": "images/naruto__sage_of_the_six_paths_mode__by_masonengine_d8a5q84.webp",
+    "equippedJutsu": [
+      "jutsu-truth-seeking-balls-01",
+      "jutsu-rasenshuriken-02"
+    ],
+    "awakeningId": "awakening-kurama-01"
   },
   {
     "id": 118,
     "name": "Naruto Uzumaki (7th Hokage)",
-    "ovr": 98,
-    "rarity": "GOLD RARE",
-    "image_url": "images/naruto__seventh_hokage__by_masonengine_d9tsgqe.webp"
+    "ovr": 99,
+    "image_url": "images/naruto__seventh_hokage__by_masonengine_d9tsgqe.webp",
+    "equippedJutsu": [
+      "jutsu-super-ultrabig-ball-rasengan-01"
+    ],
+    "awakeningId": "awakening-kurama-01"
   },
   {
     "id": 119,
     "name": "Neji Hyuga (Shippuden)",
     "ovr": 82,
-    "rarity": "SILVER RARE",
-    "image_url": "images/neji (2).webp"
+    "image_url": "images/neji (2).webp",
+    "equippedJutsu": [
+      "jutsu-gentle-fist-01",
+      "jutsu-rotation-01"
+    ],
+    "awakeningId": "awakening-byakugan-01"
   },
   {
     "id": 120,
     "name": "Neji Hyuga (War Arc)",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/neji (4).webp"
+    "image_url": "images/neji (4).webp",
+    "equippedJutsu": [
+      "jutsu-eight-trigrams-one-hundred-twentyeight-palms-01"
+    ],
+    "awakeningId": "awakening-byakugan-01"
   },
   {
     "id": 121,
     "name": "Neji Hyuga (part 1)",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/neji (1).webp"
+    "image_url": "images/neji (1).webp",
+    "equippedJutsu": [
+      "jutsu-eight-trigrams-palm-rotation-01"
+    ],
+    "awakeningId": "awakening-byakugan-01"
   },
   {
     "id": 122,
-    "name": "Obito Uchiha (Tobi)",
+    "name": "Obito Uchiha (Part 1)",
     "ovr": 82,
-    "rarity": "SILVER RARE",
-    "image_url": "images/obito.webp"
+    "image_url": "images/obito.webp",
+    "equippedJutsu": [
+      "jutsu-minefield-technique-01",
+      "jutsu-kamui-escape-01"
+    ],
+    "awakeningId": "awakening-sharingan-01"
   },
   {
     "id": 123,
     "name": "Obito Uchiha (Rampaging)",
     "ovr": 89,
-    "rarity": "GOLD RARE",
-    "image_url": "images/obito__rampaging__by_masonengine_d8t4bai.webp"
+    "image_url": "images/obito__rampaging__by_masonengine_d8t4bai.webp",
+    "equippedJutsu": [
+      "jutsu-wood-release-cutting-technique-01"
+    ],
+    "awakeningId": "awakening-sharingan-01"
   },
   {
     "id": 124,
     "name": "Obito Uchiha (Ten-Tails)",
     "ovr": 98,
-    "rarity": "GOLD RARE",
-    "image_url": "images/obito__ten_tails_jinchuriki__by_masonengine_d8u309w.webp"
+    "image_url": "images/obito__ten_tails_jinchuriki__by_masonengine_d8u309w.webp",
+    "equippedJutsu": [
+      "jutsu-sword-of-nunoboko-01",
+      "jutsu-truthseeking-orb-01"
+    ],
+    "awakeningId": "awakening-ten-tails-01"
   },
   {
     "id": 125,
     "name": "Obito Uchiha (Unmasked)",
     "ovr": 94,
-    "rarity": "GOLD RARE",
-    "image_url": "images/obito__unmasked__by_masonengine_d7u7ejs.webp"
+    "image_url": "images/obito__unmasked__by_masonengine_d7u7ejs.webp",
+    "equippedJutsu": [
+      "jutsu-kamui-01",
+      "jutsu-fire-release-bomb-blast-01"
+    ],
+    "awakeningId": "awakening-sharingan-01"
   },
   {
     "id": 126,
     "name": "Ohnoki (3rd Tsuchikage)",
-    "ovr": 91,
-    "rarity": "GOLD RARE",
-    "image_url": "images/ohnoki_by_masonengine_d8gzv0g.webp"
+    "ovr": 89,
+    "image_url": "images/ohnoki_by_masonengine_d8gzv0g.webp",
+    "equippedJutsu": [
+      "jutsu-particle-style-atomic-dismantling-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 127,
     "name": "Orochimaru",
-    "ovr": 92,
-    "rarity": "GOLD RARE",
-    "image_url": "images/orochimaru_by_masonengine_d8hxov2.webp"
+    "ovr": 90,
+    "image_url": "images/orochimaru_by_masonengine_d8hxov2.webp",
+    "equippedJutsu": [
+      "jutsu-eight-branches-technique-01",
+      "jutsu-snake-summon-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 128,
     "name": "Orochimaru (Akatsuki)",
-    "ovr": 91,
-    "rarity": "GOLD RARE",
-    "image_url": "images/orochimaru__akatsuki_inception__by_masonengine_d7t6bsc.webp"
+    "ovr": 87,
+    "image_url": "images/orochimaru__akatsuki_inception__by_masonengine_d7t6bsc.webp",
+    "equippedJutsu": [
+      "jutsu-triple-rashomon-01",
+      "jutsu-kusanagi-sword-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 129,
     "name": "Pain (Deva Path)",
-    "ovr": 95,
-    "rarity": "GOLD RARE",
-    "image_url": "images/pain_by_masonengine_damsdub.webp"
+    "ovr": 91,
+    "image_url": "images/pain_by_masonengine_damsdub.webp",
+    "equippedJutsu": [
+      "jutsu-almighty-push-01",
+      "jutsu-planetary-devastation-01"
+    ],
+    "awakeningId": "awakening-rinnegan-01"
   },
   {
     "id": 130,
     "name": "Ay (4th Raikage)",
-    "ovr": 91,
-    "rarity": "GOLD RARE",
-    "image_url": "images/raikage__ay__haori_jacket__by_masonengine_d8gjayz.webp"
+    "ovr": 88,
+    "image_url": "images/raikage__ay__haori_jacket__by_masonengine_d8gjayz.webp",
+    "equippedJutsu": [
+      "jutsu-lariat-01",
+      "jutsu-lightning-straight-01"
+    ],
+    "awakeningId": "awakening-lightning-cloak-01"
   },
   {
     "id": 131,
     "name": "Rin Nohara",
     "ovr": 62,
-    "rarity": "BRONZE",
-    "image_url": "images/rin.webp"
+    "image_url": "images/rin.webp",
+    "equippedJutsu": [
+      "jutsu-medical-ninjutsu-01",
+      "jutsu-first-aid-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 132,
     "name": "Rock Lee (Part 1)",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/rock lee (1).webp"
+    "image_url": "images/rock lee (1).webp",
+    "equippedJutsu": [
+      "jutsu-primary-lotus-01",
+      "jutsu-leaf-hurricane-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 133,
     "name": "Rock Lee (Shippuden)",
-    "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/rock lee (2).webp"
+    "ovr": 78,
+    "image_url": "images/rock lee (2).webp",
+    "equippedJutsu": [
+      "jutsu-drunken-fist-01",
+      "jutsu-hidden-lotus-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 134,
     "name": "Rock Lee (6 Gates)",
-    "ovr": 88,
-    "rarity": "SILVER RARE",
-    "image_url": "images/rock lee (3).webp"
+    "ovr": 85,
+    "image_url": "images/rock lee (3).webp",
+    "equippedJutsu": [
+      "jutsu-asa-kujaku-01",
+      "jutsu-reverse-lotus-01"
+    ],
+    "awakeningId": "awakening-eight-gates-01"
   },
   {
     "id": 135,
     "name": "Roshi (Four-Tails Jinchuriki)",
     "ovr": 86,
-    "rarity": "SILVER RARE",
-    "image_url": "images/roshi_by_masonengine_d8x8yzc.webp"
+    "image_url": "images/roshi_by_masonengine_d8x8yzc.webp",
+    "equippedJutsu": [
+      "jutsu-lava-release-scorching-rocks-01"
+    ],
+    "awakeningId": "awakening-son-goku-01"
   },
   {
     "id": 136,
-    "name": "Sai (Base)",
-    "ovr": 78,
-    "rarity": "BRONZE",
-    "image_url": "images/sai (2).webp"
+    "name": "Sai (shippuden)",
+    "ovr": 80,
+    "image_url": "images/sai (2).webp",
+    "equippedJutsu": [
+      "jutsu-super-beast-imitating-drawing-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 137,
     "name": "Sai (War arc)",
     "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sai (3).webp"
+    "image_url": "images/sai (3).webp",
+    "equippedJutsu": [
+      "jutsu-super-beast-scroll-dragon-01",
+      "jutsu-tiger-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 138,
     "name": "Sakon & Ukon",
     "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sakon_by_masonengine_dch0i8o.webp"
+    "image_url": "images/sakon_by_masonengine_dch0i8o.webp",
+    "equippedJutsu": [
+      "jutsu-demon-twin-attack-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 139,
-    "name": "Sakura (1)",
+    "name": "Sakura (Part 1)",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/sakura (1).webp"
+    "image_url": "images/sakura (1).webp",
+    "equippedJutsu": [
+      "jutsu-chakra-enhanced-strength-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 140,
     "name": "Sakura (Shippuden)",
     "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sakura (2).webp"
+    "image_url": "images/sakura (2).webp",
+    "equippedJutsu": [
+      "jutsu-cherry-blossom-impact-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 141,
     "name": "Sakura (War arc)",
     "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sakura (3).webp"
+    "image_url": "images/sakura (3).webp",
+    "equippedJutsu": [
+      "jutsu-katsuyu-slug-summon-01",
+      "jutsu-medical-punch-01"
+    ],
+    "awakeningId": "awakening-byakugo-01"
   },
   {
     "id": 142,
-    "name": "Sakura (4) Byakugo",
+    "name": "Sakura (Byakugo)",
     "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/sakura (4) byakugo.webp"
+    "image_url": "images/sakura (4) byakugo.webp",
+    "equippedJutsu": [
+      "jutsu-100-healings-seal-01",
+      "jutsu-ground-split-01"
+    ],
+    "awakeningId": "awakening-byakugo-01"
   },
   {
     "id": 143,
     "name": "Iron Country Samurai",
     "ovr": 65,
-    "rarity": "BRONZE",
-    "image_url": "images/samurai_by_masonengine_dc5gkn4.webp"
+    "image_url": "images/samurai_by_masonengine_dc5gkn4.webp",
+    "equippedJutsu": [
+      "jutsu-chakra-sabre-slash-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 144,
     "name": "Sarada Uchiha",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/sarada (1).webp"
+    "image_url": "images/sarada (1).webp",
+    "equippedJutsu": [
+      "jutsu-cherry-blossom-impact-01",
+      "jutsu-fireball-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 145,
     "name": "Sarada Awakening Mode",
-    "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sarada__awakening_mode__by_masonengine_dgiifdz.webp"
+    "ovr": 86,
+    "image_url": "images/sarada__awakening_mode__by_masonengine_dgiifdz.webp",
+    "equippedJutsu": [
+      "jutsu-chidori-01",
+      "jutsu-sharingan-genjutsu-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 146,
     "name": "Sasori",
-    "ovr": 88,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sasori_by_masonengine_dcf47us.webp"
+    "ovr": 83,
+    "image_url": "images/sasori_by_masonengine_dcf47us.webp",
+    "equippedJutsu": [
+      "jutsu-iron-sand-unleashed-01",
+      "jutsu-100-puppets-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 147,
     "name": "Sasori Reanimation",
-    "ovr": 89,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sasori__reanimation__by_masonengine_d9yvxzb.webp"
+    "ovr": 84,
+    "image_url": "images/sasori__reanimation__by_masonengine_d9yvxzb.webp",
+    "equippedJutsu": [
+      "jutsu-third-kazekage-puppet-01",
+      "jutsu-poison-blades-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 148,
     "name": "Sasuke (Part 1)",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/sasuke (1).webp"
+    "image_url": "images/sasuke (1).webp",
+    "equippedJutsu": [
+      "jutsu-fireball-01",
+      "jutsu-chidori-01"
+    ],
+    "awakeningId": "awakening-sharingan-01"
   },
   {
     "id": 149,
     "name": "Sasuke Hebi",
     "ovr": 82,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sasuke (2) hebi.webp"
+    "image_url": "images/sasuke (2) hebi.webp",
+    "equippedJutsu": [
+      "jutsu-chidori-senbon-01",
+      "jutsu-curse-mark-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 150,
     "name": "Sasuke Black Custom",
     "ovr": 82,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sasuke (3) black custom.webp"
+    "image_url": "images/sasuke (3) black custom.webp",
+    "equippedJutsu": [
+      "jutsu-kirin-01",
+      "jutsu-dragon-fire-technique-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 151,
     "name": "Sasuke Taka",
-    "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sasuke (4) taka.webp"
+    "ovr": 90,
+    "image_url": "images/sasuke (4) taka.webp",
+    "equippedJutsu": [
+      "jutsu-amaterasu-01",
+      "jutsu-chidori-spear-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 152,
-    "name": "Sasuke War Arc",
-    "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/sasuke (5) war arc.webp"
+    "name": "Sasuke EMS",
+    "ovr": 91,
+    "image_url": "images/sasuke (5) war arc.webp",
+    "equippedJutsu": [
+      "jutsu-enton-kagutsuchi-01",
+      "jutsu-chidori-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 153,
     "name": "Sasuke Rinne Sharinggan",
     "ovr": 98,
-    "rarity": "GOLD RARE",
-    "image_url": "images/sasuke (6) rinne sharinggan.webp"
+    "image_url": "images/sasuke (6) rinne sharinggan.webp",
+    "equippedJutsu": [
+      "jutsu-indras-arrow-01",
+      "jutsu-chidori-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 154,
     "name": "Sasuke Support Kage",
     "ovr": 99,
-    "rarity": "GOLD RARE",
-    "image_url": "images/sasuke (7) support kage.webp"
+    "image_url": "images/sasuke (7) support kage.webp",
+    "equippedJutsu": [
+      "jutsu-susanoo-01",
+      "jutsu-amenotejikara-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 155,
     "name": "Shikamaru nara (Shippuden)",
     "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/shikamaru (2).webp"
+    "image_url": "images/shikamaru (2).webp",
+    "equippedJutsu": [
+      "jutsu-shadow-strangle-jutsu-01",
+      "jutsu-shadow-sewing-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 156,
     "name": "Shikamaru Nara (War Arc Chief)",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/shikamaru (3).webp"
+    "image_url": "images/shikamaru (3).webp",
+    "equippedJutsu": [
+      "jutsu-shadow-stitching-01",
+      "jutsu-shadow-pinning-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 157,
     "name": "Shikamaru Nara (Part 1)",
     "ovr": 70,
-    "rarity": "BRONZE",
-    "image_url": "images/shikamaru (1).webp"
+    "image_url": "images/shikamaru (1).webp",
+    "equippedJutsu": [
+      "jutsu-shadow-paralysis-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 158,
-    "name": "Shino Aburame",
-    "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/shino (2).webp"
+    "name": "Shino Aburame (Shippuden)",
+    "ovr": 78,
+    "image_url": "images/shino (2).webp",
+    "equippedJutsu": [
+      "jutsu-secret-technique-insect-sphere-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 159,
     "name": "Shino Aburame (War Arc)",
     "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/shino (3).webp"
+    "image_url": "images/shino (3).webp",
+    "equippedJutsu": [
+      "jutsu-secret-technique-beetle-tornado-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 160,
     "name": "Shino Aburame (Part 1)",
     "ovr": 71,
-    "rarity": "BRONZE",
-    "image_url": "images/shino (1).webp"
+    "image_url": "images/shino (1).webp",
+    "equippedJutsu": [
+      "jutsu-insect-jamming-technique-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 161,
     "name": "Shisui Uchiha",
     "ovr": 94,
-    "rarity": "GOLD RARE",
-    "image_url": "images/shisui.webp"
+    "image_url": "images/shisui.webp",
+    "equippedJutsu": [
+      "jutsu-kotoamatsukami-01",
+      "jutsu-body-flicker-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
   },
   {
     "id": 162,
     "name": "Shizune",
-    "ovr": 76,
-    "rarity": "BRONZE",
-    "image_url": "images/shizune.webp"
+    "ovr": 73,
+    "image_url": "images/shizune.webp",
+    "equippedJutsu": [
+      "jutsu-poison-fog-01",
+      "jutsu-needle-shot-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 163,
     "name": "Suigetsu Hozuki",
     "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/suigetsu_by_masonengine_d8dul9t.webp"
+    "image_url": "images/suigetsu_by_masonengine_d8dul9t.webp",
+    "equippedJutsu": [
+      "jutsu-water-style-great-arm-01",
+      "jutsu-hydrification-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 164,
     "name": "Tayuya",
     "ovr": 81,
-    "rarity": "SILVER RARE",
-    "image_url": "images/tayuya_by_masonengine_dchd6a4.webp"
+    "image_url": "images/tayuya_by_masonengine_dchd6a4.webp",
+    "equippedJutsu": [
+      "jutsu-demon-flute-phantom-sound-chains-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 165,
     "name": "Temari (Shippuden)",
-    "ovr": 79,
-    "rarity": "BRONZE",
-    "image_url": "images/temari_by_masonengine_d85kj3g.webp"
+    "ovr": 80,
+    "image_url": "images/temari_by_masonengine_d85kj3g.webp",
+    "equippedJutsu": [
+      "jutsu-wind-release-great-task-fan-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 166,
     "name": "Temari (War Arc)",
     "ovr": 82,
-    "rarity": "SILVER RARE",
-    "image_url": "images/temari__great_war_ninja__by_masonengine_d9q918b.webp"
+    "image_url": "images/temari__great_war_ninja__by_masonengine_d9q918b.webp",
+    "equippedJutsu": [
+      "jutsu-wind-release-cast-net-01",
+      "jutsu-cyclone-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 167,
     "name": "Temari (Part 1)",
     "ovr": 70,
-    "rarity": "BRONZE",
-    "image_url": "images/temari__part_1___second_suit__by_masonengine_dcat4t6.webp"
+    "image_url": "images/temari__part_1___second_suit__by_masonengine_dcat4t6.webp",
+    "equippedJutsu": [
+      "jutsu-wind-release-dust-wind-technique-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 168,
     "name": "Tenten (Shippuden)",
-    "ovr": 74,
-    "rarity": "BRONZE",
-    "image_url": "images/tenten (2).webp"
+    "ovr": 78,
+    "image_url": "images/tenten (2).webp",
+    "equippedJutsu": [
+      "jutsu-twin-rising-dragons-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 169,
     "name": "Tenten (Part 1)",
     "ovr": 75,
-    "rarity": "BRONZE",
-    "image_url": "images/tenten (1).webp"
+    "image_url": "images/tenten (1).webp",
+    "equippedJutsu": [
+      "jutsu-unsealing-technique-iron-weapons-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 170,
     "name": "Tenten (Bashosen / War Arc)",
-    "ovr": 78,
-    "rarity": "BRONZE",
-    "image_url": "images/tenten (3).webp"
+    "ovr": 80,
+    "image_url": "images/tenten (3).webp",
+    "equippedJutsu": [
+      "jutsu-bashosen-five-element-fan-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 171,
     "name": "Rasa (4th Kazekage)",
     "ovr": 88,
-    "rarity": "SILVER RARE",
-    "image_url": "images/the_fourth_kazekage__reanimation__by_masonengine_d847n1g.webp"
+    "image_url": "images/the_fourth_kazekage__reanimation__by_masonengine_d847n1g.webp",
+    "equippedJutsu": [
+      "jutsu-gold-dust-imperial-funeral-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 172,
     "name": "Gengetsu (2nd Mizukage)",
-    "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/the_second_mizukage__reanimation__by_masonengine_d8l9ntr.webp"
+    "ovr": 88,
+    "image_url": "images/the_second_mizukage__reanimation__by_masonengine_d8l9ntr.webp",
+    "equippedJutsu": [
+      "jutsu-steaming-danger-tyranny-01",
+      "jutsu-water-gun-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 173,
     "name": "Mu (2nd Tsuchikage)",
-    "ovr": 92,
-    "rarity": "GOLD RARE",
-    "image_url": "images/the_second_tsuchikage__reanimation__by_masonengine_d7to5b4.webp"
+    "ovr": 88,
+    "image_url": "images/the_second_tsuchikage__reanimation__by_masonengine_d7to5b4.webp",
+    "equippedJutsu": [
+      "jutsu-particle-style-01",
+      "jutsu-dustless-bewildering-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 174,
     "name": "A (3rd Raikage)",
-    "ovr": 93,
-    "rarity": "GOLD RARE",
-    "image_url": "images/the_third_raikage__reanimation__by_masonengine_d8hbt3q.webp"
+    "ovr": 88,
+    "image_url": "images/the_third_raikage__reanimation__by_masonengine_d8hbt3q.webp",
+    "equippedJutsu": [
+      "jutsu-hell-stab-fourfinger-spear-01"
+    ],
+    "awakeningId": "awakening-lightning-cloak-01"
   },
   {
     "id": 175,
     "name": "Tobirama Senju (2nd Hokage)",
-    "ovr": 95,
-    "rarity": "GOLD RARE",
-    "image_url": "images/tobirama (1).webp"
+    "ovr": 92,
+    "image_url": "images/tobirama (1).webp",
+    "equippedJutsu": [
+      "jutsu-flying-raijin-slice-01",
+      "jutsu-water-dragon-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 176,
     "name": "Tobirama (Reanimation)",
     "ovr": 93,
-    "rarity": "GOLD RARE",
-    "image_url": "images/tobirama (2).webp"
+    "image_url": "images/tobirama (2).webp",
+    "equippedJutsu": [
+      "jutsu-water-style-water-colliding-wave-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 177,
     "name": "Tobi (Akatsuki)",
     "ovr": 80,
-    "rarity": "SILVER RARE",
-    "image_url": "images/tobi_by_masonengine_d8lxobr.webp"
+    "image_url": "images/tobi_by_masonengine_d8lxobr.webp",
+    "equippedJutsu": [
+      "jutsu-minefield-technique-01",
+      "jutsu-escape-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 178,
     "name": "Tobi Great War Ninja",
     "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/tobi__great_war_ninja__by_masonengine_d8ctsty.webp"
+    "image_url": "images/tobi__great_war_ninja__by_masonengine_d8ctsty.webp",
+    "equippedJutsu": [
+      "jutsu-kamui-fire-blast-01",
+      "jutsu-summoning-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 179,
     "name": "Toneri Otsutsuki",
-    "ovr": 90,
-    "rarity": "GOLD RARE",
-    "image_url": "images/toneri_otsutsuki.webp"
+    "ovr": 94,
+    "image_url": "images/toneri_otsutsuki.webp",
+    "equippedJutsu": [
+      "jutsu-golden-wheel-reincarnation-explosion-01"
+    ],
+    "awakeningId": "awakening-tenseigan-01"
   },
   {
     "id": 180,
     "name": "Torune Aburame",
     "ovr": 78,
-    "rarity": "BRONZE",
-    "image_url": "images/torune.webp"
+    "image_url": "images/torune.webp",
+    "equippedJutsu": [
+      "jutsu-rinkaichu-venomous-insects-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 181,
     "name": "Tsunade Senju (5th Hokage)",
-    "ovr": 92,
-    "rarity": "GOLD RARE",
-    "image_url": "images/tsunade.webp"
+    "ovr": 90,
+    "image_url": "images/tsunade.webp",
+    "equippedJutsu": [
+      "jutsu-100-healings-01",
+      "jutsu-cherry-blossom-impact-01"
+    ],
+    "awakeningId": "awakening-byakugo-01"
   },
   {
     "id": 182,
     "name": "Utakata (Six-Tails Jinchuriki)",
     "ovr": 86,
-    "rarity": "SILVER RARE",
-    "image_url": "images/utakata_by_masonengine_d98p98e.webp"
+    "image_url": "images/utakata_by_masonengine_d98p98e.webp",
+    "equippedJutsu": [
+      "jutsu-bubble-drowning-01",
+      "jutsu-acid-slime-01"
+    ],
+    "awakeningId": "awakening-saiken-01"
   },
   {
     "id": 183,
     "name": "Utakata Reanimation",
     "ovr": 87,
-    "rarity": "SILVER RARE",
-    "image_url": "images/utakata__reanimation__by_masonengine_daockmw.webp"
+    "image_url": "images/utakata__reanimation__by_masonengine_daockmw.webp",
+    "equippedJutsu": [
+      "jutsu-wrathful-bubble-wave-01"
+    ],
+    "awakeningId": "awakening-saiken-01"
   },
   {
     "id": 184,
     "name": "Yagura (4th Mizukage)",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/yagura_by_masonengine_dc6456b.webp"
+    "image_url": "images/yagura_by_masonengine_dc6456b.webp",
+    "equippedJutsu": [
+      "jutsu-water-reflection-mirror-01",
+      "jutsu-coral-palm-01"
+    ],
+    "awakeningId": "awakening-isobu-01"
   },
   {
     "id": 185,
     "name": "Yagura Reanimation",
     "ovr": 86,
-    "rarity": "SILVER RARE",
-    "image_url": "images/yagura__reanimation__by_masonengine_dc6458n.webp"
+    "image_url": "images/yagura__reanimation__by_masonengine_dc6458n.webp",
+    "equippedJutsu": [
+      "jutsu-tailed-beast-water-cannon-01"
+    ],
+    "awakeningId": "awakening-isobu-01"
   },
   {
     "id": 186,
     "name": "Yamato (Wood Release)",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/yamato (2).webp"
+    "image_url": "images/yamato (2).webp",
+    "equippedJutsu": [
+      "jutsu-wood-emergence-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 187,
     "name": "Yugito Nii (Two-Tails Jinchuriki)",
     "ovr": 84,
-    "rarity": "SILVER RARE",
-    "image_url": "images/yugito_nii_by_masonengine_dc6hyy1.webp"
+    "image_url": "images/yugito_nii_by_masonengine_dc6hyy1.webp",
+    "equippedJutsu": [
+      "jutsu-cat-fireball-01",
+      "jutsu-mouse-hair-ball-01"
+    ],
+    "awakeningId": "awakening-matatabi-01"
   },
   {
     "id": 188,
     "name": "Yugito Nii Reanimation",
     "ovr": 85,
-    "rarity": "SILVER RARE",
-    "image_url": "images/yugito_nii__reanimation__by_masonengine_dc6hz09.webp"
+    "image_url": "images/yugito_nii__reanimation__by_masonengine_dc6hz09.webp",
+    "equippedJutsu": [
+      "jutsu-twotails-fire-cat-blast-01"
+    ],
+    "awakeningId": "awakening-matatabi-01"
   },
   {
     "id": 189,
     "name": "Zabuza Momochi",
     "ovr": 81,
-    "rarity": "SILVER RARE",
-    "image_url": "images/zabuza_by_masonengine_d81wxee.webp"
+    "image_url": "images/zabuza_by_masonengine_d81wxee.webp",
+    "equippedJutsu": [
+      "jutsu-water-dragon-01",
+      "jutsu-silent-killing-01"
+    ],
+    "awakeningId": null
   },
   {
     "id": 190,
     "name": "Zabuza Momochi (Reanimation)",
     "ovr": 83,
-    "rarity": "SILVER RARE",
-    "image_url": "images/zabuza__reanimation__by_masonengine_daocjrd.webp"
+    "image_url": "images/zabuza__reanimation__by_masonengine_daocjrd.webp",
+    "equippedJutsu": [
+      "jutsu-demonic-silent-killing-01",
+      "jutsu-water-wall-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 191,
+    "name": "Boruto Karma Progression",
+    "ovr": 93,
+    "image_url": "images/borushiki_v2__boruto_next_generations__by_tonclm_by_tonclm_dkg1ht1.webp",
+    "equippedJutsu": [
+      "jutsu-karma-mark-level-3-01",
+      "jutsu-vanishing-rasengan-01"
+    ],
+    "awakeningId": "awakening-karma-01"
+  },
+  {
+    "id": 192,
+    "name": "Chojuro (6th Mizukage)",
+    "ovr": 84,
+    "image_url": "images/chojuro 6th mizukage.webp",
+    "equippedJutsu": [
+      "jutsu-hiramekarei-liberation-01",
+      "jutsu-twin-sword-slash-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 193,
+    "name": "Code (No Limiters)",
+    "ovr": 92,
+    "image_url": "images/code.webp",
+    "equippedJutsu": [
+      "jutsu-claw-marks-01",
+      "jutsu-white-karma-unleashed-01"
+    ],
+    "awakeningId": "awakening-karma-01"
+  },
+  {
+    "id": 194,
+    "name": "Daemon",
+    "ovr": 92,
+    "image_url": "images/daemon.webp",
+    "equippedJutsu": [
+      "jutsu-reflection-01",
+      "jutsu-superhuman-taijutsu-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 195,
+    "name": "Darui (5th Raikage)",
+    "ovr": 86,
+    "image_url": "images/darui 5th raikage.webp",
+    "equippedJutsu": [
+      "jutsu-laser-circus-01",
+      "jutsu-black-lightning-01"
+    ],
+    "awakeningId": "awakening-lightning-cloak-01"
+  },
+  {
+    "id": 196,
+    "name": "Deidara (Akatsuki Inception)",
+    "ovr": 87,
+    "image_url": "images/deidara__akatsuki_inception__by_masonengine_d7zq69f.webp",
+    "equippedJutsu": [
+      "jutsu-c1-clay-birds-01",
+      "jutsu-superifying-explosive-art-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 197,
+    "name": "Eida",
+    "ovr": 92,
+    "image_url": "images/eida.webp",
+    "equippedJutsu": [
+      "jutsu-senrigan-01",
+      "jutsu-omnipotence-charm-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 198,
+    "name": "Hanabi Hyuga (Jounin)",
+    "ovr": 81,
+    "image_url": "images/hanabi (jounin).webp",
+    "equippedJutsu": [
+      "jutsu-eight-tragrams-sixtyfour-palms-01",
+      "jutsu-rotation-01"
+    ],
+    "awakeningId": "awakening-byakugan-01"
+  },
+  {
+    "id": 199,
+    "name": "Hidan (Akatsuki Inception)",
+    "ovr": 85,
+    "image_url": "images/hidan__akatsuki_inception__by_masonengine_d7yw6v4.webp",
+    "equippedJutsu": [
+      "jutsu-triplebladed-scythe-01",
+      "jutsu-curse-technique-death-possession-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 200,
+    "name": "Hinata Hyuga (Adult)",
+    "ovr": 77,
+    "image_url": "images/hinata (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-eight-trigrams-twin-lion-fists-01",
+      "jutsu-gentle-step-01"
+    ],
+    "awakeningId": "awakening-byakugan-01"
+  },
+  {
+    "id": 201,
+    "name": "Hinata Hyuga (The Last)",
+    "ovr": 80,
+    "image_url": "images/hinata__the_last__by_masonengine_d8esvel.webp",
+    "equippedJutsu": [
+      "jutsu-eight-trigrams-vacuum-palm-01",
+      "jutsu-twin-lion-attack-01"
+    ],
+    "awakeningId": "awakening-byakugan-01"
+  },
+  {
+    "id": 202,
+    "name": "Ino Yamanaka (Adult)",
+    "ovr": 79,
+    "image_url": "images/ino (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-mind-transfer-jutsu-01",
+      "jutsu-sensory-communication-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 203,
+    "name": "Isshiki Otsutsuki",
+    "ovr": 99,
+    "image_url": "images/isshiki_otsutsuki.webp",
+    "equippedJutsu": [
+      "jutsu-daikokuten-01",
+      "jutsu-sukunahikona-cubes-01"
+    ],
+    "awakeningId": "awakening-karma-01"
+  },
+  {
+    "id": 204,
+    "name": "Itachi Uchiha (Anbu)",
+    "ovr": 89,
+    "image_url": "images/itachi anbu.webp",
+    "equippedJutsu": [
+      "jutsu-tsukuyomi-01",
+      "jutsu-fire-release-dragon-fire-technique-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
+  },
+  {
+    "id": 205,
+    "name": "Jiraiya (Sannin Era)",
+    "ovr": 88,
+    "image_url": "images/jiraiya sannin era.webp",
+    "equippedJutsu": [
+      "jutsu-summoning-toad-mouth-bind-01",
+      "jutsu-rasengan-01"
+    ],
+    "awakeningId": "awakening-sage-01"
+  },
+  {
+    "id": 206,
+    "name": "Jiraiya (Sage Mode)",
+    "ovr": 90,
+    "image_url": "images/jiraiya__sage_mode__by_masonengine_d86pqli.webp",
+    "equippedJutsu": [
+      "jutsu-sage-art-goemon-01",
+      "jutsu-massive-rasengan-01"
+    ],
+    "awakeningId": "awakening-sage-01"
+  },
+  {
+    "id": 207,
+    "name": "Kakuzu (Akatsuki Inception)",
+    "ovr": 87,
+    "image_url": "images/kakuzu__akatsuki_inception__by_masonengine_dbjvv06.webp",
+    "equippedJutsu": [
+      "jutsu-earth-grudge-fear-01",
+      "jutsu-firewind-compound-jutsu-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 208,
+    "name": "Kankuro (Adult)",
+    "ovr": 79,
+    "image_url": "images/kankuro (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-black-secret-technique-machine-one-shot-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 209,
+    "name": "Kawaki (Karma Progression)",
+    "ovr": 93,
+    "image_url": "images/kawaki__karma_progression.webp",
+    "equippedJutsu": [
+      "jutsu-karma-blaster-01",
+      "jutsu-microshrinking-rods-01"
+    ],
+    "awakeningId": "awakening-karma-01"
+  },
+  {
+    "id": 210,
+    "name": "Gaara (Kazekage)",
+    "ovr": 88,
+    "image_url": "images/kazekage__gaara (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-sand-tsunami-01"
+    ],
+    "awakeningId": "awakening-shukaku-01"
+  },
+  {
+    "id": 211,
+    "name": "Kiba Inuzuka (Adult)",
+    "ovr": 77,
+    "image_url": "images/kiba (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-fang-over-fang-01",
+      "jutsu-absolute-taijutsu-drive-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 212,
+    "name": "Kurotsuchi (4th Tsuchikage)",
+    "ovr": 84,
+    "image_url": "images/kurotsuchi 4th tsucikage.webp",
+    "equippedJutsu": [
+      "jutsu-lava-release-quicklime-congealing-technique-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 213,
+    "name": "Mangetsu Hozuki",
+    "ovr": 82,
+    "image_url": "images/mangetsu_hozuki_by_masonengine_dcy8uec.webp",
+    "equippedJutsu": [
+      "jutsu-silent-killing-01",
+      "jutsu-seven-ninja-swords-style-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 214,
+    "name": "Mirai Sarutobi",
+    "ovr": 80,
+    "image_url": "images/mirai sarutobi.webp",
+    "equippedJutsu": [
+      "jutsu-wind-release-whirlwind-fist-01",
+      "jutsu-genjutsu-flint-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 215,
+    "name": "Mugino",
+    "ovr": 78,
+    "image_url": "images/mugino.webp",
+    "equippedJutsu": [
+      "jutsu-earth-release-earth-flow-wave-01",
+      "jutsu-chakra-blade-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 216,
+    "name": "Naruto Uzumaki (The Last)",
+    "ovr": 93,
+    "image_url": "images/naruto__the_last__by_masonengine_d8fz0vh.webp",
+    "equippedJutsu": [
+      "jutsu-rasengan-01",
+      "jutsu-super-rasengan-plan-01"
+    ],
+    "awakeningId": "awakening-kurama-01"
+  },
+  {
+    "id": 217,
+    "name": "Orochimaru (Sannin Era)",
+    "ovr": 87,
+    "image_url": "images/Orochimaru Sannin era.webp",
+    "equippedJutsu": [
+      "jutsu-striking-shadow-snakes-01",
+      "jutsu-wind-release-breakthrough-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 218,
+    "name": "Rock Lee (Adult)",
+    "ovr": 83,
+    "image_url": "images/rock lee (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-primary-lotus-01",
+      "jutsu-eight-gates-dynamic-entry-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 219,
+    "name": "Sai Yamanaka (Adult)",
+    "ovr": 81,
+    "image_url": "images/sai (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-super-beast-scroll-lions-dragons-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 220,
+    "name": "Sakura Haruno (Adult)",
+    "ovr": 85,
+    "image_url": "images/sakura (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-chakra-enhanced-strength-01",
+      "jutsu-cherry-blossom-impact-01"
+    ],
+    "awakeningId": "awakening-byakugo-01"
+  },
+  {
+    "id": 221,
+    "name": "Sakura Haruno (The Last)",
+    "ovr": 85,
+    "image_url": "images/sakura (The last).webp",
+    "equippedJutsu": [
+      "jutsu-medical-palm-01",
+      "jutsu-chakra-infused-heavy-strike-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 222,
+    "name": "Sasori (Akatsuki Inception)",
+    "ovr": 87,
+    "image_url": "images/sasori__akatsuki_inception__by_masonengine_d8mo5jl.webp",
+    "equippedJutsu": [
+      "jutsu-puppet-performance-hundred-puppets-01",
+      "jutsu-iron-sand-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 223,
+    "name": "Sasuke Uchiha (Taka / Akatsuki)",
+    "ovr": 89,
+    "image_url": "images/sasuke (akatsuki).webp",
+    "equippedJutsu": [
+      "jutsu-chidori-01",
+      "jutsu-flame-control-sword-slash-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
+  },
+  {
+    "id": 224,
+    "name": "Sasuke Uchiha (The Last)",
+    "ovr": 93,
+    "image_url": "images/sasuke (the last).webp",
+    "equippedJutsu": [
+      "jutsu-chidori-senbon-01",
+      "jutsu-almighty-teleportation-slash-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
+  },
+  {
+    "id": 225,
+    "name": "Shikamaru Nara (Adult)",
+    "ovr": 83,
+    "image_url": "images/shikamaru (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-shadow-paralysis-01",
+      "jutsu-shadow-stitching-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 226,
+    "name": "Shino Aburame (Adult)",
+    "ovr": 78,
+    "image_url": "images/shino (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-secret-technique-insect-sphere-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 227,
+    "name": "Temari (Adult)",
+    "ovr": 80,
+    "image_url": "images/temari (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-wind-release-sea-dragon-01",
+      "jutsu-great-sickle-weasel-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 228,
+    "name": "Tenten (Adult)",
+    "ovr": 76,
+    "image_url": "images/tenten (Adult).webp",
+    "equippedJutsu": [
+      "jutsu-rising-dragon-control-01",
+      "jutsu-weapon-avalanche-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 229,
+    "name": "Tsunade (Sannin Era)",
+    "ovr": 88,
+    "image_url": "images/Tsunade Sannin era.webp",
+    "equippedJutsu": [
+      "jutsu-heavenly-spear-punch-01",
+      "jutsu-creation-rebirth-01"
+    ],
+    "awakeningId": "awakening-byakugo-01"
+  },
+  {
+    "id": 230,
+    "name": "Choji Akimichi (Butterfly Mode)",
+    "ovr": 85,
+    "image_url": "images/choji__great_ninja_war___awakening_mode__by_masonengine_dcchqzb.webp",
+    "equippedJutsu": [
+      "jutsu-butterfly-mode-01",
+      "jutsu-human-bullet-tank-01"
+    ],
+    "awakeningId": "awakening-butterfly-01"
+  },
+  {
+    "id": 231,
+    "name": "Choji Akimichi (Adult)",
+    "ovr": 83,
+    "image_url": "images/choji_akimichi (adult).webp",
+    "equippedJutsu": [
+      "jutsu-human-boulder-01",
+      "jutsu-partial-expansion-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 232,
+    "name": "Hagoromo Otsutsuki",
+    "ovr": 99,
+    "image_url": "images/hagoromo_otsutsuki_render_by_lunuel_djd8nin.webp",
+    "equippedJutsu": [
+      "jutsu-truthseeking-balls-01",
+      "jutsu-six-paths-senjutsu-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 233,
+    "name": "Konan (akatsuki Inception)",
+    "ovr": 87,
+    "image_url": "images/konan (akatsuki 1).webp",
+    "equippedJutsu": [
+      "jutsu-paper-dance-01",
+      "jutsu-paper-shuriken-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 234,
+    "name": "Yahiko (Akatsuki Inception)",
+    "ovr": 83,
+    "image_url": "images/yahiko (akatsuki 1).webp",
+    "equippedJutsu": [
+      "jutsu-water-release-encirclement-pillar-01",
+      "jutsu-wild-water-wave-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 235,
+    "name": "Zetsu",
+    "ovr": 90,
+    "image_url": "images/naruto_shippuden_zetsu__akatsuki__by_iennidesign_dabx27t.webp",
+    "equippedJutsu": [
+      "jutsu-spore-technique-01",
+      "jutsu-mayfly-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 236,
+    "name": "nagato (Akatsuki Inception)",
+    "ovr": 88,
+    "image_url": "images/nagato (akatsuki 1).webp",
+    "equippedJutsu": [
+      "jutsu-body-flicker-technique-01",
+      "jutsu-demonic-statue-gedo-mazo-01"
+    ],
+    "awakeningId": "awakening-rinnegan-01"
+  },
+  {
+    "id": 237,
+    "name": "sasuke Uchiha (Adult)",
+    "ovr": 93,
+    "image_url": "images/sasuke_uchiha(adult).webp",
+    "equippedJutsu": [
+      "jutsu-heavenly-hand-power-01",
+      "jutsu-chidori-01"
+    ],
+    "awakeningId": "awakening-susanoo-01"
+  },
+  {
+    "id": 238,
+    "name": "Asuma Reanimation",
+    "ovr": 83,
+    "image_url": "images/asuma (reanimation).webp",
+    "equippedJutsu": [
+      "jutsu-flying-swallow-01",
+      "jutsu-burning-ash-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 239,
+    "name": "Ginkaku Reanimation",
+    "ovr": 83,
+    "image_url": "images/ginkaku__reanimation__by_masonengine_dch6gj9.webp",
+    "equippedJutsu": [
+      "jutsu-seven-star-sword-01",
+      "jutsu-crimson-gourd-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 240,
+    "name": "Might Guy (Shippuden)",
+    "ovr": 83,
+    "image_url": "images/guy (shippuden).webp",
+    "equippedJutsu": [
+      "jutsu-asa-kujaku-01",
+      "jutsu-hirudora-01"
+    ],
+    "awakeningId": "awakening-eight-gates-01"
+  },
+  {
+    "id": 241,
+    "name": "Hashirama Senju Reanimation",
+    "ovr": 97,
+    "image_url": "images/hashirama (4).webp",
+    "equippedJutsu": [
+      "jutsu-sage-art-wood-release-true-several-thousand-hands-01"
+    ],
+    "awakeningId": "awakening-sage-01"
+  },
+  {
+    "id": 242,
+    "name": "Kakashi Hatake (Shippuden)",
+    "ovr": 84,
+    "image_url": "images/kakashi (shippuden).webp",
+    "equippedJutsu": [
+      "jutsu-lightning-blade-01",
+      "jutsu-kamui-01"
+    ],
+    "awakeningId": "awakening-sharingan-01"
+  },
+  {
+    "id": 243,
+    "name": "Kankuro (Five Kage Summit)",
+    "ovr": 82,
+    "image_url": "images/kankuro__kage_summit__by_masonengine_dcf46mr.webp",
+    "equippedJutsu": [
+      "jutsu-secret-red-move-tripuppet-control-01",
+      "jutsu-iron-sand-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 244,
+    "name": "Killer Bee",
+    "ovr": 86,
+    "image_url": "images/killer_bee_by_masonengine_d8n1p3e.webp",
+    "equippedJutsu": [
+      "jutsu-lariat-01",
+      "jutsu-tailed-beast-bomb-01"
+    ],
+    "awakeningId": "awakening-gyuki-01"
+  },
+  {
+    "id": 245,
+    "name": "Kinkaku Reanimation",
+    "ovr": 84,
+    "image_url": "images/kinkaku__reanimation__by_masonengine_dch34bw.webp",
+    "equippedJutsu": [
+      "jutsu-banana-fan-coil-of-fire-01",
+      "jutsu-amber-purifying-pot-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 246,
+    "name": "Konohamaru Sarutobi",
+    "ovr": 78,
+    "image_url": "images/konohamaru (2).webp",
+    "equippedJutsu": [
+      "jutsu-rasengan-01",
+      "jutsu-multishadow-clone-technique-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 247,
+    "name": "Masked Man (Obito)",
+    "ovr": 88,
+    "image_url": "images/masked_man_by_masonengine_d9b77hr.webp",
+    "equippedJutsu": [
+      "jutsu-wood-release-cutting-technique-01"
+    ],
+    "awakeningId": "awakening-sharingan-01"
+  },
+  {
+    "id": 248,
+    "name": "Minato Namikaze (Jounin)",
+    "ovr": 88,
+    "image_url": "images/minato (jounin).webp",
+    "equippedJutsu": [
+      "jutsu-flying-raijin-02",
+      "jutsu-rasengan-01"
+    ],
+    "awakeningId": "awakening-flying-raijin-01"
+  },
+  {
+    "id": 249,
+    "name": "Sasuke Uchiha (Cursed Seal Stage 3)",
+    "ovr": 87,
+    "image_url": "images/sasuke_cursed_seal_nv_2_by_dattexx_d55oae6.webp",
+    "equippedJutsu": [
+      "jutsu-cursed-seal-stage-2-01",
+      "jutsu-fireball-02"
+    ],
+    "awakeningId": "awakening-curse-mark-01"
+  },
+  {
+    "id": 250,
+    "name": "Temari (Five Kage Summit)",
+    "ovr": 83,
+    "image_url": "images/temari__kage_summit__by_masonengine_dbp0zhs.webp",
+    "equippedJutsu": [
+      "jutsu-wind-release-great-task-fan-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 251,
+    "name": "Lady Chiyo Reanimation",
+    "ovr": 83,
+    "image_url": "images/chiyo_edo_tensei_by_emmanuel26_d7n7uvs1.webp",
+    "equippedJutsu": [
+      "jutsu-puppet-spring-punishing-strike-01"
+    ],
+    "awakeningId": null
+  },
+  {
+    "id": 252,
+    "name": "Naruto Uzumaki (Chunin Exam)",
+    "ovr": 79,
+    "image_url": "images/naruto chunin.webp",
+    "equippedJutsu": [
+      "jutsu-shadow-clone-01",
+      "jutsu-rasengan-01"
+    ],
+    "awakeningId": "awakening-kurama-01"
+  },
+  {
+    "id": 253,
+    "name": "Naruto Uzumaki (Kyubi chakra mode)",
+    "ovr": 84,
+    "image_url": "images/naruto__kyubi__render__ninja_storm_generations__by_maxiuchiha22_dd7cqea1.webp",
+    "equippedJutsu": [
+      "jutsu-tailed-beast-rasengan-01"
+    ],
+    "awakeningId": "awakening-kurama-01"
+  },
+  {
+    "id": 254,
+    "name": "Sasuke (Cursed Seal Stage 2)",
+    "ovr": 85,
+    "image_url": "images/sasuke__curse_seal__render__n__storm_generations__by_maxiuchiha22_dd7cqen1.webp",
+    "equippedJutsu": [
+      "jutsu-curse-mark-chidori-01"
+    ],
+    "awakeningId": "awakening-curse-mark-01"
   }
 ]

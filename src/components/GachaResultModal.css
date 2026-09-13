@@ -1,0 +1,685 @@
+/* Base Modal Container */
+.gacha-reveal-stage {
+    background: rgba(10, 14, 23, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 20px 24px;
+    width: 95vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(234, 179, 8, 0.12);
+    backdrop-filter: blur(12px);
+    animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: max-width 0.25s ease;
+}
+
+@keyframes modalScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Dynamic Modal Widths (Hugging card content neatly) */
+.gacha-reveal-stage.pull-single {
+    max-width: 320px;
+    padding: 20px 20px 18px;
+}
+
+.gacha-reveal-stage.pull-small {
+    max-width: 760px;
+}
+
+.gacha-reveal-stage.pull-multi {
+    max-width: 960px;
+}
+
+/* Title Section */
+.gacha-reveal-title {
+    text-align: center;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+.gacha-reveal-title h3 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    font-family: var(--font-heading, serif);
+}
+
+.reveal-tier-tag {
+    font-size: 0.82rem;
+    padding: 3px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    font-weight: 600;
+    display: inline-block;
+}
+
+.reveal-tier-tag.gold-tag {
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.5);
+    background: rgba(251, 191, 36, 0.12);
+    box-shadow: 0 0 12px rgba(251, 191, 36, 0.2);
+}
+
+.reveal-tier-tag.silver-tag {
+    color: #cbd5e1;
+    border-color: rgba(203, 213, 225, 0.4);
+    background: rgba(203, 213, 225, 0.1);
+}
+
+.reveal-tier-tag.bronze-tag {
+    color: #f97316;
+    border-color: rgba(249, 115, 22, 0.4);
+    background: rgba(249, 115, 22, 0.1);
+}
+
+.reveal-tier-tag.diamond-tag {
+    color: #7dd3fc;
+    border-color: rgba(56, 189, 248, 0.5);
+    background: rgba(56, 189, 248, 0.12);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+}
+
+.reveal-tier-tag.mythic-tag {
+    color: #f9a8d4;
+    border-color: rgba(236, 72, 153, 0.5);
+    background: rgba(236, 72, 153, 0.12);
+    box-shadow: 0 0 14px rgba(236, 72, 153, 0.3);
+}
+
+/* Scroll Area for Cards */
+.gacha-grid-scroll-area {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(88vh - 160px);
+    padding: 6px 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.pull-single .gacha-grid-scroll-area {
+    overflow: visible;
+    max-height: none;
+    padding: 6px 0;
+}
+
+/* Sleek Scrollbar */
+.gacha-grid-scroll-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.gacha-grid-scroll-area::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+}
+
+.gacha-grid-scroll-area::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.gacha-grid-scroll-area::-webkit-scrollbar-thumb:hover {
+    background: rgba(245, 158, 11, 0.5);
+}
+
+/* Grid Layout */
+.gacha-cards-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 10px;
+    width: 100%;
+}
+
+.gacha-cards-grid.count-1 {
+    grid-template-columns: 165px;
+    justify-content: center;
+}
+
+.gacha-cards-grid.count-2 {
+    grid-template-columns: repeat(2, 165px);
+    justify-content: center;
+    gap: 14px;
+}
+
+.gacha-cards-grid.count-3 {
+    grid-template-columns: repeat(3, 165px);
+    justify-content: center;
+    gap: 14px;
+}
+
+.gacha-cards-grid.count-4 {
+    grid-template-columns: repeat(4, 165px);
+    justify-content: center;
+    gap: 12px;
+}
+
+.gacha-cards-grid.count-5,
+.gacha-cards-grid.count-6,
+.gacha-cards-grid.count-7,
+.gacha-cards-grid.count-8,
+.gacha-cards-grid.count-9,
+.gacha-cards-grid.count-10 {
+    grid-template-columns: repeat(5, 165px);
+    justify-content: center;
+}
+
+/* UNIFORM CARD SIZING ACROSS ALL PULL COUNTS (1x, 2x, 5x, 10x) */
+.gacha-card-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 12px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.gacha-card-item:hover {
+    transform: translateY(-4px);
+    z-index: 5;
+}
+
+.gacha-card-item .card-3d-perspective {
+    width: 165px !important;
+    height: 248px !important;
+    max-width: 165px !important;
+}
+
+/* Uniform Compact Typography & Badges in Gacha Modal (165px width) */
+.gacha-cards-grid .card-3d-front,
+.gacha-cards-grid .card-3d-back {
+    border-radius: 16px !important;
+}
+
+.gacha-cards-grid .card-3d-front {
+    border-width: 2.5px !important;
+}
+
+.gacha-cards-grid .card-3d-front .card-artwork-wrapper {
+    height: 56% !important;
+    flex: 0 0 56% !important;
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.gacha-cards-grid .card-3d-front .card-info-bottom {
+    background: #080c14 !important;
+    padding: 5px 7px !important;
+    gap: 3px !important;
+}
+
+.gacha-cards-grid .card-title {
+    font-size: 0.76rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 1px !important;
+}
+
+.gacha-cards-grid .card-summon-subtitle {
+    font-size: 0.52rem !important;
+    line-height: 1.1 !important;
+}
+
+.gacha-cards-grid .card-jutsu-box {
+    padding: 3px 5px !important;
+    border-radius: 5px !important;
+}
+
+.gacha-cards-grid .card-jutsu-name {
+    font-size: 0.62rem !important;
+    font-weight: 800 !important;
+    color: #fbbf24 !important;
+    text-transform: uppercase !important;
+}
+
+.gacha-cards-grid .card-jutsu-desc {
+    font-size: 0.5rem !important;
+    color: rgba(226, 232, 240, 0.85) !important;
+}
+
+.gacha-cards-grid .card-3d-front .card-ovr-badge-3d {
+    top: 6px !important;
+    right: 6px !important;
+    padding: 2px 4px !important;
+    min-width: 30px !important;
+    border-radius: 6px !important;
+}
+
+.gacha-cards-grid .card-3d-front .card-ovr-badge-3d .ovr-number {
+    font-size: 0.88rem !important;
+}
+
+.gacha-cards-grid .card-3d-front .card-ovr-badge-3d .ovr-text {
+    font-size: 0.42rem !important;
+}
+
+.gacha-cards-grid .card-plus-badge-3d {
+    font-size: 0.65rem !important;
+    padding: 1px 5px !important;
+    top: 6px !important;
+    left: 6px !important;
+    border-radius: 5px !important;
+}
+
+.gacha-cards-grid .stars-rating {
+    font-size: 0.58rem !important;
+    letter-spacing: -0.5px !important;
+}
+
+.gacha-cards-grid .rarity-tag {
+    font-size: 0.5rem !important;
+    letter-spacing: 0.3px !important;
+}
+
+.gacha-cards-grid .flip-card-action-btn {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 10px !important;
+    top: 6px !important;
+    left: 6px !important;
+}
+
+.gacha-cards-grid .card-plus-badge-3d ~ .details-btn-front {
+    top: 32px !important;
+}
+
+/* Card Back Uniform Styling */
+.gacha-cards-grid .card-3d-back {
+    padding: 10px 8px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gacha-cards-grid .back-header {
+    padding: 0 0 4px 0 !important;
+    margin-top: 0 !important;
+}
+
+.gacha-cards-grid .back-title-name {
+    font-size: 0.74rem !important;
+    line-height: 1.15 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    word-break: break-word !important;
+    max-height: 2.3em !important;
+}
+
+.gacha-cards-grid .back-stars {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.5px !important;
+    margin: 1px 0 0 0 !important;
+}
+
+.gacha-cards-grid .back-jutsu {
+    margin: 3px 0 !important;
+    padding: 3px 6px !important;
+    border-radius: 4px !important;
+}
+
+.gacha-cards-grid .back-jutsu-label {
+    font-size: 0.52rem !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 1px !important;
+}
+
+.gacha-cards-grid .back-jutsu-desc {
+    font-size: 0.62rem !important;
+    line-height: 1.15 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    word-break: break-word !important;
+    max-height: 2.3em !important;
+}
+
+.gacha-cards-grid .back-stats {
+    margin: 3px 0 !important;
+    padding: 0 !important;
+    gap: 2px !important;
+}
+
+.gacha-cards-grid .back-stat-row {
+    font-size: 0.6rem !important;
+}
+
+.gacha-cards-grid .back-stat-label {
+    font-size: 0.56rem !important;
+    width: 22px !important;
+}
+
+.gacha-cards-grid .back-stat-bar-track {
+    height: 5px !important;
+    margin: 0 5px !important;
+}
+
+.gacha-cards-grid .back-stat-value {
+    font-size: 0.6rem !important;
+    width: 18px !important;
+}
+
+.gacha-cards-grid .back-footer {
+    font-size: 0.54rem !important;
+    padding-top: 3px !important;
+    margin-top: 1px !important;
+}
+
+.gacha-cards-grid .status-unlocked,
+.gacha-cards-grid .status-locked {
+    font-size: 0.54rem !important;
+    line-height: 1.1 !important;
+}
+
+/* ==========================================================================
+   AWAKENING CARD GLOW EFFECT IN GRID
+   ========================================================================== */
+
+@keyframes awakeningGlowPulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px var(--awk-color, #f59e0b))
+                drop-shadow(0 0 24px var(--awk-color, #f59e0b));
+    }
+    50% {
+        filter: drop-shadow(0 0 18px var(--awk-color, #f59e0b))
+                drop-shadow(0 0 42px var(--awk-color, #f59e0b));
+    }
+}
+
+.gacha-card-item.awakening-card {
+    position: relative;
+    border-radius: 12px;
+    animation: awakeningGlowPulse 2.6s ease-in-out infinite;
+    box-shadow:
+        0 0 0 2px var(--awk-color, #f59e0b),
+        0 0 18px var(--awk-color, #f59e0b),
+        inset 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Awakening Color Tiers */
+.gacha-card-item.awakening-gold { --awk-color: #f59e0b; }
+.gacha-card-item.awakening-silver { --awk-color: #94a3b8; }
+.gacha-card-item.awakening-bronze { --awk-color: #d97706; }
+
+/* Action Buttons Footer */
+.gacha-modal-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 14px;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pull-single .gacha-modal-actions {
+    max-width: 280px;
+    gap: 10px;
+}
+
+.gacha-modal-actions button {
+    flex: 1;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 920px) {
+    .gacha-cards-grid.count-5,
+    .gacha-cards-grid.count-6,
+    .gacha-cards-grid.count-7,
+    .gacha-cards-grid.count-8,
+    .gacha-cards-grid.count-9,
+    .gacha-cards-grid.count-10 {
+        grid-template-columns: repeat(5, minmax(115px, 1fr));
+        gap: 8px 6px;
+    }
+
+    .gacha-card-item .card-3d-perspective {
+        height: 215px !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .gacha-reveal-stage {
+        padding: 16px 12px;
+        width: 98vw;
+    }
+
+    .gacha-cards-grid.count-5,
+    .gacha-cards-grid.count-6,
+    .gacha-cards-grid.count-7,
+    .gacha-cards-grid.count-8,
+    .gacha-cards-grid.count-9,
+    .gacha-cards-grid.count-10 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 8px;
+    }
+
+    .gacha-card-item .card-3d-perspective {
+        height: 230px !important;
+    }
+
+    .gacha-reveal-title h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gacha-cards-grid.count-2,
+    .gacha-cards-grid.count-3,
+    .gacha-cards-grid.count-4,
+    .gacha-cards-grid.count-5,
+    .gacha-cards-grid.count-6,
+    .gacha-cards-grid.count-7,
+    .gacha-cards-grid.count-8,
+    .gacha-cards-grid.count-9,
+    .gacha-cards-grid.count-10 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 6px;
+    }
+
+    .gacha-card-item .card-3d-perspective {
+        height: 205px !important;
+    }
+
+    .gacha-modal-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+/* Wrapper baru buat gabung stepper + tombol max */
+.pack-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Bungkus qty-btn + qty-value jadi satu bar */
+.qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  color: #cabb98;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.qty-btn:hover {
+  background: rgba(212, 175, 55, 0.15);
+}
+
+.qty-value {
+  width: 44px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn-qty-max {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f39c12, #d4af37);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.btn-qty-max:hover {
+  filter: brightness(1.1);
+}
+
+/* ==========================================================================
+   JACKPOT REVEAL FX (Diamond / Mythic)
+   ========================================================================== */
+
+.gacha-reveal-stage.jackpot {
+    animation: jackpotFlash 0.6s ease-out, modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gacha-reveal-stage.jackpot-mythic {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), inset 0 0 120px rgba(236, 72, 153, 0.35);
+    border-color: rgba(236, 72, 153, 0.5);
+}
+
+.gacha-reveal-stage.jackpot-diamond {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), inset 0 0 120px rgba(56, 189, 248, 0.32);
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+.jackpot-banner {
+    margin-top: 8px;
+    padding: 6px 22px;
+    border-radius: 24px;
+    font-family: var(--font-heading, serif);
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+    animation: jackpotPulse 1.2s infinite alternate;
+}
+
+.jackpot-banner.jackpot-mythic {
+    background: var(--mythic-gradient, linear-gradient(135deg, #ec4899, #be185d));
+    box-shadow: 0 0 24px rgba(236, 72, 153, 0.55);
+}
+
+.jackpot-banner.jackpot-diamond {
+    background: var(--diamond-gradient, linear-gradient(135deg, #38bdf8, #0ea5e9));
+    box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
+}
+
+.gacha-card-item.jackpot-card {
+    animation: jackpotFloat 1.6s ease-in-out infinite;
+    transform: scale(1.04);
+    z-index: 5;
+}
+
+.gacha-card-item.jackpot-card.jackpot-diamond {
+    filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.7));
+}
+
+.gacha-card-item.jackpot-card.jackpot-mythic {
+    filter: drop-shadow(0 0 18px rgba(236, 72, 153, 0.75));
+}
+
+@keyframes jackpotFlash {
+    0% {
+        opacity: 0.2;
+        filter: brightness(2.2);
+    }
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+@keyframes jackpotPulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    100% {
+        transform: scale(1.06);
+        filter: brightness(1.25);
+    }
+}
+
+@keyframes jackpotFloat {
+    0%, 100% {
+        transform: scale(1.04) translateY(0);
+    }
+    50% {
+        transform: scale(1.04) translateY(-8px);
+    }
+}

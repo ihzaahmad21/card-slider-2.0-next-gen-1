@@ -1,7 +1,7 @@
 import React from 'react';
 import BrandMark from './BrandMark.jsx';
 
-export default function Navbar({ coins, onOpenShowcase, onOpenInventory, onOpenShop }) {
+export default function Navbar({ coins, onOpenShowcase, onOpenInventory, onOpenShop, onOpenPlayground }) {
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {
@@ -19,7 +19,7 @@ export default function Navbar({ coins, onOpenShowcase, onOpenInventory, onOpenS
             { label: 'Home', onClick: () => scrollToSection('home') },
             { label: 'Showcase Modal', onClick: onOpenShowcase, active: true },
             { label: 'Inventory', onClick: onOpenInventory },
-            { label: 'Shop', onClick: onOpenShop }
+            { label: 'Shop', onClick: onOpenShop },
           ].map(({ label, onClick, active }) => (
             <li key={label}>
               <button className={`nav-link${active ? ' active' : ''}`} onClick={onClick}>

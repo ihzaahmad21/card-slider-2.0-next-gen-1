@@ -2,8 +2,19 @@ const PREFIX = 'shinobiTCG.';
 
 export const STORAGE_KEYS = {
   coins: `${PREFIX}userCoins`,
+  level: `${PREFIX}playerLevel`,
+  exp: `${PREFIX}playerExp`,
   rateBoosters: `${PREFIX}rateBoosters`,
-  inventory: `${PREFIX}userInventory`
+  inventory: `${PREFIX}userInventory`,
+  deck: `${PREFIX}deck`,
+  marketListings: `${PREFIX}marketListings`,
+  activePlayerTeam: `${PREFIX}activePlayerTeam`,
+  botEnemyTeam: `${PREFIX}botEnemyTeam`,
+  battleStats: `${PREFIX}battleStats`,
+  avatarIcon: `${PREFIX}avatarIcon`,
+  achievements: `${PREFIX}achievements`,
+  pity: (packType) => `${PREFIX}pity.${packType}`,
+  matchHistory: 'shinobi_match_history'
 };
 
 export function readStoredNumber(key, fallback) {

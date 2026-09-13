@@ -1,0 +1,273 @@
+/* ==========================================================================
+   DAILY BONUS WIDGET — CHAKRA SURGE METER RESKIN
+   ========================================================================== */
+.daily-bonus.chakra-meter-widget {
+  padding: 14px 12px;
+  background: radial-gradient(circle at 10% 10%, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 12px;
+  margin: 10px 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Tier Heat Aura on Container */
+.chakra-meter-widget.tier-1 { border-color: rgba(56, 189, 248, 0.4); }
+.chakra-meter-widget.tier-2 { border-color: rgba(6, 182, 212, 0.45); }
+.chakra-meter-widget.tier-3 { border-color: rgba(16, 185, 129, 0.5); }
+.chakra-meter-widget.tier-4 { border-color: rgba(234, 179, 8, 0.55); box-shadow: 0 4px 20px rgba(234, 179, 8, 0.15); }
+.chakra-meter-widget.tier-5 { border-color: rgba(249, 115, 22, 0.6); box-shadow: 0 4px 22px rgba(249, 115, 22, 0.2); }
+.chakra-meter-widget.tier-6 { border-color: rgba(239, 68, 68, 0.65); box-shadow: 0 4px 24px rgba(239, 68, 68, 0.25); }
+.chakra-meter-widget.tier-7 {
+  border-color: rgba(236, 72, 153, 0.8);
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.35), inset 0 0 15px rgba(236, 72, 153, 0.15);
+  animation: chakraBurstAura 2.2s infinite alternate;
+}
+
+@keyframes chakraBurstAura {
+  0% { box-shadow: 0 0 15px rgba(236, 72, 153, 0.25); }
+  100% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.6), inset 0 0 20px rgba(244, 63, 94, 0.25); }
+}
+
+.daily-bonus.chakra-meter-widget.claimed {
+  background: radial-gradient(circle at 10% 10%, rgba(15, 23, 42, 0.95), rgba(10, 15, 30, 0.98));
+  border-color: rgba(148, 163, 184, 0.25);
+  box-shadow: none;
+}
+
+/* Header */
+.chakra-meter-widget .daily-bonus-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.chakra-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chakra-core-icon {
+  font-size: 18px;
+  filter: drop-shadow(0 0 6px #38bdf8);
+  animation: chakraSpin 8s linear infinite;
+}
+
+@keyframes chakraSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.chakra-meter-widget .daily-bonus-label {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.chakra-tier-subtitle {
+  font-size: 9px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.3px;
+}
+
+.chakra-streak-pill {
+  padding: 3px 8px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.5px;
+}
+
+/* 7-Segment Chakra Track */
+.chakra-track-container {
+  margin-bottom: 12px;
+  padding: 6px;
+  background: rgba(10, 15, 26, 0.8);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.chakra-segments-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.chakra-segment-bar {
+  height: 22px;
+  border-radius: 4px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: help;
+}
+
+.chakra-segment-num {
+  font-size: 9px;
+  font-weight: 800;
+  color: #64748b;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+}
+
+/* Segment Heat Gradient Styles */
+.chakra-segment-bar.segment-filled.seg-1,
+.chakra-segment-bar.segment-active.seg-1 { background: linear-gradient(180deg, #38bdf8, #0284c7); border-color: #38bdf8; }
+.chakra-segment-bar.segment-filled.seg-2,
+.chakra-segment-bar.segment-active.seg-2 { background: linear-gradient(180deg, #06b6d4, #0891b2); border-color: #06b6d4; }
+.chakra-segment-bar.segment-filled.seg-3,
+.chakra-segment-bar.segment-active.seg-3 { background: linear-gradient(180deg, #10b981, #059669); border-color: #10b981; }
+.chakra-segment-bar.segment-filled.seg-4,
+.chakra-segment-bar.segment-active.seg-4 { background: linear-gradient(180deg, #eab308, #ca8a04); border-color: #eab308; }
+.chakra-segment-bar.segment-filled.seg-5,
+.chakra-segment-bar.segment-active.seg-5 { background: linear-gradient(180deg, #f97316, #ea580c); border-color: #f97316; }
+.chakra-segment-bar.segment-filled.seg-6,
+.chakra-segment-bar.segment-active.seg-6 { background: linear-gradient(180deg, #ef4444, #dc2626); border-color: #ef4444; }
+.chakra-segment-bar.segment-filled.seg-7,
+.chakra-segment-bar.segment-active.seg-7 {
+  background: linear-gradient(180deg, #ec4899, #be185d);
+  border-color: #f43f5e;
+  box-shadow: 0 0 10px rgba(244, 63, 94, 0.6);
+}
+
+.chakra-segment-bar.segment-filled .chakra-segment-num,
+.chakra-segment-bar.segment-active .chakra-segment-num {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.chakra-segment-bar.segment-active {
+  animation: segmentPulse 1.2s infinite alternate;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+@keyframes segmentPulse {
+  0% { transform: scale(0.96); filter: brightness(1); }
+  100% { transform: scale(1.04); filter: brightness(1.35); }
+}
+
+.chakra-flow-indicator {
+  height: 2px;
+  margin-top: 5px;
+  background: linear-gradient(90deg, #38bdf8, #10b981, #eab308, #f97316, #ef4444, #ec4899);
+  border-radius: 999px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 6px rgba(56, 189, 248, 0.5);
+}
+
+/* Reward Highlight Row */
+.chakra-meter-widget .daily-bonus-streak {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: rgba(15, 23, 42, 0.65);
+  border-radius: 6px;
+  border-left: 3px solid #38bdf8;
+  margin-bottom: 10px;
+}
+
+.chakra-meter-widget.tier-4 .daily-bonus-streak { border-left-color: #eab308; }
+.chakra-meter-widget.tier-5 .daily-bonus-streak { border-left-color: #f97316; }
+.chakra-meter-widget.tier-6 .daily-bonus-streak { border-left-color: #ef4444; }
+.chakra-meter-widget.tier-7 .daily-bonus-streak { border-left-color: #ec4899; }
+.chakra-meter-widget.claimed .daily-bonus-streak { border-left-color: #64748b; }
+
+.chakra-meter-widget .daily-bonus-day {
+  font-size: 11px;
+  font-weight: 700;
+  color: #e2e8f0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.chakra-meter-widget .daily-bonus-reward {
+  font-size: 12px;
+  font-weight: 800;
+  color: #38bdf8;
+  font-family: 'Outfit', sans-serif;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+.chakra-meter-widget.tier-4 .daily-bonus-reward { color: #facc15; }
+.chakra-meter-widget.tier-5 .daily-bonus-reward { color: #fb923c; }
+.chakra-meter-widget.tier-6 .daily-bonus-reward { color: #f87171; }
+.chakra-meter-widget.tier-7 .daily-bonus-reward { color: #f472b6; text-shadow: 0 0 10px rgba(244, 63, 94, 0.6); }
+
+/* Infuse Button */
+.chakra-infuse-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 16px rgba(2, 132, 199, 0.4);
+}
+
+.chakra-meter-widget.ready-to-claim .chakra-infuse-btn {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  animation: infuseGlow 1.5s infinite alternate;
+}
+
+@keyframes infuseGlow {
+  0% { box-shadow: 0 0 12px rgba(14, 165, 233, 0.4); }
+  100% { box-shadow: 0 0 24px rgba(37, 99, 235, 0.75); }
+}
+
+.chakra-infuse-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.15);
+}
+
+.chakra-infuse-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.chakra-infuse-btn:disabled {
+  background: rgba(30, 41, 59, 0.45);
+  border-color: rgba(148, 163, 184, 0.2);
+  color: #64748b;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.chakra-meter-widget.claimed .chakra-infuse-btn:disabled {
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+}
+
+.chakra-meter-widget .daily-bonus-total {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 10px;
+  color: #94a3b8;
+  opacity: 0.85;
+  letter-spacing: 0.3px;
+}

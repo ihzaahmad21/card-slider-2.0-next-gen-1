@@ -1,15 +1,13 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
-import CardContainer from './CardContainer.jsx';
+import React, { useState, useEffect, useMemo } from 'react';
+import { getCardImageSrc, getAttributeColorClass } from '../utils/cards.js';
 
-export default function Hero({ cards, onOpenShowcase, onOpenInventory, onOpenShop, onSelectCard }) {
-  const [carouselIndex, setCarouselIndex] = useState(0);
-  const [isFading, setIsFading] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+export default function Hero({ cards = [], inventory = [], onOpenShowcase, onOpenInventory, onOpenShop, onSelectCard }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Filter top Gold cards (or fallback top OVR cards)
-  const carouselCandidates = useMemo(() => {
+  // Filter kartu Gold atau top OVR sama seperti HeaderCarousel
+  const heroCards = useMemo(() => {
     if (!cards || cards.length === 0) return [];
-    let golds = cards.filter(c => c.rarity === 'GOLD RARE' || c.ovr >= 90);
+    let golds = cards.filter(c => c.rarityClass === 'gold' || c.ovr >= 90);
     golds.sort((a, b) => b.ovr - a.ovr || b.stars - a.stars);
     if (golds.length === 0) {
       golds = [...cards].sort((a, b) => b.ovr - a.ovr || b.stars - a.stars).slice(0, 6);
@@ -17,21 +15,18 @@ export default function Hero({ cards, onOpenShowcase, onOpenInventory, onOpenSho
     return golds;
   }, [cards]);
 
+  // Efek rotasi otomatis berganti gambar tiap 4 detik
   useEffect(() => {
-    if (carouselCandidates.length === 0 || isHovered) return;
+    if (heroCards.length === 0) return;
 
     const timer = setInterval(() => {
-      setIsFading(true);
-      setTimeout(() => {
-        setCarouselIndex(prev => (prev + 1) % carouselCandidates.length);
-        setIsFading(false);
-      }, 300);
-    }, 4000);
+      setCurrentIndex(prev => (prev === heroCards.length - 1 ? 0 : prev + 1));
+    }, 1000);
 
     return () => clearInterval(timer);
-  }, [carouselCandidates, isHovered]);
+  }, [heroCards.length]);
 
-  const currentCard = carouselCandidates[carouselIndex] || cards[0];
+  const featuredCard = heroCards.length > 0 ? heroCards[currentIndex] : null;
 
   const openShopModal = () => {
     if (onOpenShop) {
@@ -43,16 +38,18 @@ export default function Hero({ cards, onOpenShowcase, onOpenInventory, onOpenSho
   };
 
   return (
-    <section className="hero-section" id="home">
+    <section className="hero-section" id="home" style={{
+      padding: '60px 0',
+      minHeight: '520px',           // ← tambahan, biar section lebih "penuh"
+      display: 'flex',              // ← tambahan
+      alignItems: 'center',         // ← tambahan: center vertikal
+      overflow: 'hidden',
+      position: 'relative'
+    }}>
       <div className="container">
-        <div className="hero-grid">
+        <div className="hero-grid" style={{ position: 'relative' }}>
           {/* Left Hero Content */}
-          <div className="hero-content">
-            <div className="hero-badge">
-              <span className="pulse-dot"></span>
-              <span>Next-Gen React TCG App</span>
-            </div>
-
+          <div className="hero-content" style={{ maxWidth: '640px', paddingRight: '20px' }}>
             <h1 className="hero-title">
               Collect & Upgrade <span>Shinobi Cards</span>
             </h1>
@@ -62,7 +59,7 @@ export default function Hero({ cards, onOpenShowcase, onOpenInventory, onOpenSho
               your Jutsu stats, and master the card arena.
             </p>
 
-            <div className="hero-cta-group" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            <div className="hero-cta-group" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '24px' }}>
               <button className="btn-primary" onClick={openShopModal}>
                 <span>Gacha Now</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -70,49 +67,47 @@ export default function Hero({ cards, onOpenShowcase, onOpenInventory, onOpenSho
                 </svg>
               </button>
 
-              {/* Tombol My Inventory Baru */}
               <button className="btn-primary" style={{ background: 'linear-gradient(135deg, #10b981, #059669)', borderColor: '#10b981' }} onClick={onOpenInventory}>
                 <span>Inventory</span>
               </button>
 
-              {/* Tombol View Showcase */}
               <button className="btn-secondary" onClick={onOpenShowcase}>
                 <span>Showcase</span>
               </button>
             </div>
-
-            <div className="hero-stats">
-              <div className="stat-item">
-                <h4>{cards ? cards.length : 190}</h4>
-                <p>Ninja Cards</p>
-              </div>
-              <div className="stat-item">
-                <h4>3</h4>
-                <p>Pack Tiers</p>
-              </div>
-              <div className="stat-item">
-                <h4>99</h4>
-                <p>Max OVR Power</p>
-              </div>
-            </div>
           </div>
 
-          {/* Right Auto-Rotating Live Card Carousel */}
-          <div className="hero-card-preview">
-            <div
-              className={`hero-card-stage ${isFading ? 'hero-carousel-fade' : ''}`}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              onClick={() => currentCard && onSelectCard(currentCard)}
-              title="Click to view Storm 4 Card Detail"
-            >
-              {currentCard && <CardContainer card={currentCard} />}
-            </div>
-            <div className="preview-label">
-              <span>Live 2:3 Scale Preview (Auto-Rotating)</span>
-            </div>
-          </div>
         </div>
+      </div>
+
+      {/* Right Hero Character Render (Floating & Auto-Rotating) */}
+      <div className="hero-render-container" style={{
+        position: 'absolute',
+        right: '60px',
+        bottom: '10px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        zIndex: 2,
+        pointerEvents: 'none'
+      }}>
+        {featuredCard && (
+          <div style={{ textAlign: 'center' }}>
+            <img
+              src={getCardImageSrc(featuredCard)}
+              alt={featuredCard.name}
+              style={{
+                maxHeight: '480px',
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 15px 25px rgba(0,0,0,0.8))',
+                transition: 'opacity 0.5s ease-in-out'
+              }}
+            />
+            <div style={{ marginTop: '8px', color: 'var(--parchment)', fontSize: '18px', fontWeight: 'bold', fontFamily: '"Cinzel", serif', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+              {featuredCard.name}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

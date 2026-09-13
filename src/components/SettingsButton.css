@@ -1,0 +1,60 @@
+.settings-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  background: linear-gradient(135deg, rgba(212, 168, 74, 0.1), rgba(212, 168, 74, 0.05));
+  border: 1px solid rgba(212, 168, 74, 0.3);
+  border-radius: 10px;
+  color: #f3e6c8;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.settings-button:hover {
+  background: linear-gradient(135deg, rgba(212, 168, 74, 0.2), rgba(212, 168, 74, 0.1));
+  border-color: rgba(212, 168, 74, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(212, 168, 74, 0.2);
+}
+
+.settings-button:active {
+  transform: translateY(0);
+}
+
+.settings-icon {
+  color: #d4a84a;
+  flex-shrink: 0;
+  animation: settings-rotate 20s linear infinite;
+}
+
+@keyframes settings-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.settings-button:hover .settings-icon {
+  animation-duration: 2s;
+}
+
+.settings-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 980px) {
+  .settings-label {
+    display: none;
+  }
+
+  .settings-button {
+    justify-content: center;
+  }
+}
