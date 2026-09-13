@@ -2959,6 +2959,13 @@ qty-value {
     --sidebar-w: 80px;
   }
 }
+
+@media (max-width: 600px) {
+  /* Di HP, sidebar icon-only lebih sempit */
+  .app {
+    --sidebar-w: 60px;
+  }
+}
 /* ==========================================================================
    SETTINGS - GLOBAL EFFECTS
    Applied when user enables "Reduce Motion" in Settings.

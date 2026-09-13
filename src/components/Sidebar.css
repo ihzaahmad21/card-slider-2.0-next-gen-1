@@ -7,6 +7,10 @@
   flex-direction: column;
   padding: 22px 14px;
   min-width: 0;
+  /* ── Kunci scroll: sidebar dibatasi tinggi viewport ── */
+  height: 100%;             /* mengisi tinggi grid row yang diberikan */
+  overflow: hidden;         /* clip luar, scroll dikelola .nav di dalam */
+  box-sizing: border-box;
 }
 
 /* ---------- Sidebar Collapsible ---------- */
@@ -75,6 +79,32 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  /* ── Scroll area: tumbuh mengisi sisa ruang, sisanya bisa di-scroll ── */
+  flex: 1 1 0;              /* ambil semua ruang yang tersisa */
+  overflow-y: auto;         /* aktifkan scroll vertikal */
+  overflow-x: hidden;
+  /* Padding bawah supaya item terakhir tidak mepet toggle button */
+  padding-bottom: 8px;
+  /* ── Scrollbar tipis sesuai tema dark ── */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212,168,74,0.25) transparent;
+}
+
+.nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.nav::-webkit-scrollbar-thumb {
+  background: rgba(212,168,74,0.22);
+  border-radius: 999px;
+}
+
+.nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(212,168,74,0.45);
 }
 
 .nav-item {
@@ -176,5 +206,28 @@
 
   .brand, .nav-item, .sidebar-toggle {
     justify-content: center;
+  }
+}
+
+/* ── Mobile ≤ 600px: sidebar icon-only 60px ── */
+@media (max-width: 600px) {
+  .sidebar {
+    padding: 14px 8px;
+  }
+
+  .nav-item {
+    padding: 10px 6px;
+    justify-content: center;
+  }
+
+  .brand {
+    justify-content: center;
+    padding: 0 0 14px 0;
+    margin-bottom: 12px;
+  }
+
+  .sidebar-toggle {
+    justify-content: center;
+    padding: 10px 6px;
   }
 }
