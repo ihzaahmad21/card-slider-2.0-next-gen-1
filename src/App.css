@@ -2126,6 +2126,87 @@ qty-value {
   }
 }
 
+/* ── Hero Mobile: ≤ 600px ─────────────────────────────────────
+   Ubah layout 2-kolom desktop → stack vertikal 1 kolom.
+   Gambar karakter (position:absolute) diubah ke flow normal
+   via class CSS supaya tidak menimpa teks & tombol CTA.
+   ─────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  /* Override inline style position:relative di .hero-section */
+  .hero-section {
+    padding: 20px 0 0 !important;
+    min-height: unset !important;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Grid 1 kolom stack vertikal */
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin: 0 auto;
+  }
+
+  /* Tombol CTA: wrap ke baris ke-2 jika perlu, tidak overflow */
+  .hero-cta-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 11px 20px;
+    font-size: 0.85rem;
+    flex: 1 1 auto;
+    max-width: 160px;
+    text-align: center;
+  }
+
+  /* === KUNCI UTAMA: override inline-style position:absolute ===
+     Karena JSX pakai style={{}}, gunakan !important agar diikuti.
+     Gambar karakter pindah ke bawah teks, menjadi flow normal. */
+  .hero-render-container {
+    position: relative !important;
+    right: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    top: unset !important;
+    margin: 12px auto 0;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    pointer-events: none;
+  }
+
+  /* Batasi tinggi gambar karakter supaya tidak overflow */
+  .hero-render-container img {
+    max-height: 260px !important;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Nama karakter di bawah gambar */
+  .hero-render-container > div > div:last-child {
+    font-size: 14px !important;
+  }
+}
+
 /* =========================================================
    RESPONSIF MOBILE UNTUK STORM4 MODAL (HP & SCREEN KECIL)
    ========================================================= */

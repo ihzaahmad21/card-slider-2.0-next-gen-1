@@ -193,3 +193,68 @@
     display: none;
   }
 }
+
+/* ── Mobile: ≤ 600px ─────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .topbar {
+    padding: 0 10px;
+    gap: 8px;
+    flex-wrap: wrap;          /* izinkan baris ke-2 jika tidak muat */
+    min-height: 52px;
+  }
+
+  /* Sembunyikan server pill — hemat ruang di HP */
+  .server-pill {
+    display: none;
+  }
+
+  /* Geser grup kanan ke kiri agar tidak terbuang */
+  .topbar-right {
+    margin-left: 0;
+    gap: 6px;
+    flex-wrap: nowrap;        /* tetap 1 baris dalam grup kanan */
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  /* Kecilkan badge currency */
+  .currency {
+    padding: 5px 9px;
+    font-size: 0.75rem;
+    gap: 5px;
+  }
+
+  .currency svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Kecilkan avatar */
+  .avatar-ring {
+    width: 34px;
+    height: 34px;
+  }
+
+  .avatar-inner {
+    font-size: 0.72rem;
+  }
+
+  /* Kecilkan padding wrap profil */
+  .avatar-wrap {
+    padding: 3px 6px 3px 8px;
+    gap: 6px;
+  }
+
+  /* Sempitkan player-meta-box agar exp bar + level tetap muat */
+  .player-meta-box {
+    min-width: 54px;
+  }
+
+  .level-tag {
+    font-size: 0.65rem;
+  }
+
+  .exp-text-sub {
+    font-size: 0.55rem;
+  }
+}
