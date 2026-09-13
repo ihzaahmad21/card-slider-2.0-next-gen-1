@@ -54,27 +54,6 @@ export default function Hero({ cards = [], inventory = [], onOpenShowcase, onOpe
               Collect & Upgrade <span>Shinobi Cards</span>
             </h1>
 
-            <p className="hero-subtitle">
-              Experience the ultimate Ninja TCG card collector. Build your roster, unlock legendary gacha packs, upgrade
-              your Jutsu stats, and master the card arena.
-            </p>
-
-            <div className="hero-cta-group" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '24px' }}>
-              <button className="btn-primary" onClick={openShopModal}>
-                <span>Gacha Now</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </button>
-
-              <button className="btn-primary" style={{ background: 'linear-gradient(135deg, #10b981, #059669)', borderColor: '#10b981' }} onClick={onOpenInventory}>
-                <span>Inventory</span>
-              </button>
-
-              <button className="btn-secondary" onClick={onOpenShowcase}>
-                <span>Showcase</span>
-              </button>
-            </div>
           </div>
 
         </div>
