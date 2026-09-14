@@ -38,6 +38,7 @@
   max-width: 960px;
   height: 610px;
   max-height: 90vh;
+  max-height: 90dvh;
 }
 
 @keyframes upmScaleUp {
@@ -79,7 +80,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  z-index: 20;
+  z-index: 30;
 }
 
 .upm-close-btn:hover {
@@ -113,6 +114,10 @@
   text-align: center;
   gap: 11px;
   overflow-y: auto;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
   position: relative;
   z-index: 5;
 }
@@ -428,6 +433,8 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(0, 0, 0, 0.35);
   overflow-x: auto;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
   flex-shrink: 0;
@@ -449,6 +456,7 @@
   font-size: 0.88rem;
   font-weight: 700;
   cursor: pointer;
+  touch-action: manipulation;
   white-space: nowrap;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   border-radius: 8px 8px 0 0;
@@ -478,6 +486,10 @@
 .upm-tab-body {
   flex: 1;
   overflow-y: auto;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(56, 189, 248, 0.3) transparent;
   padding: 20px 24px;
 }
 
@@ -1090,23 +1102,168 @@
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
-/* Responsive fallback for narrow mobile screens */
+/* ═════════════════════════════════════════════════════════════════
+   RESPONSIVE LAYOUT FOR MOBILE & NARROW SCREENS
+   ═════════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
+  .upm-backdrop {
+    padding: 14px 10px;
+    align-items: center;
+  }
+
+  /* Modal bounded to 90vh / 90dvh so it never touches screen edges */
   .upm-modal-split {
     height: 90vh;
+    height: 90dvh;
+    max-height: 90vh;
+    max-height: 90dvh;
+    border-radius: 18px;
+    overflow: hidden; /* preserves rounded corners and clips content cleanly */
   }
+
+  /* Close button stays strictly fixed at the top-right corner of the modal frame */
+  .upm-close-btn {
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+    z-index: 40;
+    background: rgba(13, 18, 34, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
+  }
+
+  /* Main modal dashboard container: single unified vertical scroll for mobile */
   .upm-dashboard-layout {
     flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    /* Custom sleek dark scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(56, 189, 248, 0.35) rgba(6, 8, 19, 0.4);
   }
+
+  .upm-dashboard-layout::-webkit-scrollbar {
+    width: 5px;
+  }
+  .upm-dashboard-layout::-webkit-scrollbar-track {
+    background: rgba(6, 8, 19, 0.4);
+    border-radius: 999px;
+    margin: 6px 0;
+  }
+  .upm-dashboard-layout::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.32);
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .upm-dashboard-layout::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 189, 248, 0.6);
+  }
+
+  /* Sidebar: remove independent scroll trap so all info flows into main container */
   .upm-sidebar {
     width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    overflow: visible;
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 24px 16px 18px;
+    gap: 11px;
   }
-  .upm-currency-grid,
-  .upm-stats-metrics-grid,
-  .upm-fav-grid,
+
+  /* Right main panel: unclamp height constraint */
+  .upm-main-panel {
+    flex: none;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  /* Sub-menu tabs bar */
+  .upm-tabs-nav {
+    padding: 10px 12px 0;
+    gap: 4px;
+    background: rgba(8, 12, 22, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    overflow-x: auto;
+    flex-shrink: 0;
+  }
+
+  .upm-tab-btn {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    gap: 5px;
+  }
+
+  /* Tab body panel: unclamp height and eliminate inner scroll trap */
+  .upm-tab-body {
+    flex: none;
+    height: auto;
+    overflow: visible;
+    padding: 16px 14px 20px;
+  }
+
+  /* Metrics grid */
+  .upm-stats-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  /* Span the 5th metric box (Win streak) across 2 columns for a balanced grid */
+  .upm-stats-metrics-grid .upm-metric-box:last-child {
+    grid-column: span 2;
+  }
+
+  .upm-metric-box {
+    padding: 10px 6px;
+  }
+
+  .upm-metric-val {
+    font-size: 1.35rem;
+  }
+
+  .upm-fav-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .upm-avatar-picker-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .upm-modal-footer {
+    padding: 14px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.35);
+  }
+}
+
+@media (max-width: 480px) {
+  .upm-backdrop {
+    padding: 10px 6px;
+  }
+
   .upm-avatar-picker-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .upm-tab-btn {
+    padding: 7px 10px;
+    font-size: 0.78rem;
+  }
+
+  .upm-tab-text {
+    font-size: 0.78rem;
   }
 }

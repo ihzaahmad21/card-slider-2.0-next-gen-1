@@ -258,3 +258,74 @@
     font-size: 0.55rem;
   }
 }
+
+/* ---------- Mobile Landscape (MLBB Style: Slim Topbar) ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .topbar {
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 14px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid var(--line, rgba(212,168,74,0.18));
+  }
+
+  .server-pill {
+    display: none;
+  }
+
+  .search {
+    display: none; /* Hide search in slim landscape header to maximize room for profile & currencies */
+  }
+
+  .topbar-right {
+    margin-left: auto;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .currency {
+    padding: 3px 8px;
+    font-size: 0.72rem;
+    gap: 4px;
+    border-radius: 6px;
+  }
+
+  .currency svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .avatar-wrap {
+    padding: 2px 6px;
+    gap: 6px;
+    border-left: 1px solid var(--line, rgba(212,168,74,0.16));
+  }
+
+  .avatar-ring {
+    width: 26px;
+    height: 26px;
+  }
+
+  .avatar-inner {
+    font-size: 0.65rem;
+  }
+
+  .player-meta-box {
+    min-width: 48px;
+  }
+
+  .level-tag {
+    font-size: 0.6rem;
+    line-height: 1;
+  }
+
+  .exp-bar-track {
+    height: 3px;
+  }
+
+  .exp-text-sub {
+    display: none;
+  }
+}
+

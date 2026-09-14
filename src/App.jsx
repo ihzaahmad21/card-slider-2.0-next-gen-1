@@ -130,6 +130,34 @@ export default function App() {
     );
   }, [settings.display.reduceMotion]);
 
+  // Web API Lock Screen Orientation to Landscape for Mobile/Tablet (MLBB Style)
+  useEffect(() => {
+    const lockLandscape = async () => {
+      try {
+        if (window.screen?.orientation?.lock) {
+          await window.screen.orientation.lock('landscape');
+        }
+      } catch (err) {
+        console.debug('Screen orientation lock to landscape:', err?.message || err);
+      }
+    };
+
+    lockLandscape();
+
+    // Fallback on first user interaction for mobile browsers that require user gesture
+    const handleFirstInteraction = () => {
+      lockLandscape();
+    };
+
+    window.addEventListener('touchstart', handleFirstInteraction, { passive: true, once: true });
+    window.addEventListener('click', handleFirstInteraction, { once: true });
+
+    return () => {
+      window.removeEventListener('touchstart', handleFirstInteraction);
+      window.removeEventListener('click', handleFirstInteraction);
+    };
+  }, []);
+
   // Sync Deck Presets with Inventory
   useEffect(() => {
     setDeckPresets(prevPresets => {
@@ -610,7 +638,7 @@ export default function App() {
       <EmberParticles count={22} />
       <Sidebar activeView={activeView} setActiveView={setActiveView} />
 
-      <div style={{ gridColumn: '2', gridRow: '1 / 3', display: 'flex', flexDirection: 'column', overflow: 'hidden', minWidth: 0 }}>
+      <div className="app-content-wrapper">
         <Topbar
           coins={coins}
           gems={50}
